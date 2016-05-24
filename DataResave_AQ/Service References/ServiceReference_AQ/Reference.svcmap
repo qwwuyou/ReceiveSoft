@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="847961b8-2447-40f1-b8a0-bbacef50ffbb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a0a8cc6b-e337-49a9-a83d-63a4277ddcae" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="9d81ae1d-7f4e-4755-8734-98a351389b6d" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="bcfc37ea-539b-4d27-8113-4a4bbfe42d38" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="03c75f95-19b0-470b-b96b-9da6b09fe142" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="AquariusAcquisitionService.Dto.xsd" MetadataType="Schema" ID="69eed06b-1997-48bd-8b90-70d86329b208" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="AquariusAcquisitionService.xsd" MetadataType="Schema" ID="ba3fadcd-73f9-4620-b4d3-c72d19c078c6" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="AquariusDataService.xsd" MetadataType="Schema" ID="c6b31c9b-71fa-4e96-b09b-4fb3283010d4" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="637377b3-fae3-4c5f-911a-ac786ab702c4" SourceId="1" SourceUrl="http://123.56.83.14/AQUARIUS/AQAcquisitionService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

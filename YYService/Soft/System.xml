@@ -1,0 +1,32 @@
+<system>
+  <Project>
+    <Pro name="北京" path="E:\接收软件代码\DevControlsDemo_5.2\Service 水资源数据库调整后  -卫星完成\YYApp\bin\Debug/System.xml" />
+  </Project>
+  <DataBaseConnect>
+    <Type>MSSQL</Type>
+    <Source>123.57.234.45</Source>
+    <DataBase>JS_shuiwen</DataBase>
+    <UserName>aq</UserName>
+    <PassWord>aquarius</PassWord>
+  </DataBaseConnect>
+  <Dll>
+    <DataProtocol file="HydrologicProtocol.dll" class="Service.Hydrologic" />
+  </Dll>
+  <Service>
+    <tcp serviceid="1" ip_portname="0.0.0.0" port_baudrate="16018" />
+    <gsm serviceid="2" ip_portname="COM4" port_baudrate="9600" num="13555555555" />
+  </Service>
+  <UI>
+    <tcp ip="127.0.0.1" port="8888" />
+  </UI>
+  <TC>
+    <tcp ip="192.168.1.62" port="16020" />
+  </TC>
+  <Login>
+    <UserName>admin</UserName>
+    <PassWord>123</PassWord>
+  </Login>
+  <Mail IsToMail="1" />
+  <WriteInfo Encoding="HEX" />
+  <Resave Name="HLJ" file="DataResave_HLJ.dll" class="DataResave_HLJ.DataResave_HLJ" />
+</system>

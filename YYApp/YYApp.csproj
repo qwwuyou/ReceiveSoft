@@ -1,0 +1,894 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C86BF771-4E8F-4C7B-9828-8A50347C2744}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YYApp</RootNamespace>
+    <AssemblyName>YYApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\YYService\Soft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>sys.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAccess">
+      <HintPath>..\DataAccess\bin\Debug\DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.8.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllReference\DevComponents.DotNetBar2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HIMR, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllReference\HIMR.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YanYu.WRIMR.Protocol, Version=0.7.2.30191, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllReference\YanYu.WRIMR.Protocol.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlertForm.Designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Channel\ExecServiceList.cs" />
+    <Compile Include="Channel\service.cs" />
+    <Compile Include="CommandResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandResultForm.Designer.cs">
+      <DependentUpon>CommandResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_00.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_00.Designer.cs">
+      <DependentUpon>_00.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_36.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_36.Designer.cs">
+      <DependentUpon>_36.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_37.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_37.Designer.cs">
+      <DependentUpon>_37.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_38.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_38.Designer.cs">
+      <DependentUpon>_38.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_39.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_39.Designer.cs">
+      <DependentUpon>_39.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_3A.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_3A.Designer.cs">
+      <DependentUpon>_3A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_41.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_41.Designer.cs">
+      <DependentUpon>_41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_40.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_40.Designer.cs">
+      <DependentUpon>_40.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_42.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_42.Designer.cs">
+      <DependentUpon>_42.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_43.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_43.Designer.cs">
+      <DependentUpon>_43.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_44.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_44.Designer.cs">
+      <DependentUpon>_44.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_45.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_45.Designer.cs">
+      <DependentUpon>_45.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_46.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_46.Designer.cs">
+      <DependentUpon>_46.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_47.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_47.Designer.cs">
+      <DependentUpon>_47.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_48.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_48.Designer.cs">
+      <DependentUpon>_48.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_49.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_49.Designer.cs">
+      <DependentUpon>_49.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4A.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4A.Designer.cs">
+      <DependentUpon>_4A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4B.Designer.cs">
+      <DependentUpon>_4B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4C.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4C.Designer.cs">
+      <DependentUpon>_4C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4D.Designer.cs">
+      <DependentUpon>_4D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4E.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4E.Designer.cs">
+      <DependentUpon>_4E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4F.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_4F.Designer.cs">
+      <DependentUpon>_4F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_50.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_50.Designer.cs">
+      <DependentUpon>_50.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_51.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Hydrologic\_51.Designer.cs">
+      <DependentUpon>_51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_17.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_17.Designer.cs">
+      <DependentUpon>_17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_18.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_18.Designer.cs">
+      <DependentUpon>_18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_19.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_19.Designer.cs">
+      <DependentUpon>_19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1A.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1A.Designer.cs">
+      <DependentUpon>_1A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1D.Designer.cs">
+      <DependentUpon>_1D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1E.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1E.Designer.cs">
+      <DependentUpon>_1E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Control\CommandControl\SetCommand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\SetCommand.Designer.cs">
+      <DependentUpon>SetCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_02.Designer.cs">
+      <DependentUpon>_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_10.Designer.cs">
+      <DependentUpon>_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_11.Designer.cs">
+      <DependentUpon>_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_12.Designer.cs">
+      <DependentUpon>_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_15.Designer.cs">
+      <DependentUpon>_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_16.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_16.Designer.cs">
+      <DependentUpon>_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1B.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1B.Designer.cs">
+      <DependentUpon>_1B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1C.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1C.Designer.cs">
+      <DependentUpon>_1C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1F.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_1F.Designer.cs">
+      <DependentUpon>_1F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_20.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_20.Designer.cs">
+      <DependentUpon>_20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_30.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_30.Designer.cs">
+      <DependentUpon>_30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_32.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_32.Designer.cs">
+      <DependentUpon>_32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_34.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_34.Designer.cs">
+      <DependentUpon>_34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Command\ExecCommandList.cs" />
+    <Compile Include="Control\CommandControl\WaterResource\_5D.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_5D.Designer.cs">
+      <DependentUpon>_5D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_5E.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_5E.Designer.cs">
+      <DependentUpon>_5E.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_5F.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_5F.Designer.cs">
+      <DependentUpon>_5F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_90.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_90.Designer.cs">
+      <DependentUpon>_90.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_91.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_91.Designer.cs">
+      <DependentUpon>_91.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_92.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_92.Designer.cs">
+      <DependentUpon>_92.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_94.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_94.Designer.cs">
+      <DependentUpon>_94.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_95.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_95.Designer.cs">
+      <DependentUpon>_95.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_96.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_96.Designer.cs">
+      <DependentUpon>_96.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_A0.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_A0.Designer.cs">
+      <DependentUpon>_A0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_A1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_A1.Designer.cs">
+      <DependentUpon>_A1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_B2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_B2.Designer.cs">
+      <DependentUpon>_B2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_B1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\WaterResource\_B1.Designer.cs">
+      <DependentUpon>_B1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_103.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_103.Designer.cs">
+      <DependentUpon>_103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_105.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_105.Designer.cs">
+      <DependentUpon>_105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_108.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_108.Designer.cs">
+      <DependentUpon>_108.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_109.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\CommandControl\Yy\_109.Designer.cs">
+      <DependentUpon>_109.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\GetCommandState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\GetCommandState.Designer.cs">
+      <DependentUpon>GetCommandState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\Hydrologic\SetHydrologicRTUWorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\Hydrologic\SetHydrologicRTUWorkControl.Designer.cs">
+      <DependentUpon>SetHydrologicRTUWorkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetAutoToRemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetAutoToRemControl.Designer.cs">
+      <DependentUpon>SetAutoToRemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetConfigDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetConfigDataControl.Designer.cs">
+      <DependentUpon>SetConfigDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRealTimeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRealTimeControl.Designer.cs">
+      <DependentUpon>SetRealTimeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRemControl.Designer.cs">
+      <DependentUpon>SetRemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\Yy\SetYyRTUWorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\Yy\SetYyRTUWorkControl.Designer.cs">
+      <DependentUpon>SetYyRTUWorkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetSystemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetSystemControl.Designer.cs">
+      <DependentUpon>SetSystemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\ShowCommandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\ShowCommandControl.Designer.cs">
+      <DependentUpon>ShowCommandControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetManualControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetManualControl.Designer.cs">
+      <DependentUpon>SetManualControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetImgControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetImgControl.Designer.cs">
+      <DependentUpon>SetImgControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetDataResaveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetDataResaveControl.Designer.cs">
+      <DependentUpon>SetDataResaveControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnDe.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RTF.cs" />
+    <Compile Include="Control\SetControl\SetCenterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetCenterControl.Designer.cs">
+      <DependentUpon>SetCenterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRTUControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\SetRTUControl.Designer.cs">
+      <DependentUpon>SetRTUControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\WaterResource\SetRTUWorkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\WaterResource\SetRTUWorkControl.Designer.cs">
+      <DependentUpon>SetRTUWorkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl\ShowDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl\ShowDataControl.Designer.cs">
+      <DependentUpon>ShowDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station\ExecRTUList.cs" />
+    <Compile Include="Station\RTU.cs" />
+    <Compile Include="TcpClient.cs" />
+    <Compile Include="TcpControl.cs" />
+    <Compile Include="WriteReadXML.cs" />
+    <Compile Include="_51Mail.cs" />
+    <Compile Include="SetPojectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPojectForm.Designer.cs">
+      <DependentUpon>SetPojectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetHLJForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetHLJForm.Designer.cs">
+      <DependentUpon>SetHLJForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandResultForm.resx">
+      <DependentUpon>CommandResultForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_00.resx">
+      <DependentUpon>_00.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_36.resx">
+      <DependentUpon>_36.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_37.resx">
+      <DependentUpon>_37.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_38.resx">
+      <DependentUpon>_38.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_39.resx">
+      <DependentUpon>_39.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_3A.resx">
+      <DependentUpon>_3A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_41.resx">
+      <DependentUpon>_41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_40.resx">
+      <DependentUpon>_40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_42.resx">
+      <DependentUpon>_42.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_43.resx">
+      <DependentUpon>_43.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_44.resx">
+      <DependentUpon>_44.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_45.resx">
+      <DependentUpon>_45.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_46.resx">
+      <DependentUpon>_46.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_47.resx">
+      <DependentUpon>_47.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_48.resx">
+      <DependentUpon>_48.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_49.resx">
+      <DependentUpon>_49.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4A.resx">
+      <DependentUpon>_4A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4B.resx">
+      <DependentUpon>_4B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4C.resx">
+      <DependentUpon>_4C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4D.resx">
+      <DependentUpon>_4D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4E.resx">
+      <DependentUpon>_4E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_4F.resx">
+      <DependentUpon>_4F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_50.resx">
+      <DependentUpon>_50.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Hydrologic\_51.resx">
+      <DependentUpon>_51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\SetCommand.resx">
+      <DependentUpon>SetCommand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_02.resx">
+      <DependentUpon>_02.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_10.resx">
+      <DependentUpon>_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_11.resx">
+      <DependentUpon>_11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_12.resx">
+      <DependentUpon>_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_15.resx">
+      <DependentUpon>_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_16.resx">
+      <DependentUpon>_16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_17.resx">
+      <DependentUpon>_17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_18.resx">
+      <DependentUpon>_18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_19.resx">
+      <DependentUpon>_19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1A.resx">
+      <DependentUpon>_1A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1B.resx">
+      <DependentUpon>_1B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1C.resx">
+      <DependentUpon>_1C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1D.resx">
+      <DependentUpon>_1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1E.resx">
+      <DependentUpon>_1E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_1F.resx">
+      <DependentUpon>_1F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_20.resx">
+      <DependentUpon>_20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_30.resx">
+      <DependentUpon>_30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_32.resx">
+      <DependentUpon>_32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_34.resx">
+      <DependentUpon>_34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_5D.resx">
+      <DependentUpon>_5D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_5E.resx">
+      <DependentUpon>_5E.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_5F.resx">
+      <DependentUpon>_5F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_90.resx">
+      <DependentUpon>_90.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_91.resx">
+      <DependentUpon>_91.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_92.resx">
+      <DependentUpon>_92.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_94.resx">
+      <DependentUpon>_94.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_95.resx">
+      <DependentUpon>_95.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_96.resx">
+      <DependentUpon>_96.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_A0.resx">
+      <DependentUpon>_A0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_A1.resx">
+      <DependentUpon>_A1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_B2.resx">
+      <DependentUpon>_B2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\WaterResource\_B1.resx">
+      <DependentUpon>_B1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Yy\_103.resx">
+      <DependentUpon>_103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Yy\_105.resx">
+      <DependentUpon>_105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Yy\_108.resx">
+      <DependentUpon>_108.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\CommandControl\Yy\_109.resx">
+      <DependentUpon>_109.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\GetCommandState.resx">
+      <DependentUpon>GetCommandState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\Hydrologic\SetHydrologicRTUWorkControl.resx">
+      <DependentUpon>SetHydrologicRTUWorkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetAutoToRemControl.resx">
+      <DependentUpon>SetAutoToRemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetConfigDataControl.resx">
+      <DependentUpon>SetConfigDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetDataResaveControl.resx">
+      <DependentUpon>SetDataResaveControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetRealTimeControl.resx">
+      <DependentUpon>SetRealTimeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetRemControl.resx">
+      <DependentUpon>SetRemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\Yy\SetYyRTUWorkControl.resx">
+      <DependentUpon>SetYyRTUWorkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetSystemControl.resx">
+      <DependentUpon>SetSystemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\ShowCommandControl.resx">
+      <DependentUpon>ShowCommandControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetManualControl.resx">
+      <DependentUpon>SetManualControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetImgControl.resx">
+      <DependentUpon>SetImgControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Control\SetControl\SetCenterControl.resx">
+      <DependentUpon>SetCenterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\SetRTUControl.resx">
+      <DependentUpon>SetRTUControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\WaterResource\SetRTUWorkControl.resx">
+      <DependentUpon>SetRTUWorkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl\ShowDataControl.resx">
+      <DependentUpon>ShowDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPojectForm.resx">
+      <DependentUpon>SetPojectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetHLJForm.resx">
+      <DependentUpon>SetHLJForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YYPack\YYPack.csproj">
+      <Project>{4E971A0C-0F70-4423-BBFA-4310AE0E3FD1}</Project>
+      <Name>YYPack</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\123.gif" />
+    <None Include="Resources\Clear.png" />
+    <None Include="Resources\Clear1.png" />
+    <Content Include="Resources\sys.ico" />
+    <Content Include="sys.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F50EBC6B-F338-4EEE-B346-6559EA561496}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Control</RootNamespace>
+    <AssemblyName>Control</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\YYService\Soft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\DllReference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenPop, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CenterAddress.cs" />
+    <Compile Include="Channel\COM\ComBussiness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\COM\ComModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\COM\ComQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\COM\ComServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\COM\ComThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\GSM\GsmBussiness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\GSM\GsmModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\GSM\GsmQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\GSM\GsmServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\GSM\GsmThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\TCP\TcpBussiness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\TCP\TcpModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\TCP\TcpQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\TCP\TcpServer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\TCP\TcpThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\UDP\UdpBussiness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\UDP\UdpModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\UDP\UdpQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\UDP\UdpServer.cs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Channel\UDP\UdpThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EnDe.cs" />
+    <Compile Include="Package\DataProcess.cs" />
+    <Compile Include="Package\EnCoder.cs" />
+    <Compile Include="Package\Reflection_Protoco.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBussiness.cs" />
+    <Compile Include="ServiceControl.cs" />
+    <Compile Include="ServiceEnum.cs" />
+    <Compile Include="ServiceModel.cs" />
+    <Compile Include="ServiceQueue.cs" />
+    <Compile Include="ToUI\Client\TcpClient.cs" />
+    <Compile Include="ToUI\Server\TcpBussiness.cs" />
+    <Compile Include="ToUI\Server\TcpModel.cs" />
+    <Compile Include="ToUI\Server\TcpQueue.cs" />
+    <Compile Include="ToUI\Server\TcpServer.cs" />
+    <Compile Include="ToUI\Server\TcpThread.cs" />
+    <Compile Include="WriteReadXML.cs" />
+    <Compile Include="_51Mail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{F518E703-68B7-4083-8068-959C556AC887}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSMMODEM\GSMMODEM.csproj">
+      <Project>{FB9F3FF1-0B65-4FF7-AFBA-4DC918FCDDE4}</Project>
+      <Name>GSMMODEM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+<system>
+  <DataBaseConnect>
+    <Type>MSSQL</Type>
+    <Source>123.57.234.45</Source>
+    <DataBase>RTDB_HT</DataBase>
+    <UserName>aq</UserName>
+    <PassWord>aquarius</PassWord>
+  </DataBaseConnect>
+</system>

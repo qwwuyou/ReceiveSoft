@@ -1,0 +1,1203 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HIMR</name>
+    </assembly>
+    <members>
+        <member name="M:YanYu.Protocol.HIMR.ByteHelper.HexStrToByte(System.String)">
+            <summary>
+            字符串转16进制字节数组
+            </summary>
+            <param name="hexString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.ByteHelper.ByteToHexStr(System.Byte[])">
+            <summary>
+            字节数组转16进制字符串
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Package.frames">
+            <summary>
+            存储该包包含的链路帧集合[帧序号|帧]
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Package.packageBody">
+            <summary>
+            存储每一个帧的帧数据,合并起来的内容为 帧内容起始符-结束符之间的内容
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Package.BodyLenth">
+            <summary>
+                包体内容长度(字节数)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Package.AddFrame(YanYu.Protocol.HIMR.LinkLayer.Frame)">
+            <summary>
+                增加链路帧
+            </summary>
+            <param name="frame">待增加的链路帧</param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Package.GetFrames">
+            <summary>
+                获取该包体中的链路帧集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Package.ValidataPackage">
+            <summary>
+                验证该包体中的帧是否全部正确,如果该方法验证失败要
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OTC.ObjectTransferClient">
+            <summary>
+            对象传送器，使用UDP协议通过网路在不同主机间传送对象。
+            </summary>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.#ctor">
+            <summary>
+            构建一个对象传送器，默认端口7321
+            </summary>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.#ctor(System.Int32)">
+            <summary>
+            指定端口号构建一个对象传送器。
+            </summary>
+            <param name="port">端口号</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Start">
+            <summary>
+            初始化传送器并开始工作
+            </summary>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Connect(System.String,System.Int32)">
+            <summary>
+            使用指定的主机名和端口连接默认的远程主机
+            </summary>
+            <param name="hostname">主机名</param>
+            <param name="port">端口</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Connect(System.Net.IPAddress,System.Int32)">
+            <summary>
+            使用指定的IP地址和端口连接默认的远程主机
+            </summary>
+            <param name="ipaddress">IP地址</param>
+            <param name="port">端口</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Connect(System.Net.IPEndPoint)">
+            <summary>
+            使用网络终结点连接默认的远程主机
+            </summary>
+            <param name="iep">网络端点</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Send(System.Object)">
+            <summary>
+            将对象发送到默认主机。调用此方法前必须先调用Connect方法连接默认主机。
+            </summary>
+            <param name="obj">要发送的对象</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Send(System.Object,System.Net.IPEndPoint)">
+            <summary>
+            将对象发送到指定的主机。若调用了Connect方法连接了默认主机，则此方法不可用。
+            </summary>
+            <param name="obj">要发送的对象</param>
+            <param name="remoteIEP">目标主机的网络端点</param>
+        </member>
+        <member name="M:OTC.ObjectTransferClient.Listen">
+            <summary>
+            监听接收数据线程方法
+            </summary>
+        </member>
+        <member name="E:OTC.ObjectTransferClient.ReceiveObject">
+            <summary>
+            接收到对象事件
+            </summary>
+        </member>
+        <member name="P:OTC.ObjectTransferClient.Port">
+            <summary>
+            返回或设置接收对象的端口号
+            </summary>
+        </member>
+        <member name="P:OTC.ObjectTransferClient.IsStart">
+            <summary>
+            返回对象发送器是否已经初始化并开始工作
+            </summary>
+        </member>
+        <member name="P:OTC.ObjectTransferClient.IsConnected">
+            <summary>
+            返回对象发送器是否已经连接默认远程主机
+            </summary>
+        </member>
+        <member name="T:OTC.ReceiveObjectEventArgs">
+            <summary>
+            接收对象事件参数
+            </summary>
+        </member>
+        <member name="M:OTC.ReceiveObjectEventArgs.#ctor(System.Object,System.Net.IPEndPoint)">
+            <summary>
+            构建一个接收对象事件的参数
+            </summary>
+            <param name="obj">接收到的对象</param>
+            <param name="iep">发送者的网络端点</param>
+        </member>
+        <member name="M:OTC.ReceiveObjectEventArgs.#ctor">
+            <summary>
+            构建一个空的接收对象事件参数
+            </summary>
+        </member>
+        <member name="P:OTC.ReceiveObjectEventArgs.Obj">
+            <summary>
+            接收到的对象
+            </summary>
+        </member>
+        <member name="P:OTC.ReceiveObjectEventArgs.RemoteIEP">
+            <summary>
+            发送方的网络端点
+            </summary>
+        </member>
+        <member name="T:OTC.ReceiveObjectEventHandler">
+            <summary>
+            接收对象事件的委托
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.FrameCollection.ChangeDoTack(System.Int32,System.Int32)">
+             <summary>
+            
+             </summary>
+             <param name="dueTime">
+             在调用构造 System.Threading.Timer 时指定的回调方法之前的延迟时间量（以毫秒为单位）。指定 System.Threading.Timeout.Infinite可防止重新启动计时器。指定零 (0) 可立即重新启动计时器。
+             </param>
+             <param name="period">
+             调用构造 System.Threading.Timer 时指定的回调方法的时间间隔（以毫秒为单位）。指定 System.Threading.Timeout.Infinite可以禁用定期终止。
+             </param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.FrameCollection.GetAskFrame(System.Boolean,YanYu.Protocol.HIMR.ImagePackageParam)">
+            <summary>
+            可以创建请求重发回复,重发确认回复,整包确认回复
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.ImageFramesCache">
+             <summary>
+             最好用Return方式,但是也要考虑好事件方式
+             是否使用static类,过期维护是在管理类,还是集合类中
+            
+             图片报文信息维护管理器(考虑每个集合是否可以复用,维护一个固定大小的集合,还是维护一个常规固定大小的集合,
+             可以增加,但是减少之后可以释放掉一部分,维护一个最小集合大小即可
+             每收到一条报文就往这个管理器中Add
+             自动维护过期时间,清理图片报文集合
+             当一个图片可以合成后触发合成报文事件
+             当一个图片需要某一条报文重复,触发请求重发报文事件
+             需要有时间维护工具,包括集合超时销毁,集合报文不正确,请求重发
+            
+             Add,首先根据[站号+总报数](报文内的分包信息(如果没有默认1))主键,在列表中检索是否存在该集合
+             如果存在该集合,则调用集合的AddPackage方法,否则创建一个集合(主键同上),然后将该报文AddPackage进入这个集合
+             重点逻辑集中在每个集合的第一包处理上
+             </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.ImageFramesCache.AddFrame(YanYu.Protocol.HIMR.LinkLayer.Frame,System.Int32,System.Object)">
+            <summary>
+            添加收到的报文信息
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Bug.Add(System.DateTime)">
+            <summary>
+             只有生成完成之后的才添加,添加一个标识到队列中,如果超过长度移出开始处的标识
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Bug.Exists(System.DateTime)">
+            <summary>
+            确认该标识的集合是否之前完整的接收过,只用于确认回复0x60功能码,不作为确认集合器中的数据存在
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Bug.lastTime">
+            <summary>
+            最后个接收到的60功能码
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.InPackage.packData">
+            <summary>
+                包体内容解析结果
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPackage.GetFrames">
+            <summary>
+                获取该包体中的链路帧集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPackage.InitPackage">
+            <summary>
+                解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPackage.ParseSerialNumber">
+            <summary>
+                解析流水号
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPackage.ParseBodyHead">
+            <summary>
+                解析要素数据
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPackage.CretatAsk_Package(System.Boolean)">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x2F">
+            <summary>
+                链路维持报上行报文包(0x2F)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x2F.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x30">
+            <summary>
+                测试报上行报文包(0x30)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x30.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x30.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x31">
+            <summary>
+                均匀时段水文信息报上行报文包(0x31)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x31.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x31.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x32">
+            <summary>
+                测站定时报上行报文包(0x32)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x32.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x33">
+            <summary>
+                测站加时报上行报文包(0x33)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x33.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x33.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x34">
+            <summary>
+                测站小时报上行报文包(0x34)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x34.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x34.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x35">
+            <summary>
+                测站人工置数报上行报文包(0x35)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x35.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x35.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x36">
+            <summary>
+            测站图片自报,或中心站站查询遥测站图片信息报上行包(0x36)
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x37">
+            <summary>
+                中心站查询遥测站实时数据上行报文包(0x37)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x37.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x38">
+            <summary>
+                中心站查询遥测站时段数据上行报文包(0x38)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x38.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x39">
+            <summary>
+                中心站查询遥测站人工置数报上行报文包(0x39)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x39.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x3A">
+            <summary>
+                中心站查询遥测站指定要素数据上行报文包(0x3A)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x3A.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x40">
+            <summary>
+                中心站修改遥测站基本配置表上行包(0x40)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x40.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x41">
+            <summary>
+                中心站读取要测站基本配置表或要测站自报基本配置表上行报文(0x41)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x41.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x42">
+            <summary>
+                中心站修改遥测站运行参数配置表上行包(0x42)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x42.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x43">
+            <summary>
+                中心站读取遥测站运行参数配置表或要测站自报运行参数配置表(0x43)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x43.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x44">
+            <summary>
+                查询水泵电机实时工作数据上行报文(0x44)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x44.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x45">
+            <summary>
+                查询遥测终端软件版本上行报文(0x45)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x45.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x46">
+            <summary>
+                查询要测站状态和报警信息上行包(0x46)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x46.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x47">
+            <summary>
+                初始化固态存储数据上行报文(0x47)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x47.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x48">
+            <summary>
+                恢复终端初上设置上行包(0x48)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x48.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x49">
+            <summary>
+                修改密码上行包(0x49)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x49.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4A">
+            <summary>
+                设置遥测站时钟上行报文(0x4A)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4A.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4B">
+            <summary>
+                设置遥测终端IC卡状态上行包(0x4B)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4B.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4C">
+            <summary>
+                控制水泵开关命令或水泵状态信息自报(0x4C)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4C.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4D">
+            <summary>
+                控制阀门开关命令或阀门状态信息自报(0x4D)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4D.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4E">
+            <summary>
+                控制闸门开关命令或闸门状态信息自报(0x4E)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4E.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x4F">
+            <summary>
+                水量定值控制命令上行包(0x4F)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x4F.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x50">
+            <summary>
+                中心站查询遥测站事件记录上行包(0x50)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x50.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.InPacket.Deal0x51">
+            <summary>
+                中心站查询遥测站时钟上行包(0x51)
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x51.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0x60.InitPackage">
+            <summary>
+             解析包体内容
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.InPacket.Deal0xEF.CretatAsk_Package">
+            <summary>
+             创建回复数据报文
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.LinkLayer.CRC16Helper">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.LinkLayer.Frame">
+            <summary>
+                帧
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.#ctor">
+            <summary>
+                帧默认构造函数
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.#ctor(System.Byte[],System.Int32)">
+            <summary>
+                根据一个完整的数据报文构造一个帧(解析时使用)
+            </summary>
+            <param name="vBuffer">数据报文</param>
+            <param name="startIndex">开始字节位置</param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.#ctor(YanYu.Protocol.HIMR.StationNumber,System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte,YanYu.Protocol.HIMR.Direction,YanYu.Protocol.HIMR.Encoding,System.UInt16,System.UInt16)">
+            <summary>
+                根据参数构造一个完成的帧
+            </summary>
+            <param name="stationNumber">测站编号</param>
+            <param name="centralAddress">中心站地址(号码)</param>
+            <param name="passWord">密码</param>
+            <param name="funCode">功能码</param>
+            <param name="bodyBuffer">帧内容(帧正文内容),主要不包含任何起始符和结束符部分</param>
+            <param name="terminator">帧结束符</param>
+            <param name="direction">传输方向,标识该帧是上行还是下行</param>
+            <param name="enCoding">帧编码格式</param>
+            <param name="sumPackageCount">共计帧数,分帧发送必须参数,取值范围1-4095</param>
+            <param name="currentPackageNo">当前帧序号,分帧发送必须参数,取值范围1-4095</param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.CreateFrame(System.Byte[])">
+            <summary>
+                根据数据解析出几个或者一个完整的帧
+            </summary>
+            <param name="vBuffer">待解析的数据</param>
+            <returns>解析出来的帧</returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.CreateFrame(System.String,System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte,System.UInt16,YanYu.Protocol.HIMR.Direction,YanYu.Protocol.HIMR.Encoding)">
+            <summary>
+                根据提供的参数检测出是否需要分帧,并且生成帧
+            </summary>
+            <param name="stationNumber">测站编号</param>
+            <param name="centralAddress">中心站地址(号码)</param>
+            <param name="passWord">密码</param>
+            <param name="funCode">功能码</param>
+            <param name="bodyBuffer">帧内容(帧正文内容),主要不包含任何起始符和结束符部分</param>
+            <param name="terminator">帧结束符</param>
+            <param name="direction">传输方向,标识该帧是上行还是下行</param>
+            <param name="maxBodyLength">帧正文最大长度</param>
+            <param name="enCoding">帧编码格式</param>
+            <returns>
+                根据提供的参数生成的帧,可以是一个还是多个,自动检测是否分帧
+            </returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.CreateFrame(YanYu.Protocol.HIMR.StationNumber,System.UInt16,System.UInt16,System.UInt16,System.Byte[],System.Byte,System.UInt16,YanYu.Protocol.HIMR.Direction,YanYu.Protocol.HIMR.Encoding)">
+            <summary>
+                根据提供的参数检测出是否需要分帧,并且生成帧
+            </summary>
+            <param name="stationNumber">测站编号</param>
+            <param name="centralAddress">中心站地址(号码)</param>
+            <param name="passWord">密码</param>
+            <param name="funCode">功能码</param>
+            <param name="bodyBuffer">帧内容(帧正文内容),主要不包含任何起始符和结束符部分</param>
+            <param name="terminator">帧结束符</param>
+            <param name="direction">传输方向,标识该帧是上行还是下行</param>
+            <param name="maxBodyLength">帧正文最大长度</param>
+            <param name="enCoding">帧编码格式</param>
+            <returns>
+                根据提供的参数生成的帧,可以是一个还是多个,自动检测是否分帧
+            </returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.ValidataFrame(System.String@)">
+            <summary>
+                验证帧是否合理
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.VerifyCRC">
+            <summary>
+                验证帧的CRC是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.ToBytes">
+            <summary>
+                将帧转换成Byte[],可以通过网络发送或者提供显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.LinkLayer.Frame.Encoder">
+            <summary>
+                获取该帧的Byte[]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.LinkLayer.Frame.EnCoding">
+            <summary>
+                帧编码格式
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.LinkLayer.Frame.IsMoreFrame">
+            <summary>
+                是否为分帧传输
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.LinkLayer.FrameHead">
+            <summary>
+                帧头信息
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.StationAddress">
+            <summary>
+                遥测站地址
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.CentralAddress">
+            <summary>
+                中心站地址
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.PassWord">
+            <summary>
+                密码
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.FunCode">
+            <summary>
+                功能码
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.Direction">
+            <summary>
+                传输方向
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.Lenth">
+            <summary>
+                包长度
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.BenginContextCode">
+            <summary>
+                正文开始符
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.SumPackageCount">
+            <summary>
+                分帧的时候总帧数
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.LinkLayer.FrameHead.CurrentPackageNo">
+            <summary>
+                当前帧序号
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.PacketHelper.ParseSerialNumber(System.Byte[])">
+            <summary>
+                解析包体流水号
+            </summary>
+            <param name="packageBody"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.PacketHelper.ParseSerialNumber(System.Byte[],System.Int32)">
+            <summary>
+                解析流水号
+            </summary>
+            <param name="packageBody">包体内容</param>
+            <param name="start">开始位置</param>
+            <returns>流水号</returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.PacketHelper.ParseDeliveryTime(System.Byte[],System.Int32)">
+            <summary>
+                获取包体数据中的发报时间
+            </summary>
+            <param name="packageBody">包体内容</param>
+            <param name="startIndex">开始位置</param>
+            <returns>
+                发报时间
+            </returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.PacketHelper.ParseElem(System.Byte[],System.Int32@,YanYu.Protocol.HIMR.PackData@,System.Boolean)">
+            <summary>
+                解析要素数据
+            </summary>
+            <param name="packageBody">包体内容</param>
+            <param name="startIndex">起始字节序号</param>
+            <param name="packData">解析完成存储位置</param>
+            <param name="fixStationNumberBug">针对王立在发送站号序列的时候不按照规约来的特殊处理标识</param>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Properties.Resources.DefineFlagsRun">
+            <summary>
+                运行参数要素定义文件
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Properties.Resources.DefineTagBasic">
+            <summary>
+                基本配置参数要素定义文件
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Properties.Resources.DefineTagElem">
+            <summary>
+                自报信息要素定义文件
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.Direction">
+            <summary>
+                帧传输方向
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Direction.UP">
+            <summary>
+                下行(由中心站发送给要测站的帧)
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Direction.Down">
+            <summary>
+                上行(由要测站发送给中心站的帧)
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.Encoding">
+            <summary>
+                数据报文编码格式
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Encoding.HEX">
+            <summary>
+                Hex/BCD编码
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Encoding.ASCII">
+            <summary>
+                ASSIC编码
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.ControlCharacters">
+            <summary>
+                报文帧控制字符定义,参见水文规约P.7,表10
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.ControlCharacters.Start_Character">
+            <summary>
+                帧始符定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Start_Character.SOH_HEX">
+            <summary>
+                HEX/BCD 编码报文帧起始,注意该编码为0x7E7E,长度为Byte[2],以为两个字节内容相同所以这里只定义了一个
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Start_Character.SOH_ASCII">
+            <summary>
+                ASCⅡ字符编码报文帧起始,
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.ControlCharacters.StartOfTextCharacter">
+            <summary>
+                帧正文起始符定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.StartOfTextCharacter.STX">
+            <summary>
+                传输正文起始
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.StartOfTextCharacter.SYN">
+            <summary>
+                多包传输正文起始
+                多包发送，一次确认的传输模式中使用
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.ControlCharacters.Terminator">
+            <summary>
+                帧结束符定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.ETX">
+            <summary>
+                报文结束，后续无报文
+                作为报文结束符，表示传输完成，等待退出通信
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.ETB">
+            <summary>
+                报文结束，后续有报文
+                在报文分包传输时作为报文结束符，表示传输未完成，不可退出通信
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.ENQ">
+            <summary>
+                询问
+                作为下行查询及控制命令帧的报文结束符。
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.EOT">
+            <summary>
+                传输结束，退出
+                作为传输结束确认帧报文结束符，表示可以退出通信。
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.ACK">
+            <summary>
+                肯定确认，继续发送
+                作为有后续报文帧的“确认帧”报文结束符。
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.NAK">
+            <summary>
+                否定应答，反馈重发
+                用于要求对方重发某数据包的报文结束符。
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.ControlCharacters.Terminator.ESC">
+            <summary>
+                传输结束，终端保持在线
+                在下行确认帧代替EOT 作为报文结束符，要求终端在线。
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.DefineFlags">
+            <summary>
+                要素定义
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.DefineFlags.#cctor">
+            <summary>
+                构造函数,初始化要素定义
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.DefineFlags.GetElemFlag(System.UInt16)">
+            <summary>
+                根据十六进制要素前导符获取要素标识信息
+            </summary>
+            <param name="hexFlag">十六进制要素前导符</param>
+            <returns>
+                要素标识信息
+            </returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.DefineFlags.GetRunFlag(System.UInt16)">
+            <summary>
+                根据十六进制要素前导符获取要素标识信息
+            </summary>
+            <param name="hexFlag">
+                运行参数配置信息要素标识前导符
+            </param>
+            <returns>
+                运行参数要素标识信息
+            </returns>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.DefineFlags.GetBasicFlag(System.UInt16)">
+            <summary>
+                根据十六进制基本配置参数要素前导符获取进本配置要素标识信息
+            </summary>
+            <param name="hexFlag">
+                基本配置参数要素标识前导符
+            </param>
+            <returns>
+                基本配置参数要素标识信息
+            </returns>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.DefineFlags.ElemFlags">
+            <summary>
+                自报信息要素定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.DefineFlags.RunFlags">
+            <summary>
+                运行参数要素定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.DefineFlags.BasicTag">
+            <summary>
+                基本配置参数要素定义
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.Flag">
+            <summary>
+                要素定义
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Flag.#ctor(System.Xml.XmlNode)">
+            <summary>
+                根据XML节点初始化一个要素定义
+            </summary>
+            <param name="node">
+                一个xml节点
+            </param>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.SeqNo">
+            <summary>
+                排序序号
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.Name">
+            <summary>
+                名称
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.UnitSymbol">
+            <summary>
+                单位符号
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.UnitName">
+            <summary>
+                单位名称
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.Summary">
+            <summary>
+                备注说明
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.SymbolHex">
+            <summary>
+                Hex引导符
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.SymbolASCII">
+            <summary>
+                ASCII引导符
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.ByteLength">
+            <summary>
+                数据区字节长度
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.PointAfterLength">
+            <summary>
+                小数点后位数
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.FixedLength">
+            <summary>
+                字节数是否定长
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.Expand">
+            <summary>
+                是否是扩展要素定义
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.Numeric">
+            <summary>
+                是否是数字
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Flag.CustomNum">
+            <summary>
+                自定义编号,可以用来对应数据库中的数据类型
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.deliveryTime">
+            <summary>
+                发报时间
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.StationNumber">
+            <summary>
+                测站编号
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.StationClassificationCodes">
+            <summary>
+                测站类型
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.Values">
+            <summary>
+                数据值集合
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.SwitchStatus">
+            <summary>
+                开关状态信息(例如水泵/阀门/闸门)
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.PackData.FixValue">
+            <summary>
+                定值控制状态
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.PackData.SerialNumber">
+            <summary>
+                包序号
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.PackData.DeliveryTime">
+            <summary>
+                发报时间
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.PackData.ObservationTime">
+            <summary>
+                数据观测或采集时间
+            </summary>
+        </member>
+        <member name="T:YanYu.Protocol.HIMR.Data">
+            <summary>
+                包体数据
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Data.#ctor(YanYu.Protocol.HIMR.Flag,System.Byte[],System.Byte[])">
+            <summary>
+                根据参数创建一条包体数据
+            </summary>
+            <param name="flag">要素定义</param>
+            <param name="prefix">数据前导部分,包含要素标识符和要素数据长度以及小数点位数部分</param>
+            <param name="value">数据值部分</param>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Data.#ctor(YanYu.Protocol.HIMR.Flag,System.Byte[],System.Byte[],System.DateTime)">
+            <summary>
+                根据参数创佳一条包体数据
+            </summary>
+            <param name="flag">要素定义</param>
+            <param name="prefix">要素前导部分,包含要素标识符和要素数据长度以及小数点位数部分</param>
+            <param name="value">数据值部分</param>
+            <param name="dateTime">数据时间</param>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Data.prefix">
+            <summary>
+                数据前导符,包含数据长度和小数位数定义
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Data.Value">
+            <summary>
+                数据内容
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Data.dateTime">
+            <summary>
+                数据时间,可选
+            </summary>
+        </member>
+        <member name="F:YanYu.Protocol.HIMR.Data.style">
+            <summary>
+                数据要素定义
+            </summary>
+        </member>
+        <member name="M:YanYu.Protocol.HIMR.Data.ToString">
+            <summary>
+                数据值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Data.DateTime">
+            <summary>
+                数据时间
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Data.Style">
+            <summary>
+                数据样式定义
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Data.ByteLength">
+            <summary>
+                数据区字节长度
+            </summary>
+        </member>
+        <member name="P:YanYu.Protocol.HIMR.Data.PointAfterLength">
+            <summary>
+                小数点后位数
+            </summary>
+        </member>
+    </members>
+</doc>

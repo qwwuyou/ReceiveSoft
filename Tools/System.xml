@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="gb2312"?>
+<system>
+  <Project>
+    <Pro name="未知" path="C:\Users\qw\Desktop\DevControlsDemo_5.2\Service\YYApp\bin\Debug/System.xml" />
+  </Project>
+  <!--数据库配置节点-->
+  <DataBaseConnect>
+    <!--服务器名称-->
+    <Source>.</Source>
+    <!--数据库名称-->
+    <DataBase>YY_DB</DataBase>
+    <!--数据库用户名-->
+    <UserName>sa</UserName>
+    <!--数据库密码-->
+    <PassWord>123</PassWord>
+  </DataBaseConnect>
+  <Dll>
+    <DataProtocol file="Protocol.dll" class="Service.WaterResource">
+    </DataProtocol>
+  </Dll>
+  <Service>
+    <tcp serviceid="1" ip_portname="192.168.40.54" port_baudrate="16036" />
+    <!--<tcp serviceid="2" ip_portname="192.168.40.54" port_baudrate="16018" />
+    <udp serviceid="1" ip_portname="192.168.40.54" port_baudrate="16019" />
+    <udp serviceid="2" ip_portname="192.168.41.202" port_baudrate="16037" />
+    <gsm serviceid="1" ip_portname="com4" port_baudrate="9600" num="18210248347" />
+    -->
+  </Service>
+  <UI>
+    <tcp ip="127.0.0.1" port="8888" />
+  </UI>
+  <TC>
+    <tcp ip="" port="" />
+  </TC>
+  <Mail IsToMail="0" />
+</system>

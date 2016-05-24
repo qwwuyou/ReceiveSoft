@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312"?>
+<TimeSeries>
+
+  <TS>
+    <ID>1</ID>
+    <QWService DataType="203103">温度(外)@88888880000001</QWService>
+    <AQ>405b626e-5a78-49b1-be80-0acb3d1a62ed</AQ>
+  </TS>
+  
+
+</TimeSeries>
+
+<!--DataType说明 2051分钟数据  2061小时数据 2031日数据-->
+<!--DataType说明 205101分钟累计值   205102分钟最大值 205103分钟最小值 205104分钟平均值-->

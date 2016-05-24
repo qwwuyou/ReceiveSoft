@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AQAcquisitionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IAQAcquisitionService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AquariusAcquisitionService.Dto" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AquariusAcquisitionService" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AquariusDataService" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAQAcquisitionService_GetAuthToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_GetAuthToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_IsConnectionValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnectionValid" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_IsConnectionValid_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_IsConnectionValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnectionValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_KeepConnectionAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeepConnectionAlive" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_KeepConnectionAlive_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_KeepConnectionAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeepConnectionAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_AppendTimeSeriesAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppendTimeSeriesAsync" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_AppendTimeSeriesAsync_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_AppendTimeSeriesAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppendTimeSeriesAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:OverwriteAppendTimeSeriesAsync" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OverwriteAppendTimeSeriesAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppendTimeSeriesAsyncStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppendTimeSeriesAsyncStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateTimeSeries3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTimeSeries3" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateTimeSeries3_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateTimeSeries3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTimeSeries3Response" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLocation" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateLocation_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAQAcquisitionService_CreateLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLocationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAQAcquisitionService">
+    <wsdl:operation name="GetAuthToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/GetAuthToken" message="tns:IAQAcquisitionService_GetAuthToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/GetAuthTokenResponse" message="tns:IAQAcquisitionService_GetAuthToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsConnectionValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/IsConnectionValid" message="tns:IAQAcquisitionService_IsConnectionValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/IsConnectionValidResponse" message="tns:IAQAcquisitionService_IsConnectionValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeepConnectionAlive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/KeepConnectionAlive" message="tns:IAQAcquisitionService_KeepConnectionAlive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/KeepConnectionAliveResponse" message="tns:IAQAcquisitionService_KeepConnectionAlive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendTimeSeriesAsync">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAcquisitionService/AppendTimeSeriesAsync" message="tns:IAQAcquisitionService_AppendTimeSeriesAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAcquisitionService/AppendTimeSeriesAsyncResponse" message="tns:IAQAcquisitionService_AppendTimeSeriesAsync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OverwriteAppendTimeSeriesAsync">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAcquisitionService/OverwriteAppendTimeSeriesAsync" message="tns:IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAcquisitionService/OverwriteAppendTimeSeriesAsyncResponse" message="tns:IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppendTimeSeriesAsyncStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAcquisitionService/GetAppendTimeSeriesAsyncStatus" message="tns:IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAcquisitionService/GetAppendTimeSeriesAsyncStatusResponse" message="tns:IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeSeries3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAcquisitionService/CreateTimeSeries3" message="tns:IAQAcquisitionService_CreateTimeSeries3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAcquisitionService/CreateTimeSeries3Response" message="tns:IAQAcquisitionService_CreateTimeSeries3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAcquisitionService/CreateLocation" message="tns:IAQAcquisitionService_CreateLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAcquisitionService/CreateLocationResponse" message="tns:IAQAcquisitionService_CreateLocation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAQAcquisitionService" type="tns:IAQAcquisitionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthToken">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/GetAuthToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsConnectionValid">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/IsConnectionValid" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_IsConnectionValid_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeepConnectionAlive">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/KeepConnectionAlive" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_KeepConnectionAlive_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendTimeSeriesAsync">
+      <soap:operation soapAction="http://tempuri.org/IAQAcquisitionService/AppendTimeSeriesAsync" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_AppendTimeSeriesAsync_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverwriteAppendTimeSeriesAsync">
+      <soap:operation soapAction="http://tempuri.org/IAQAcquisitionService/OverwriteAppendTimeSeriesAsync" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppendTimeSeriesAsyncStatus">
+      <soap:operation soapAction="http://tempuri.org/IAQAcquisitionService/GetAppendTimeSeriesAsyncStatus" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeSeries3">
+      <soap:operation soapAction="http://tempuri.org/IAQAcquisitionService/CreateTimeSeries3" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_CreateTimeSeries3_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLocation">
+      <soap:operation soapAction="http://tempuri.org/IAQAcquisitionService/CreateLocation" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAQAcquisitionService_CreateLocation_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IAQAcquisitionService" type="tns:IAQAcquisitionService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IAQAcquisitionService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthToken">
+      <soap12:operation soapAction="http://tempuri.org/IAQAuthSession/GetAuthToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsConnectionValid">
+      <soap12:operation soapAction="http://tempuri.org/IAQAuthSession/IsConnectionValid" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_IsConnectionValid_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeepConnectionAlive">
+      <soap12:operation soapAction="http://tempuri.org/IAQAuthSession/KeepConnectionAlive" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_KeepConnectionAlive_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendTimeSeriesAsync">
+      <soap12:operation soapAction="http://tempuri.org/IAQAcquisitionService/AppendTimeSeriesAsync" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_AppendTimeSeriesAsync_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverwriteAppendTimeSeriesAsync">
+      <soap12:operation soapAction="http://tempuri.org/IAQAcquisitionService/OverwriteAppendTimeSeriesAsync" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_OverwriteAppendTimeSeriesAsync_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppendTimeSeriesAsyncStatus">
+      <soap12:operation soapAction="http://tempuri.org/IAQAcquisitionService/GetAppendTimeSeriesAsyncStatus" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_GetAppendTimeSeriesAsyncStatus_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTimeSeries3">
+      <soap12:operation soapAction="http://tempuri.org/IAQAcquisitionService/CreateTimeSeries3" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_CreateTimeSeries3_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLocation">
+      <soap12:operation soapAction="http://tempuri.org/IAQAcquisitionService/CreateLocation" style="document" />
+      <wsdl:input>
+        <soap12:header message="tns:IAQAcquisitionService_CreateLocation_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AQAcquisitionService">
+    <wsdl:port name="BasicHttpBinding_IAQAcquisitionService" binding="tns:BasicHttpBinding_IAQAcquisitionService">
+      <soap:address location="http://iz25x3w7nubz/AQUARIUS/AQAcquisitionService.svc/basic" />
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IAQAcquisitionService" binding="tns:WSHttpBinding_IAQAcquisitionService">
+      <soap12:address location="http://iz25x3w7nubz/AQUARIUS/AQAcquisitionService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://iz25x3w7nubz/AQUARIUS/AQAcquisitionService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

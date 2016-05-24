@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AquariusAcquisitionService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AquariusAcquisitionService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="InterpolationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="InstantaneousValues" />
+      <xs:enumeration value="PrecedingConstant" />
+      <xs:enumeration value="PrecedingTotals" />
+      <xs:enumeration value="InstantaneousTotals" />
+      <xs:enumeration value="DiscreteValues" />
+      <xs:enumeration value="SucceedingConstant" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="InterpolationType" nillable="true" type="tns:InterpolationType" />
+</xs:schema>
