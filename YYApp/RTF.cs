@@ -29,13 +29,13 @@ namespace Service
 //\cellx10500
 //\cellx11500
 
-@"\cellx1500
-\cellx3600
+@"\cellx2200
+\cellx4500
 \cellx6300
-\cellx7500
-\cellx9500
-\cellx11500
-\cellx12500
+\cellx7700
+\cellx9700
+\cellx11700
+\cellx12700
 \pard\intbl\ltrpar\kerning2\f0\fs20
 
 站号\cell 站名\cell 监测项\cell 值\cell 采集时间\cell 接收时间\cell 信道\cell\row\intbl ");
@@ -148,12 +148,12 @@ namespace Service
 {\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green191\blue255;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue255;}
 \viewkind4\uc1\trowd\trgaph108\trleft-108\trbrdrt\brdrs\brdrw10\brdrcf16 \trbrdrl\brdrs\brdrw10\brdrcf16 \trbrdrb\brdrs\brdrw10\brdrcf16 \trbrdrr\brdrs\brdrw10\brdrcf16 \clbrdrt\brdrw15\brdrs\clbrdrl\brdrw15\brdrs\clbrdrb\brdrw15\brdrs\clbrdrr\brdrw15\brdrs 
 
-\cellx1500
-\cellx3600 
-\cellx5600 
-\cellx7600 
-\cellx8600 ");
-            int width = 8600;
+\cellx2200
+\cellx4500 
+\cellx6500 
+\cellx8500 
+\cellx9600 ");
+            int width = 9600;
             for (int i = 0; i < dt.Columns.Count -5; i++)
             {
                 width = width + 1300;

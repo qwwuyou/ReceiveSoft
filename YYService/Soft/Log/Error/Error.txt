@@ -1,0 +1,3 @@
+2016/8/29 10:56:07System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73

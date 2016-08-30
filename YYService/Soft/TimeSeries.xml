@@ -3,11 +3,99 @@
 
   <TS>
     <ID>1</ID>
-    <QWService DataType="203103">温度(外)@88888880000001</QWService>
-    <AQ>405b626e-5a78-49b1-be80-0acb3d1a62ed</AQ>
+    <QWService DataType="2011">经度@88888880000001</QWService>
+    <AQ>68bb9d6b-e94f-4425-ae54-412654767f38</AQ>
   </TS>
-  
-
+  <TS>
+    <ID>2</ID>
+    <QWService DataType="2011">纬度@88888880000001</QWService>
+    <AQ>4edec8a2-42c7-412d-863e-ffc534dc8166</AQ>
+  </TS>
+  <TS>
+    <ID>3</ID>
+    <QWService DataType="2011">温度(内)@88888880000001</QWService>
+    <AQ>cc37c4a3-d181-4f7f-86b0-12e0fabea065</AQ>
+  </TS>
+  <TS>
+    <ID>4</ID>
+    <QWService DataType="2011">温度(外)@88888880000001</QWService>
+    <AQ>ca6d3286-2318-4739-ade7-e43adf72aeaa</AQ>
+  </TS>
+  <TS>
+    <ID>5</ID>
+    <QWService DataType="2011">湿度(外)@88888880000001</QWService>
+    <AQ>bae8713e-dbe1-4797-bf6e-f4e6fc85f405</AQ>
+  </TS>
+  <TS>
+    <ID>6</ID>
+    <QWService DataType="2011">湿度(内)@88888880000001</QWService>
+    <AQ>6ba47fc1-db77-455c-a244-42a2ae9411f4</AQ>
+  </TS>
+  <TS>
+    <ID>7</ID>
+    <QWService DataType="2011">气压@88888880000001</QWService>
+    <AQ>63615cef-b0f3-4e9e-90b5-b1af58469d82</AQ>
+  </TS>
+  <TS>
+    <ID>8</ID>
+    <QWService DataType="2011">风向@88888880000001</QWService>
+    <AQ>6ab7ee91-3267-49e9-aa2b-543fab16a3d0</AQ>
+  </TS>
+  <TS>
+    <ID>9</ID>
+    <QWService DataType="2011">风速@88888880000001</QWService>
+    <AQ>2b02568a-8139-4658-96ba-a4c8ec293454</AQ>
+  </TS>
+  <TS>
+    <ID>10</ID>
+    <QWService DataType="2011">化学需氧量@88888880000001</QWService>
+    <AQ>46997909-92a9-46af-adf3-530daf582e35</AQ>
+  </TS>
+  <TS>
+    <ID>11</ID>
+    <QWService DataType="2011">石油类@88888880000001</QWService>
+    <AQ>361bf054-068b-4366-bfc8-569555b620cf</AQ>
+  </TS>
+  <TS>
+    <ID>12</ID>
+    <QWService DataType="2011">NO3-N@88888880000001</QWService>
+    <AQ>a2f3cff9-bae2-40c1-88cd-7f9b238bb664</AQ>
+  </TS>
+  <TS>
+    <ID>13</ID>
+    <QWService DataType="2011">Turb@88888880000001</QWService>
+    <AQ>be2fa462-9f27-479d-a898-90f62b869524</AQ>
+  </TS>
+  <TS>
+    <ID>14</ID>
+    <QWService DataType="2011">TOC@88888880000001</QWService>
+    <AQ>59f89dfe-011e-4d1e-9a86-6999966bd8de</AQ>
+  </TS>
+  <TS>
+    <ID>15</ID>
+    <QWService DataType="2011">离子探头T@88888880000001</QWService>
+    <AQ>ee903c2b-af08-4fde-b4de-9fb417d2f3cc</AQ>
+  </TS>
+  <TS>
+    <ID>16</ID>
+    <QWService DataType="2011">离子探头NH4-N@88888880000001</QWService>
+    <AQ>db5d229c-0b07-40f1-a935-dbd75d14dcc6</AQ>
+  </TS>
+  <TS>
+    <ID>17</ID>
+    <QWService DataType="2011">离子探头PH@88888880000001</QWService>
+    <AQ>c3a4dda6-7a23-4b58-8c81-cae010530f85</AQ>
+  </TS>
+  <TS>
+    <ID>18</ID>
+    <QWService DataType="2011">电量@88888880000001</QWService>
+    <AQ>0bb5272d-2978-46f0-bbc5-460ead2caa7e</AQ>
+  </TS>
+  <TS>
+    <ID>19</ID>
+    <QWService DataType="2011">浸水@88888880000001</QWService>
+    <AQ>12a3df01-e6d1-4c17-ae9a-01a3e8a17d88</AQ>
+  </TS>
 </TimeSeries>
 
 <!--DataType说明 2051分钟数据  2061小时数据 2031日数据-->

@@ -13,26 +13,19 @@ using System.IO;
 
 
 
-
 namespace Service
 {
 
 
     public class ServiceControl
-    { 
-
+    {
         #region 与界面交互的对象
         ToUI.TcpServer TcpServer_UI;
         static Timer timer_SD;
         static TcpClient tcpclient_SD;
-        UITcpModel UiTcpModel;
         #endregion
 
         #region 与前端设备交互的对象
-        /// <summary>
-        /// 服务列表
-        /// </summary>
-        public static List<serviceModel> LsM;
         public static TcpService.TcpServer[] tcp;
         public static UdpServer[] udp;
         public static GsmServer[] gsm;
@@ -47,36 +40,19 @@ namespace Service
 
         //日志记录对象
         public static log4net.ILog log = log4net.LogManager.GetLogger("Logger");
+
+        //操作xml的对象
+        public static OperateXML.WriteReadXML wrx = new OperateXML.WriteReadXML();
         
         /// <summary>
         /// 命令列表--保存命令执行状态
         /// </summary>
-        public static  List<Command> LC;
-
-        /// <summary>
-        /// 透传用实体
-        /// </summary>
-        static UITcpModel TCTcpModel = null;
+        public static  List<Command> LC= new List<Command>();
 
         /// <summary>
         /// 系统启动时间
         /// </summary>
         public static DateTime StartTime = DateTime.Now;
-
-        /// <summary>
-        /// 是否发送邮件
-        /// </summary>
-        public static bool IsToMail = false;
-
-        /// <summary>
-        /// 写入日志信息的编码格式
-        /// </summary>
-        private static string HexOrAsc = "";
-        public static string  HEXOrASC
-        {
-            get { return HexOrAsc; }
-            set { HexOrAsc = value; }
-        }
 
         /// <summary>
         /// 2016/3/27增加 访问中心（邮箱控制）的方法
@@ -85,96 +61,70 @@ namespace Service
         static string CenterIP;
         static string CenterPort;
         static string project;
-        static string RegistrationInfo;
-        #endregion
+        public static string RegistrationInfo;
+        public static string PublicIP;
 
         /// <summary>
-        /// 信道重启，重新读取xml
+        /// 是中心端就不必启动访问中心线程，否则启动
         /// </summary>
-        public static void ReReadXML()
+        public static bool IsCenter = false;
+        #endregion
+
+
+
+        //构造
+        public ServiceControl()
         {
-            //重新初始化读取数据库配置
-            PublicBD.RePublicBD();
-
-             #region 读取xml配置文件
-            WriteReadXML wrx = new WriteReadXML();
-
-            try
-            {
-                LsM = wrx.ReadServiceXML();
-                log.Warn(DateTime.Now +"信道重启，读取服务配置文件成功！");
-            }
-            catch(Exception e)
-            {
-                log.Warn(DateTime.Now + "信道重启，读取服务配置文件失败！", e);
-            }
-
-            try 
-            {
-                IsToMail = wrx.ReadIsToMail();
-            }
-            catch (Exception e)
-            { log.Warn(DateTime.Now + "信道重启，读取是服务停止后是否发送异常信息到管理员Mail失败！", e); }
-
-            try 
-            {
-                HEXOrASC = wrx.ReadHexOrAsc();
-            }
-            catch (Exception e)
-            { log.Warn(DateTime.Now + "信道重启，读取写入日志信息的编码格式的配置文件失败！", e); }
+            #region 公网IP
+            PublicIP = ServiceBussiness.GetPublicIP();
             #endregion
 
+            //创建注册文件
+            ServiceBussiness.VerificationRegistration();
+
+            //读取xml配置文件
+            wrx.ReadXML();
+            if (wrx.XMLObj.dllfile == "Center.dll" && wrx.XMLObj.dllclass == "Service.Center")
+            {
+                IsCenter = true;
+            }
+
+
+            //用反射实现协议
             Reflection_Protoco R_Protoco = new Reflection_Protoco();
         }
 
-        /// <summary>
-        /// 重新读取透传xml
-        /// </summary>
-        public static void ReReadTCXML() 
-        {
-            WriteReadXML wrx = new WriteReadXML();
-            try
-            {
-                TCTcpModel = wrx.ReadTCTcpXML();
-                log.Warn(DateTime.Now + "读取透传配置文件成功！");
-            }
-            catch (Exception e)
-            {
-                log.Warn(DateTime.Now + "读取透传配置文件失败！", e);
-            }
-        }
 
-        public static void ReTCstart() 
+        //透传的客户端启动
+        public static void TCstart() 
         {
             #region 透传的客户端启动
             try
             {
-                tcpclient_SD = new TcpClient(TCTcpModel.IP, TCTcpModel.PORT, "");
+                tcpclient_SD = new TcpClient(wrx.XMLObj.TCTcpModel.IP, wrx.XMLObj.TCTcpModel.PORT, "");
                 tcpclient_SD.Start();
                 tcpclient_SD.OnReceivedData += new EventHandler<TcpClient.ReceivedDataEventArgs>(tcpclient_SD_OnReceivedData);
                 timer_SD = new Timer(new TimerCallback(SendData), null, 100, 100);
-                log.Warn("透传服务(" + TCTcpModel.IP + ":" + TCTcpModel.PORT + ")启动成功！");
+                log.Warn("透传服务(" + wrx.XMLObj.TCTcpModel.IP + ":" + wrx.XMLObj.TCTcpModel.PORT + ")启动成功！");
             }
             catch (Exception e)
             {
-                if (TCTcpModel == null)
+                if (wrx.XMLObj.TCTcpModel == null)
                 { log.Warn("透传服务未设置,启动失败！", e); }
                 else
                 {
-                    log.Warn("透传服务(" + TCTcpModel.IP + ":" + TCTcpModel.PORT + ")启动失败！", e);
+                    log.Warn("透传服务(" + wrx.XMLObj.TCTcpModel.IP + ":" + wrx.XMLObj.TCTcpModel.PORT + ")启动失败！", e);
                 }
             }
             #endregion
         }
-
+        //访问中心
         public static void AccessCenter()
         {
-            
             #region 项目列表
-            List<string> projects = (new WriteReadXML()).GetProjects();
-            foreach (var item in projects)
+            foreach (var item in wrx.XMLObj.projects)
             {
-                project += item + ",";
+                project += item.Project + ",";
             }
             project = project.TrimEnd(new char[] { ',' });
             #endregion
@@ -185,33 +135,34 @@ namespace Service
         }
         private static void ThreadConCenter()
         {
-            while (true)
+            while (!IsCenter)
             {
+                #region 运行时长计算
+                TimeSpan ts1 = new TimeSpan(ServiceControl.StartTime.Ticks);
+                TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
+                TimeSpan ts = ts1.Subtract(ts2).Duration();
+                string dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒";
+                dateDiff = ts.Days.ToString() + "d" + ts.Hours.ToString() + "h" + ts.Minutes.ToString() + "m" + ts.Seconds.ToString() + "s";
+                #endregion
+                #region Rtu数量(连接数据库时就被初始化了)
+                int RtuCount = ServiceBussiness.RtuList.Count();
+                #endregion
+                #region 注册信息
+                int day = 0;
+                RegistrationInfo = ServiceBussiness.Registration(out day);
+                #endregion
+                string StateData;
                 if (tcpclient_Center==null||!tcpclient_Center.Connected)
                 {
                     TcpClient_Init();
+                    StateData = dateDiff + "|" + RtuCount + "|" + project + "|" + day + "|" + PublicIP + "|start";
                 }
                 else
                 {
-                    #region 运行时长计算
-                    TimeSpan ts1 = new TimeSpan(ServiceControl.StartTime.Ticks);
-                    TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
-                    TimeSpan ts = ts1.Subtract(ts2).Duration();
-                    string dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒";
-                    #endregion
-                    #region Rtu数量(连接数据库时就被初始化了)
-                    int RtuCount = ServiceBussiness.RtuList.Count();
-                    #endregion
-                    #region 注册信息
-                    RegistrationInfo = ServiceBussiness.Registration();
-                    #endregion
-                    
-                    dateDiff = "服务运行数据:" + "运行时长[" + dateDiff + "],RTU数量[" + RtuCount.ToString() + "],项目[" + project + "],注册信息[" + RegistrationInfo + "]";
-                    //dateDiff = "Operation data:" + "RunTimeLength[" + dateDiff + "],RTUCount[" + RtuCount.ToString() + "]";
-                   
-                    tcpclient_Center.SendCenterData(Encoding.GetEncoding("gb2312").GetBytes(dateDiff));
-                     
-                 }
+                    StateData = dateDiff + "|" + RtuCount + "|" + project + "|" + day + "|" + PublicIP + "|runing";
+                }
+                
+                tcpclient_Center.SendCenterData(Encoding.GetEncoding("gb2312").GetBytes(StateData));
                 Thread.Sleep(5*60*1000);
             }
         }
@@ -225,93 +176,57 @@ namespace Service
                 tcpclient_Center = new TcpClient(CenterIP, int.Parse(CenterPort), "Center");
                 tcpclient_Center.Start();
                 tcpclient_Center.OnReceivedData += new EventHandler<TcpClient.ReceivedDataEventArgs>(tcpclient_Center_OnReceivedData);
+                System.Threading.Thread.Sleep(500);//必须等待否则下面发送失败
             }
         }
-
+        //从中心端接收命令在此处理
         static void tcpclient_Center_OnReceivedData(object sender, TcpClient.ReceivedDataEventArgs e)
         {
             //throw new NotImplementedException();
         }
-
-
-
-        public ServiceControl()
-        {
-            //创建注册文件
-            ServiceBussiness.VerificationRegistration();
-
-            #region 读取xml配置文件
-            WriteReadXML wrx = new WriteReadXML();
-
-            try
-            {
-                LsM = wrx.ReadServiceXML();
-                log.Warn(DateTime.Now +"读取服务配置文件成功！");
-            }
-            catch(Exception e)
-            {
-                log.Warn(DateTime.Now + "读取服务配置文件失败！", e);
-            }
-
-
-            try
-            {
-                UiTcpModel = wrx.ReadUITcpXML();
-                log.Warn(DateTime.Now + "读取服务与界面交互配置文件成功！");
-            }
-            catch (Exception e)
-            {
-                log.Warn(DateTime.Now + "读取服务与界面交互配置服务配置文件失败！", e);
-            }
-
-            try
-            {
-                TCTcpModel = wrx.ReadTCTcpXML();
-                log.Warn(DateTime.Now + "读取透传配置文件成功！");
-            }
-            catch (Exception e)
-            {
-                log.Warn(DateTime.Now + "读取透传配置文件失败！", e);
-            }
-
-            try 
-            {
-                IsToMail = wrx.ReadIsToMail();
-            }
-            catch (Exception e)
-            { log.Warn(DateTime.Now + "读取是服务停止后是否发送异常信息到管理员Mail失败！", e); }
-
-            try 
-            {
-                HEXOrASC = wrx.ReadHexOrAsc();
-            }
-            catch (Exception e)
-            { log.Warn(DateTime.Now + "读取写入日志信息的编码格式的配置文件失败！", e); }
-            #endregion
-            
-            #region 用反射实现
-            Reflection_Protoco R_Protoco = new Reflection_Protoco();
-            #endregion
-
-            //初始化命令列表
-            LC = new List<Command>();
-        }
-
 
         /// <summary>
         /// 启动各组服务---已经日志
         /// </summary>
         public void start()
         {
-           // System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-           // sw.Start();
-           // //耗时巨大的代码
-            
-         
-           //sw.Stop();
-           //TimeSpan ts2 = sw.Elapsed;
-           //Console.WriteLine("Stopwatch总共花费{0}ms.", ts2.TotalMilliseconds);
-            #region 尝试连接3次数据库
+            //尝试连接3次数据库
+            ConnectDB();
+
+            #region 与前端设备交互的服务启动
+            ChannelStart();
+            #endregion
+
+            #region 与界面交互的socket服务端启动
+            try
+            {
+                TcpServer_UI = new ToUI.TcpServer(wrx.XMLObj.UiTcpModel.IP, wrx.XMLObj.UiTcpModel.PORT, "UI");
+                TcpServer_UI.Start();
+                TcpServer_UI.OnConnected += new EventHandler<ToUI.ConnectedEventArgs>(TcpServer_UI_OnConnected);
+                TcpServer_UI.OnReceivedData += new EventHandler<ToUI.ReceivedDataEventArgs>(TcpServer_UI_OnReceivedData);
+                TcpServer_UI.OnDisconnected += new EventHandler<ToUI.DisconnectedEventArgs>(TcpServer_UI_OnDisconnected);
+                log.Warn(DateTime.Now + "界面交互服务(" + wrx.XMLObj.UiTcpModel.IP + ":" + wrx.XMLObj.UiTcpModel.PORT + ")启动成功！");
+            }
+            catch (Exception ex)
+            {
+                log.Warn("tcp服务(" + wrx.XMLObj.UiTcpModel.IP + ":" + wrx.XMLObj.UiTcpModel.PORT + ")启动失败！", ex);
+                throw ex; 
+            }
+            #endregion
+
+            //透传的客户端启动
+            TCstart();
+
+            //访问中心
+            AccessCenter();
+
+            log.Warn("启动工作完成！");
+            log.Warn("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        }
+
+        //连接数据库
+        private void ConnectDB() 
+        {
             int ConCount = 1;
             while (true)
             {
@@ -323,10 +238,10 @@ namespace Service
                 }
                 else
                 {
-                    log.Warn("数据库连接第"+ConCount+"次失败！");
-                    Thread.Sleep(2*60*1000);
+                    log.Warn("数据库连接第" + ConCount + "次失败！");
+                    Thread.Sleep(2 * 60 * 1000);
                 }
-                 
+
 
                 if (ConCount == 3)
                 {
@@ -335,63 +250,13 @@ namespace Service
 
                 ConCount++;
             }
-            #endregion
-          
-            #region 与前端设备交互的服务启动
-            ChannelStart();
-            #endregion
-
-            #region 与界面交互的socket服务端启动
-            try
-            {
-                TcpServer_UI = new ToUI.TcpServer(UiTcpModel.IP, UiTcpModel.PORT, "UI");
-                TcpServer_UI.Start();
-                TcpServer_UI.OnConnected += new EventHandler<ToUI.ConnectedEventArgs>(TcpServer_UI_OnConnected);
-                TcpServer_UI.OnReceivedData += new EventHandler<ToUI.ReceivedDataEventArgs>(TcpServer_UI_OnReceivedData);
-                TcpServer_UI.OnDisconnected += new EventHandler<ToUI.DisconnectedEventArgs>(TcpServer_UI_OnDisconnected);
-                log.Warn(DateTime.Now + "界面交互服务(" + UiTcpModel.IP + ":" + UiTcpModel.PORT + ")启动成功！");
-            }
-            catch (Exception ex)
-            {
-                log.Warn("tcp服务(" + UiTcpModel.IP + ":" + UiTcpModel.PORT + ")启动失败！", ex);
-                throw ex; 
-            }
-            #endregion
-
-            #region 透传的客户端启动
-            try
-            {
-                tcpclient_SD = new TcpClient(TCTcpModel.IP, TCTcpModel.PORT, "");
-                tcpclient_SD.Start();
-                tcpclient_SD.OnReceivedData += new EventHandler<TcpClient.ReceivedDataEventArgs>(tcpclient_SD_OnReceivedData);
-                timer_SD = new Timer(new TimerCallback(SendData), null,100, 100);
-                log.Warn("透传服务(" + TCTcpModel.IP + ":" + TCTcpModel.PORT + ")启动成功！");
-            }
-            catch (Exception e)
-            {
-                if (TCTcpModel == null)
-                { log.Warn( "透传服务未设置,启动失败！", e); }
-                else
-                {
-                    log.Warn( "透传服务(" + TCTcpModel.IP + ":" + TCTcpModel.PORT + ")启动失败！", e);
-                }
-            }
-            #endregion
-
-            #region 访问中心
-            AccessCenter();
-            #endregion
-
-    
-
-            log.Warn("启动工作完成！");
-            log.Warn("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         }
+
         //各信道启动
         public void ChannelStart()
         {
-            var temp = from t in LsM where t.SERVICETYPE == "TCP" select t;
-            List<serviceModel> TEMP = temp.ToList<serviceModel>();
+            var temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "TCP" select t;
+            List<OperateXML.serviceModel> TEMP = temp.ToList<OperateXML.serviceModel>();
             tcp = new TcpService.TcpServer[TEMP.Count()];
             int k = 0;
 
@@ -420,8 +285,8 @@ namespace Service
                 k++;
             }
 
-            temp = from t in LsM where t.SERVICETYPE == "UDP" select t;
-            TEMP = temp.ToList<serviceModel>();
+            temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "UDP" select t;
+            TEMP = temp.ToList<OperateXML.serviceModel>();
             udp = new UdpServer[TEMP.Count()];
             k = 0;
             foreach (var item in TEMP)
@@ -440,8 +305,8 @@ namespace Service
                 }
                 k++;
             }
-            temp = from t in LsM where t.SERVICETYPE == "GSM" select t;
-            TEMP = temp.ToList<serviceModel>();
+            temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "GSM" select t;
+            TEMP = temp.ToList<OperateXML.serviceModel>();
             gsm = new GsmServer[TEMP.Count()];
             k = 0;
             foreach (var item in TEMP)
@@ -462,8 +327,8 @@ namespace Service
                 k++;
             }
 
-            temp = from t in LsM where t.SERVICETYPE == "COM" select t;
-            TEMP = temp.ToList<serviceModel>();
+            temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "COM" select t;
+            TEMP = temp.ToList<OperateXML.serviceModel>();
             com = new ComServer[TEMP.Count()];
             k = 0;
             foreach (var item in TEMP)
@@ -474,6 +339,10 @@ namespace Service
                     com[k].Start();
                     com[k].OnReceivedData += new EventHandler<ComService.ReceivedDataEventArgs>(com_OnReceivedData);
                     log.Warn(DateTime.Now + "com服务(" + item.IP_PORTNAME + ":" + item.PORT_BAUDRATE + ")启动成功！");
+                    
+                    
+                    //byte[] bb = EnCoder.HexStrToByteArray("24 5A 4A 58 58 00 15 03 A0 46 01 00 00 02 04 00 04 00 00 00 C7 ".Replace(" ", ""));
+                    //com[k].sp.Write(bb, 0, bb.Length);
                 }
                 catch (Exception e)
                 {
@@ -497,11 +366,11 @@ namespace Service
                 {
                     #region 编码
                     byte[] EncoderData = null;
-                    if (ServiceControl.HEXOrASC == "HEX")
+                    if (wrx.XMLObj.HEXOrASC == "HEX")
                     {
                         EncoderData = EnCoder.HexStrToByteArray(item.Data);
                     }
-                    if (ServiceControl.HEXOrASC == "ASC")
+                    if (wrx.XMLObj.HEXOrASC == "ASC")
                     {
                         EncoderData = Encoding.ASCII.GetBytes(item.Data);
                     }
@@ -518,11 +387,11 @@ namespace Service
                 {
                     #region 编码
                     byte[] EncoderData = null;
-                    if (ServiceControl.HEXOrASC == "HEX")
+                    if (wrx.XMLObj.HEXOrASC == "HEX")
                     {
                         EncoderData = EnCoder.HexStrToByteArray(item.Data);
                     }
-                    if (ServiceControl.HEXOrASC == "ASC")
+                    if (wrx.XMLObj.HEXOrASC == "ASC")
                     {
                         EncoderData = Encoding.ASCII.GetBytes(item.Data);
                     }
@@ -539,11 +408,11 @@ namespace Service
                 { 
                     #region 编码
                     byte[] EncoderData = null;
-                    if (ServiceControl.HEXOrASC == "HEX")
+                    if (wrx.XMLObj.HEXOrASC == "HEX")
                     {
                         EncoderData = EnCoder.HexStrToByteArray(item.Data);
                     }
-                    if (ServiceControl.HEXOrASC == "ASC")
+                    if (wrx.XMLObj.HEXOrASC == "ASC")
                     {
                         EncoderData = Encoding.ASCII.GetBytes(item.Data);
                     }
@@ -560,11 +429,11 @@ namespace Service
                 {
                     #region 编码
                     byte[] EncoderData = null;
-                    if (ServiceControl.HEXOrASC == "HEX")
+                    if (wrx.XMLObj.HEXOrASC == "HEX")
                     {
                         EncoderData = EnCoder.HexStrToByteArray(item.Data);
                     }
-                    if (ServiceControl.HEXOrASC == "ASC")
+                    if (wrx.XMLObj.HEXOrASC == "ASC")
                     {
                         EncoderData = Encoding.ASCII.GetBytes(item.Data);
                     }
@@ -585,11 +454,11 @@ namespace Service
                     {
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(item.Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(item.Data);
                         }
@@ -608,11 +477,11 @@ namespace Service
                     {
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(item.Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(item.Data);
                         }
@@ -631,11 +500,11 @@ namespace Service
                     {
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(item.Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(item.Data);
                         }
@@ -654,11 +523,11 @@ namespace Service
                     {
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(item.Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(item.Data);
                         }
@@ -728,7 +597,6 @@ namespace Service
         #endregion
        
 
-
         /// <summary>
         /// 停止各组服务---已经日志
         /// </summary>
@@ -736,8 +604,8 @@ namespace Service
         {
             foreach (var item in tcp)
             {
-                var temp = from t in LsM where t.SERVICETYPE == "TCP" && t.SERVICEID == item.ServiceID select t;
-                List<serviceModel> TEMP = temp.ToList<serviceModel>();
+                var temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "TCP" && t.SERVICEID == item.ServiceID select t;
+                List<OperateXML.serviceModel> TEMP = temp.ToList<OperateXML.serviceModel>();
                 try
                 {
                     item.Stop();
@@ -752,8 +620,8 @@ namespace Service
 
             foreach (var item in udp)
             {
-                var temp = from t in LsM where t.SERVICETYPE == "UDP" && t.SERVICEID == item.ServiceID select t;
-                List<serviceModel> TEMP = temp.ToList<serviceModel>();
+                var temp = from t in wrx.XMLObj.LsM where t.SERVICETYPE == "UDP" && t.SERVICEID == item.ServiceID select t;
+                List<OperateXML.serviceModel> TEMP = temp.ToList<OperateXML.serviceModel>();
                 try
                 {
                     item.Stop();
@@ -768,8 +636,8 @@ namespace Service
 
             foreach (var item in gsm)
             {
-                var temp = from t in LsM where t.SERVICETYPE == "GSM" && t.SERVICEID == item.ServiceID select t;
-                List<serviceModel> TEMP = temp.ToList<serviceModel>();
+                var temp = from t in wrx.XMLObj. LsM where t.SERVICETYPE == "GSM" && t.SERVICEID == item.ServiceID select t;
+                List<OperateXML.serviceModel> TEMP = temp.ToList<OperateXML.serviceModel>();
                 try
                 {
                     item.Stop();
@@ -784,8 +652,8 @@ namespace Service
 
             foreach (var item in com)
             {
-                var temp = from t in LsM where t.SERVICETYPE == "COM" && t.SERVICEID == item.ServiceID select t;
-                List<serviceModel> TEMP = temp.ToList<serviceModel>();
+                var temp = from t in ServiceControl.wrx.XMLObj.LsM where t.SERVICETYPE == "COM" && t.SERVICEID == item.ServiceID select t;
+                List<OperateXML.serviceModel> TEMP = temp.ToList<OperateXML.serviceModel>();
                 try
                 {
                     item.Stop();
@@ -844,7 +712,7 @@ namespace Service
 
                 //写入接收数据队列
                 byte[] bt = null;
-                if (ServiceControl.HEXOrASC == "HEX")
+                if (wrx.XMLObj.HEXOrASC == "HEX")
                 {
                     bt = EnCoder.HexStrToByteArray(e.Decodedmessage.SmsContent);
                 }
@@ -963,7 +831,7 @@ namespace Service
         //所有接收数据写入Info日志
         public static void LogInfoToTxt(Service.ServiceEnum.NFOINDEX nfoindex, string NFOINDEXinfo, byte[] bt) 
         {
-            if (HEXOrASC == "HEX")
+            if (wrx.XMLObj.HEXOrASC == "HEX")
                 log.Info(nfoindex + "|" + NFOINDEXinfo + "|" + DateTime.Now.ToString("yyyyMMddHHmmss") + "|" + EnCoder.ByteArrayToHexStr(bt));
             else
                 log.Info(nfoindex + "|" + NFOINDEXinfo + "|" + DateTime.Now.ToString("yyyyMMddHHmmss") + "|" + Encoding.ASCII.GetString(bt));

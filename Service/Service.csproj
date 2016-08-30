@@ -72,17 +72,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GSProtocol\GSProtocol.csproj">
-      <Project>{487F7910-65BB-47FA-96DA-3FDAD8204AAF}</Project>
-      <Name>GSProtocol</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HydrologicProtocol\HydrologicProtocol.csproj">
-      <Project>{23DD02D7-82B8-4864-9BAE-A730BDBD7B65}</Project>
-      <Name>HydrologicProtocol</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Protocol\Protocol.csproj">
-      <Project>{0D54A695-FCD0-4706-8ACD-F8E2544A01EF}</Project>
-      <Name>Protocol</Name>
+    <ProjectReference Include="..\MKHY-S3\MKHY-S3.csproj">
+      <Project>{13222627-5EBE-41D5-BA90-A938470F8DD3}</Project>
+      <Name>MKHY-S3</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

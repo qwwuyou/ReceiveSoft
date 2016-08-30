@@ -56,7 +56,7 @@ namespace YYApp.SetControl
                 item.ItemID = "-1";
                 ItemList.Insert(0,item);
 
-                if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+                if (Program.wrx.XMLObj.dllfile .ToLower() == "gsprotocol.dll")
                 {
                     var items = from il in ItemList where il.ItemID == "180" || il.ItemID == "181" || il.ItemID == "182" || il.ItemID == "183" || il.ItemID == "184" || il.ItemID == "185" select il;
 
@@ -499,7 +499,7 @@ namespace YYApp.SetControl
         #region//过滤数据
         private DataTable FilterRealTimeNewData(string ItemID) 
         {
-            if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "gsprotocol.dll")
             {
                 DataTable newdt = dt.Clone();
                 if (ItemID == "12")
@@ -520,7 +520,7 @@ namespace YYApp.SetControl
         }
         private DataTable FilterRealTimeData(string STCD, string ItemID)
         {
-            if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+            if (Program.wrx.XMLObj.dllfile .ToLower() == "gsprotocol.dll")
             {
                 DataTable newdt = dt.Clone();
                 if (ItemID == "12")

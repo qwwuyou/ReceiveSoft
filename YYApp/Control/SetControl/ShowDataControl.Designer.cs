@@ -368,9 +368,9 @@
             this.superTabControl_Fill.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Fill.ControlBox.MenuBox,
             this.superTabControl_Fill.ControlBox.CloseBox});
-            this.superTabControl_Fill.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl_Fill.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Fill.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl_Fill.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl_Fill.Controls.Add(this.superTabControlPanel2);
             this.superTabControl_Fill.Controls.Add(this.superTabControlPanel4);
             this.superTabControl_Fill.Controls.Add(this.superTabControlPanel5);
             this.superTabControl_Fill.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -430,9 +430,9 @@
             this.superTabControlPanel2.Controls.Add(this.richTextBoxEx_Fill2);
             this.superTabControlPanel2.Controls.Add(this.panelEx1);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 29);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(439, 270);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(439, 299);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem2;
             // 
@@ -449,7 +449,7 @@
             this.richTextBoxEx_Fill2.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxEx_Fill2.Name = "richTextBoxEx_Fill2";
             this.richTextBoxEx_Fill2.ReadOnly = true;
-            this.richTextBoxEx_Fill2.Size = new System.Drawing.Size(439, 244);
+            this.richTextBoxEx_Fill2.Size = new System.Drawing.Size(439, 273);
             this.richTextBoxEx_Fill2.TabIndex = 2;
             this.richTextBoxEx_Fill2.WordWrap = false;
             // 
@@ -459,7 +459,7 @@
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.comboBox_Item);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelEx1.Location = new System.Drawing.Point(0, 244);
+            this.panelEx1.Location = new System.Drawing.Point(0, 273);
             this.panelEx1.Name = "panelEx1";
             this.panelEx1.Size = new System.Drawing.Size(439, 26);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
@@ -494,9 +494,9 @@
             this.superTabControlPanel3.Controls.Add(this.richTextBoxEx_Fill3);
             this.superTabControlPanel3.Controls.Add(this.panelEx2);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 29);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(439, 299);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(439, 270);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem3;
             // 
@@ -513,7 +513,7 @@
             this.richTextBoxEx_Fill3.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxEx_Fill3.Name = "richTextBoxEx_Fill3";
             this.richTextBoxEx_Fill3.ReadOnly = true;
-            this.richTextBoxEx_Fill3.Size = new System.Drawing.Size(439, 273);
+            this.richTextBoxEx_Fill3.Size = new System.Drawing.Size(439, 244);
             this.richTextBoxEx_Fill3.TabIndex = 3;
             this.richTextBoxEx_Fill3.WordWrap = false;
             // 
@@ -523,7 +523,7 @@
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx2.Controls.Add(this.comboBox_Item1);
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelEx2.Location = new System.Drawing.Point(0, 273);
+            this.panelEx2.Location = new System.Drawing.Point(0, 244);
             this.panelEx2.Name = "panelEx2";
             this.panelEx2.Size = new System.Drawing.Size(439, 26);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;

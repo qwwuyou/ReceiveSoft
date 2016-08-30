@@ -497,7 +497,7 @@ namespace Service
             IList<T> List = null;
             if (dt != null)
             {
-                List = ModelConvertHelper<T>.ConvertToModel(dt);
+                List = SqlModelConvertHelper<T>.ConvertToModel(dt);
             }
             return List;
         }
@@ -621,7 +621,7 @@ namespace Service
                             //cmd.Parameters.Clear();
                             //Close();
                         }
-                        catch (Exception ex)
+                        catch
                         {
                             connection.Close();
                             Bool = false;
@@ -977,7 +977,7 @@ namespace Service
     /// <summary>
     /// 数据层实例
     /// </summary>
-    public class ModelConvertHelper<T> where T : new()
+    public class SqlModelConvertHelper<T> where T : new()
     {
         public static IList<T> ConvertToModel(DataTable dt)
         {
@@ -1053,7 +1053,7 @@ namespace Service
             IList<T> List = null;
             if (dt != null)
             {
-                List = ModelConvertHelper<T>.ConvertToModel(dt);
+                List = SqlModelConvertHelper<T>.ConvertToModel(dt);
             }
             return List;
         }

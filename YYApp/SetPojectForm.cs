@@ -20,7 +20,13 @@ namespace YYApp
         {
             if (textBox_projectname.Text.Trim() != "")
             {
-                Program.wrx.WriteProjectXML(textBox_projectname.Text.Trim());
+                OperateXML.ProjectInfo pi = new OperateXML.ProjectInfo();
+                pi.Project = textBox_projectname.Text.Trim();
+                pi.Path = System.Windows.Forms.Application.StartupPath + "/System.xml";
+                Program.wrx.XMLObj.projects.Clear();
+                Program.wrx.XMLObj.projects.Add(pi);
+                Program.wrx.WriteXML();
+
                 this.Close();
             }
             else 

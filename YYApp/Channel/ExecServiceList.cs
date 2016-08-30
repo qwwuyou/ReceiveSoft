@@ -171,7 +171,7 @@ namespace YYApp
             }
         }
 
-        public static List<service> Lsm = null;
+        public static List<OperateXML.serviceModel> Lsm = null;
 
         public static bool ServiceDBConnectionState=false;
 

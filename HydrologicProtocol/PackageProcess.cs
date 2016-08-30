@@ -17,6 +17,7 @@ namespace HydrologicProtocol
         //用于存储多包报文  0x36（图片）和多包升级
         static PackageProcess()
         {
+            
             ImageFramesCache.Notify += new EventHandler<NotifyEventArgs>(ImageFramesCache_Notify);
             foreach (var item in Service.ServiceBussiness.RtuList)
             {
@@ -824,9 +825,10 @@ namespace HydrologicProtocol
                         //存入数据库，2015.8.25添加，请检查数据库YY_DATA_AUTO表是否建立STTYPE字段
                         model.STTYPE = package.packData.StationClassificationCodes.ToString("X2");
                         model.NFOINDEX = (int)NFOINDEX;
-                        //32H	遥测站定时报
+                        //32H	遥测站定时报  ==50
                         //33H	遥测站加报报
                         //34H	遥测站小时报
+                        //EFH   扩展的
                         int datatype = 0;
                         if (int.TryParse(package.FunCode.ToString(), out datatype))
                         {

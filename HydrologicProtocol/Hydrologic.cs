@@ -988,6 +988,7 @@ namespace Service
                 Qcrd.TryDequeue(out crd);
                 if (crd != null)
                 {
+                    Console.WriteLine("调用处理数据");
                     Frame[] frames = null;
                     try
                     {

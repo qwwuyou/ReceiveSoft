@@ -3,7 +3,6 @@ using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
 
-using OpenPop.Pop3;
 //using OpenPop.Mime;
 
 namespace _51Mail
@@ -91,6 +90,7 @@ namespace _51Mail
                 smtpClient.Host = "smtp." + mailMessage.From.Host;
                 smtpClient.Send(mailMessage);
 
+            
             }
         }
 
@@ -106,89 +106,6 @@ namespace _51Mail
 
     public class ReadMail
     {
-        /// <summary>
-        /// 读取指定邮箱中的邮件
-        /// </summary>
-        /// <param name="IP"></param>
-        /// <param name="Port"></param>
-        public void ReadMailInfo(out string IP, out string Port)
-        {
-            IP = "";
-            Port = "";
-            try 
-            {
-                using (Pop3Client client = new Pop3Client())
-                {
-                    if (client.Connected)
-                    {
-                        client.Disconnect();
-                    }
-                    // Connect to the server, false means don't use ssl
-                    client.Connect("pop.163.com", 110, false);
-
-                    // Authenticate ourselves towards the server by email account and password
-                    client.Authenticate("yysoft2013@163.com", "hao1234567");
-
-                    //email count
-                    int messageCount = client.GetMessageCount();
-
-                    for (int i = messageCount; i <= messageCount; i--)
-                    {
-                        if (ValidateHeader(client.GetMessageHeaders(i).Subject, out IP, out Port))
-                        { return; }
-                        //Console.WriteLine(client.GetMessageHeaders(i).Subject);
-                    }
-
-                    #region
-                    //i = 1 is the first email; 1 is the oldest email
-                    //for (int i = 1; i <= messageCount; i++)
-                    //{
-                    //    Message message = client.GetMessage(i);
-
-                    //    string sender = message.Headers.From.DisplayName;
-                    //    string from = message.Headers.From.Address;
-                    //    string subject = message.Headers.Subject;
-                    //    DateTime Datesent = message.Headers.DateSent;
-
-                    //    MessagePart messagePart = message.MessagePart;
-
-                    //    //email body, 
-                    //    string body = " ";
-                    //    if (messagePart.IsText)
-                    //    {
-                    //        body = messagePart.GetBodyAsText();
-                    //    }
-                    //    else if (messagePart.IsMultiPart)
-                    //    {
-                    //        MessagePart plainTextPart = message.FindFirstPlainTextVersion();
-                    //        if (plainTextPart != null)
-                    //        {
-                    //            // The message had a text/plain version - show that one
-                    //            body = plainTextPart.GetBodyAsText();
-                    //        }
-                    //        else
-                    //        {
-                    //            // Try to find a body to show in some of the other text versions
-                    //            List<MessagePart> textVersions = message.FindAllTextVersions();
-                    //            if (textVersions.Count >= 1)
-                    //                body = textVersions[0].GetBodyAsText();
-                    //            else
-                    //                body = "<<OpenPop>> Cannot find a text version body in this message.";
-                    //        }
-                    //    }
-
-                    //}
-                    #endregion
-
-                }
-            }
-            catch
-            {
-                IP = "";
-                Port = "";
-            }
-           
-        }
 
         /// <summary>
         /// 验证字符串是否符合IP 端口格式

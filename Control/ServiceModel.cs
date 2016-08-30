@@ -62,31 +62,6 @@ namespace Service
         }
     }
 
-    /// <summary>
-    /// 与界面交互的tcp信息配置
-    /// </summary>
-    class UITcpModel 
-    {
-        private string _ip;
-        private int _port;
-        /// <summary>
-        /// IP
-        /// </summary>		
-        public string IP
-        {
-            get { return _ip; }
-            set { _ip = value; }
-        }
-
-        /// <summary>
-        /// 端口
-        /// </summary>
-        public int PORT
-        {
-            get { return _port; }
-            set { _port = value; }
-        }
-    }
 
     /// <summary>
     /// 透传用数据报
@@ -104,65 +79,6 @@ namespace Service
             set { _data = value; }
         }
     } 
-
-   
-
-    /// <summary>
-    /// 服务列表
-    /// </summary>
-    public class serviceModel 
-    {
-        private string _servicetype;
-        private string _serviceid;
-        private string _ip_portname;
-        private int _port_baudrate;
-        private string _num;
-
-        /// <summary>
-        /// 服务类型
-        /// </summary>		
-        public string SERVICETYPE
-        {
-            get { return _servicetype; }
-            set { _servicetype = value; }
-        } 
-
-        /// <summary>
-        /// 服务标示
-        /// </summary>		
-        public string SERVICEID
-        {
-            get { return _serviceid; }
-            set { _serviceid = value; }
-        }
-
-        /// <summary>
-        /// IP或串口号
-        /// </summary>		
-        public string IP_PORTNAME
-        {
-            get { return _ip_portname; }
-            set { _ip_portname = value; }
-        }
-
-        /// <summary>
-        /// 端口或波特率
-        /// </summary>
-        public int PORT_BAUDRATE
-        {
-            get { return _port_baudrate; }
-            set { _port_baudrate = value; }
-        }
-
-        /// <summary>
-        /// 号码（卫星有卫星标识、Gsm有手机卡号）
-        /// </summary>		
-        public string NUM
-        {
-            get { return _num; }
-            set { _num = value; }
-        }
-    }
 
     /// <summary>
     /// RTU基础信息列表(未使用，YY_RTU_Basic代替)

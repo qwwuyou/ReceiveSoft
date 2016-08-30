@@ -97,6 +97,8 @@ namespace ComService
             ComReceivedData crd = new ComReceivedData();
             crd.SATELLITE = Satellite;
             crd.Data = bt;
+            /////////////////////////测试输出
+            Console.Write(EnCoder.ByteArrayToHexStr(bt));
             if (bt.Length > 0)
                 lock (Qcrd)
                 {
@@ -222,7 +224,7 @@ namespace ComService
             
             List<ComReceivedData> Lcrd = new List<ComReceivedData>();
             string str = EnCoder.ByteArrayToHexStr(data);
-            Console.WriteLine(str);
+ 
             if (str.Length >= 10) 
             {
                 string temp = str.Substring(0,10);
@@ -309,10 +311,10 @@ namespace ComService
                     CS.CStateFor4.DATATIME = DateTime.Now;
 
                     //将以上解析信息反馈到界面时注销下行
-                    Explain = " 服务器与卫星接收设备通讯正常";
-
+                    //Explain = " 服务器与卫星接收设备通讯正常";
+                   
                     //反馈给界面信息
-                    ServiceBussiness.WriteQUIM(ServiceEnum.NFOINDEX.COM.ToString(), CS.ServiceID, "接收卫星" + RevSatellite, Explain, new byte[] { }, Service.ServiceEnum.EnCoderType.HEX, Service.ServiceEnum.DataType.Text);
+                    ServiceBussiness.WriteQUIM(ServiceEnum.NFOINDEX.COM.ToString(), CS.ServiceID, RevSatellite, "接收到状态信息\n" + Explain, new byte[] { }, Service.ServiceEnum.EnCoderType.HEX, Service.ServiceEnum.DataType.Text);
                 }
                 else if (temp == "24544A5858") //$SJXX 时间信息
                 {
@@ -522,19 +524,26 @@ namespace ComService
                             Satellite = satellite.ToString("X").PadLeft(6, '0');
                         }
 
+                        
+                       
 
+
+                        //XTZJ
                         byte[] a = EnCoder.HexStrToByteArray("2458545A4A000D" + Satellite + "0000");
                         byte b = xor(a);//异或校验
                         byte[] vBuffer = copybyte(a, b);//追加异或校验
 
+                        //byte[] enter = ASCIIEncoding.ASCII.GetBytes(item.sp.NewLine); //加回车
+                        //Array.Resize(ref vBuffer, vBuffer.Length + enter.Length);
+                        //Array.Copy(enter, 0, vBuffer, vBuffer.Length - enter.Length, enter.Length);
+
                         //ComBussiness.XorSAT(ref vBuffer);
                         item.sp.Write(vBuffer, 0, vBuffer.Length);
-                        //byte[] enter=ASCIIEncoding.ASCII.GetBytes(item.sp.NewLine); //加回车
-                        //Array.Resize(ref vBuffer, vBuffer.Length + enter.Length );
-                        //Array.Copy(enter, 0, vBuffer, vBuffer.Length - enter.Length, enter.Length);
+                       
 
                         Service.ServiceControl.LogInfoToTxt(Service.ServiceEnum.NFOINDEX.COM, "", vBuffer, "ASC");
                         Service.ServiceControl.LogInfoToTxt(Service.ServiceEnum.NFOINDEX.COM, "", vBuffer);
+
                     }
                 }
             }
@@ -652,6 +661,7 @@ namespace ComService
                     ComBussiness.XorSAT(ref vBuffer);
                     CS.sp.Write(vBuffer, 0, vBuffer.Length);
 
+                    
                     Service.ServiceControl.LogInfoToTxt(Service.ServiceEnum.NFOINDEX.COM, "", vBuffer, "ASC");
                     Service.ServiceControl.LogInfoToTxt(Service.ServiceEnum.NFOINDEX.COM, "", vBuffer);
                 }

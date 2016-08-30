@@ -1,0 +1,123 @@
+2016/8/21 1:59:52System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 2:21:55System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 2:22:05System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 2:22:06System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 2:22:16System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 2:22:17System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 2:22:27System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 2:22:28System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 2:22:31得到连接异常System.Net.Sockets.SocketSystem.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。
+   在 System.Net.Sockets.Socket.EndAccept(IAsyncResult asyncResult)
+   在 TcpService.TcpServer.OnConnectRequest(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\TCP\TcpServer.cs:行号 124
+2016/8/21 2:22:31得到连接异常System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。
+   在 System.Net.Sockets.Socket.BeginAccept(Socket acceptSocket, Int32 receiveSize, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginAccept(AsyncCallback callback, Object state)
+   在 TcpService.TcpServer.OnConnectRequest(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\TCP\TcpServer.cs:行号 153
+2016/8/21 2:22:37System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 2:22:38System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 12:05:49System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:36:41System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:36:51System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:36:52System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:02System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:03System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:13System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:14System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:24System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:25System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:35System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:36System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:46System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:47System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:37:57System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:37:58System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:38:08System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:38:09System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:38:19System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:38:20System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:38:30System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:38:31System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:38:40System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:38:42System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:38:51System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:38:52System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/21 15:39:02System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/21 15:39:03System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。 127.0.0.1:1111
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73

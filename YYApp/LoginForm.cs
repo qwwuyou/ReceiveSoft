@@ -15,8 +15,10 @@ namespace YYApp
         public LoginForm()
         {
             InitializeComponent();
-            List<string> pros = Program.wrx.GetProjects();
-            if (pros.Count > 0 && pros[0] == "未知") 
+            Program.wrx.ReadXML();
+            
+            List<OperateXML.ProjectInfo> projects = Program.wrx.XMLObj.projects;
+            if (projects.Count > 0 && (projects[0].Project == "未知" || projects[0].Project == "")) 
             {
                 SetPojectForm spf = new SetPojectForm();
                 spf.ShowDialog();
@@ -26,16 +28,13 @@ namespace YYApp
         private void button_login_Click(object sender, EventArgs e)
         {
 
-            string username = "";
-            string password = "";
-            Program.wrx.ReadLoginXML(out username, out password);
-            if (textBox_username.Text.Trim() == username && textBox_password.Text.Trim() == password)
+            if (textBox_username.Text.Trim() == Program.wrx.XMLObj.UserName && textBox_password.Text.Trim() == Program.wrx.XMLObj.PassWord)
             {
                 Program.LoginState = true;
                 this.Visible = false;
                 if (MF == null)
                 {
-                    MF = new MainForm(this,comboBox_projects.SelectedValue.ToString());
+                    MF = new MainForm(this, (comboBox_projects.SelectedItem as OperateXML.ProjectInfo).Project);
                     MF.Show();
                 }
                 MF.buttonItem_Login.Enabled = false;
@@ -70,7 +69,7 @@ namespace YYApp
             comboBox_projects.Enabled = false;
             if (MF == null)
             {
-                MF = new MainForm(this,comboBox_projects.SelectedValue.ToString());
+                MF = new MainForm(this, (comboBox_projects.SelectedItem as OperateXML.ProjectInfo).Project);
                 MF.Show();
             }
             MF.buttonItem_Login.Enabled = true;
@@ -85,7 +84,6 @@ namespace YYApp
             MF.buttonItem_DataResave.Enabled = false;
 
         }
-
 
         private void LoginForm_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -109,8 +107,10 @@ namespace YYApp
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            List<string> pros = Program.wrx.GetProjects();
-            comboBox_projects.DataSource = pros;
+            List<OperateXML.ProjectInfo> projects = Program.wrx.XMLObj.projects;
+            comboBox_projects.DataSource = projects;
+            comboBox_projects.ValueMember = "Path";
+            comboBox_projects.DisplayMember = "Project";
             comboBox_projects.SelectedIndex = 0;
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,7 +120,18 @@ namespace YYApp
 
         private void comboBox_projects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.wrx.SetPath(Program.wrx.GetXmlPath(comboBox_projects.SelectedValue.ToString()));
+            string Path =(comboBox_projects.SelectedItem as OperateXML.ProjectInfo).Path;
+            if (System.IO.File.Exists(Path))
+            {
+                Program.xmlpath = Path;
+                Program.wrx.ReadXML(Path);
+            }
+            else
+            {
+                (comboBox_projects.SelectedItem as OperateXML.ProjectInfo).Path = Program.xmlpath;
+                Program.wrx.WriteXML();
+                DevComponents.DotNetBar.MessageBoxEx.Show("所选择的项目配置信息不存在，系统自动配置为默认信息！", "[提示]", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+            }
         }
 
         private void button_close_Click(object sender, EventArgs e)

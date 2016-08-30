@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.radioButton_2031 = new System.Windows.Forms.RadioButton();
+            this.radioButton_2061 = new System.Windows.Forms.RadioButton();
+            this.radioButton_2051 = new System.Windows.Forms.RadioButton();
+            this.radioButton_2011 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker_E = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,10 +78,6 @@
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
-            this.radioButton_2011 = new System.Windows.Forms.RadioButton();
-            this.radioButton_2051 = new System.Windows.Forms.RadioButton();
-            this.radioButton_2031 = new System.Windows.Forms.RadioButton();
-            this.radioButton_2061 = new System.Windows.Forms.RadioButton();
             this.panelEx1.SuspendLayout();
             this.panelEx2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -117,6 +117,50 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 23;
+            // 
+            // radioButton_2031
+            // 
+            this.radioButton_2031.AutoSize = true;
+            this.radioButton_2031.Location = new System.Drawing.Point(641, 24);
+            this.radioButton_2031.Name = "radioButton_2031";
+            this.radioButton_2031.Size = new System.Drawing.Size(35, 16);
+            this.radioButton_2031.TabIndex = 37;
+            this.radioButton_2031.TabStop = true;
+            this.radioButton_2031.Text = "日";
+            this.radioButton_2031.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_2061
+            // 
+            this.radioButton_2061.AutoSize = true;
+            this.radioButton_2061.Location = new System.Drawing.Point(594, 24);
+            this.radioButton_2061.Name = "radioButton_2061";
+            this.radioButton_2061.Size = new System.Drawing.Size(47, 16);
+            this.radioButton_2061.TabIndex = 36;
+            this.radioButton_2061.TabStop = true;
+            this.radioButton_2061.Text = "小时";
+            this.radioButton_2061.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_2051
+            // 
+            this.radioButton_2051.AutoSize = true;
+            this.radioButton_2051.Location = new System.Drawing.Point(641, 4);
+            this.radioButton_2051.Name = "radioButton_2051";
+            this.radioButton_2051.Size = new System.Drawing.Size(47, 16);
+            this.radioButton_2051.TabIndex = 34;
+            this.radioButton_2051.TabStop = true;
+            this.radioButton_2051.Text = "分钟";
+            this.radioButton_2051.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_2011
+            // 
+            this.radioButton_2011.AutoSize = true;
+            this.radioButton_2011.Location = new System.Drawing.Point(594, 4);
+            this.radioButton_2011.Name = "radioButton_2011";
+            this.radioButton_2011.Size = new System.Drawing.Size(47, 16);
+            this.radioButton_2011.TabIndex = 33;
+            this.radioButton_2011.TabStop = true;
+            this.radioButton_2011.Text = "实时";
+            this.radioButton_2011.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -305,14 +349,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -330,29 +374,29 @@
             this.Column13,
             this.Column14,
             this.Column15});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(901, 253);
             this.dataGridView1.TabIndex = 25;
@@ -518,8 +562,8 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
@@ -550,50 +594,6 @@
             this.superTabItem1.GlobalItem = false;
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "列表";
-            // 
-            // radioButton_2011
-            // 
-            this.radioButton_2011.AutoSize = true;
-            this.radioButton_2011.Location = new System.Drawing.Point(594, 4);
-            this.radioButton_2011.Name = "radioButton_2011";
-            this.radioButton_2011.Size = new System.Drawing.Size(47, 16);
-            this.radioButton_2011.TabIndex = 33;
-            this.radioButton_2011.TabStop = true;
-            this.radioButton_2011.Text = "实时";
-            this.radioButton_2011.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_2051
-            // 
-            this.radioButton_2051.AutoSize = true;
-            this.radioButton_2051.Location = new System.Drawing.Point(641, 4);
-            this.radioButton_2051.Name = "radioButton_2051";
-            this.radioButton_2051.Size = new System.Drawing.Size(47, 16);
-            this.radioButton_2051.TabIndex = 34;
-            this.radioButton_2051.TabStop = true;
-            this.radioButton_2051.Text = "分钟";
-            this.radioButton_2051.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_2031
-            // 
-            this.radioButton_2031.AutoSize = true;
-            this.radioButton_2031.Location = new System.Drawing.Point(641, 24);
-            this.radioButton_2031.Name = "radioButton_2031";
-            this.radioButton_2031.Size = new System.Drawing.Size(35, 16);
-            this.radioButton_2031.TabIndex = 37;
-            this.radioButton_2031.TabStop = true;
-            this.radioButton_2031.Text = "日";
-            this.radioButton_2031.UseVisualStyleBackColor = true;
-            // 
-            // radioButton_2061
-            // 
-            this.radioButton_2061.AutoSize = true;
-            this.radioButton_2061.Location = new System.Drawing.Point(594, 24);
-            this.radioButton_2061.Name = "radioButton_2061";
-            this.radioButton_2061.Size = new System.Drawing.Size(47, 16);
-            this.radioButton_2061.TabIndex = 36;
-            this.radioButton_2061.TabStop = true;
-            this.radioButton_2061.Text = "小时";
-            this.radioButton_2061.UseVisualStyleBackColor = true;
             // 
             // SetRealTimeControl
             // 

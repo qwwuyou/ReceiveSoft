@@ -16,7 +16,7 @@ namespace YYApp.SetControl
             InitializeComponent();
         }
 
-        List<service> list = null;
+        List<OperateXML.serviceModel> Lsm = null;
         private void SetSystemControl_Load(object sender, EventArgs e)
         {
             Form_Init();
@@ -32,14 +32,12 @@ namespace YYApp.SetControl
             DB_Init();
             dataGridViewStyle(dataGridView1);
 
-            list = Program.wrx.ReadXML();
+            Lsm = Program.wrx.XMLObj.LsM;
             DropDownList_Init(comboBox_NFOINDEX);
             comboBox_Protocol_Init();
 
-            string ip = "", port = "";
-            Program.wrx.ReadUIXML(out ip, out port);
-            textBox_ip.Text = ip;
-            textBox_port.Text = port;
+            textBox_ip.Text = Program.wrx.XMLObj.UiTcpModel.IP;
+            textBox_port.Text = Program.wrx.XMLObj.UiTcpModel.PORT.ToString();
 
             //if (Program.LoginState) 
             //{
@@ -52,20 +50,20 @@ namespace YYApp.SetControl
 
         private void DB_Init() 
         {
-            string type, server, catalog, username,password;
             try
             {
-                Program.wrx.ReadDBXML(out type,out server, out catalog, out username, out password);
-                textBox_Source.Text = server;
-                textBox_DataBase.Text = catalog;
-                textBox_UserName.Text = username;
-                textBox_PassWord.Text = password;
-                if (type.ToLower() == "mssql")
+                textBox_Source.Text = Program.wrx.XMLObj.DBserver;
+                textBox_DataBase.Text =  Program.wrx.XMLObj.DBcatalog;
+                textBox_UserName.Text =  Program.wrx.XMLObj.DBusername;
+                textBox_PassWord.Text =  Program.wrx.XMLObj.DBpassword;
+                if ( Program.wrx.XMLObj.DBtype.ToLower() == "mssql")
                 {
                     comboBox_DBType.SelectedIndex = 0;
                 }
-                else if (type.ToLower() == "mysql")
+                else if ( Program.wrx.XMLObj.DBtype.ToLower() == "mysql")
                 { comboBox_DBType.SelectedIndex = 1; }
+                else
+                { comboBox_DBType.SelectedIndex = 2; }
             }
             catch { }
         }
@@ -86,12 +84,13 @@ namespace YYApp.SetControl
             comboBox_DBType.Items.Clear();
             comboBox_DBType.Items.Add("sql server");
             comboBox_DBType.Items.Add("mysql");
+            comboBox_DBType.Items.Add("oracle");
             comboBox_DBType.SelectedIndex = 0;
         }
 
         private void comboBox_Protocol_Init() 
         {
-            string protocol= Program.wrx.ReadDllXML().ToLower() ;
+            string protocol= Program.wrx.XMLObj.dllfile.ToLower() ;
             if (protocol == "gsprotocol.dll")
             {
                 comboBox_Protocol.SelectedIndex = 0;
@@ -110,6 +109,11 @@ namespace YYApp.SetControl
             else if (protocol == "hjt212-2005.dll")
             {
                 comboBox_Protocol.SelectedIndex = 3;
+                label16.Text = "编码：ASC";
+            }
+            else if (protocol == "ADJC-001.dll")
+            {
+                comboBox_Protocol.SelectedIndex = 4;
                 label16.Text = "编码：ASC";
             } 
         }
@@ -173,8 +177,8 @@ namespace YYApp.SetControl
             dataGridView1.Columns.Clear();
             if (comboBox_NFOINDEX.SelectedIndex == 0 )
             {
-                var tcplist= from ser in list where ser.SERVICETYPE == "TCP" select ser;
-                List<service> tl = new List<service>();
+                var tcplist = from ser in Lsm where ser.SERVICETYPE == "TCP" select ser;
+                List<OperateXML.serviceModel> tl = new List<OperateXML.serviceModel>();
                 foreach (var item in tcplist)
                 {
                     tl.Add(item);
@@ -198,8 +202,8 @@ namespace YYApp.SetControl
             }
             else if (comboBox_NFOINDEX.SelectedIndex == 1)
             {
-                var udplist = from ser in list where ser.SERVICETYPE == "UDP" select ser;
-                List<service> ul = new List<service>();
+                var udplist = from ser in Lsm where ser.SERVICETYPE == "UDP" select ser;
+                List<OperateXML.serviceModel> ul = new List<OperateXML.serviceModel>();
                 foreach (var item in udplist)
                 {
                     ul.Add(item);
@@ -223,8 +227,8 @@ namespace YYApp.SetControl
             }
             else if (comboBox_NFOINDEX.SelectedIndex == 2)
             {
-                var gsmlist = from ser in list where ser.SERVICETYPE == "GSM" select ser;
-                List<service> gl = new List<service>();
+                var gsmlist = from ser in Lsm where ser.SERVICETYPE == "GSM" select ser;
+                List<OperateXML.serviceModel> gl = new List<OperateXML.serviceModel>();
                 foreach (var item in gsmlist)
                 {
                     gl.Add(item);
@@ -250,8 +254,8 @@ namespace YYApp.SetControl
             }
             else if (comboBox_NFOINDEX.SelectedIndex == 3)
             {
-                var comlist = from ser in list where ser.SERVICETYPE == "COM" select ser;
-                List<service> cl = new List<service>();
+                var comlist = from ser in Lsm where ser.SERVICETYPE == "COM" select ser;
+                List<OperateXML.serviceModel> cl = new List<OperateXML.serviceModel>();
                 foreach (var item in comlist)
                 {
                     cl.Add(item);
@@ -303,23 +307,23 @@ namespace YYApp.SetControl
             {
                 if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "删  除")
                 {
-                    IList<service> serv = null;
+                    IList<OperateXML.serviceModel> serv = null;
                     if (comboBox_NFOINDEX.SelectedIndex == 0 || comboBox_NFOINDEX.SelectedIndex == 1)
                     {
-                        var ser = from s in list where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) select s;
-                        serv = ser.ToList<service>();
+                        var ser = from s in Lsm where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) select s;
+                        serv = ser.ToList<OperateXML.serviceModel>();
                     }
                     else if (comboBox_NFOINDEX.SelectedIndex == 2 || comboBox_NFOINDEX.SelectedIndex == 3)
                     {
-                        var ser = from s in list where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) && s.NUM == dataGridView1.Rows[e.RowIndex].Cells["NUM"].Value.ToString() select s;
-                        serv = ser.ToList<service>();
+                        var ser = from s in Lsm where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) && s.NUM == dataGridView1.Rows[e.RowIndex].Cells["NUM"].Value.ToString() select s;
+                        serv = ser.ToList<OperateXML.serviceModel>();
                     }
 
                     foreach (var item in serv)
                     {
-                        list.Remove(item);
+                        Lsm.Remove(item);
                     }
-                    Program.wrx.WriteXML(list);
+                    Program.wrx.WriteXML();
                     comboBox_NFOINDEX_SelectedIndexChanged(null, null);
                     //if (DevComponents.DotNetBar.MessageBoxEx.Show("信息配置成功是否重启软件？", "[提示]", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     //{
@@ -329,16 +333,16 @@ namespace YYApp.SetControl
                 }
                 else 
                 {
-                    IList<service> serv = null;
+                    IList<OperateXML.serviceModel> serv = null;
                     if (comboBox_NFOINDEX.SelectedIndex == 0 || comboBox_NFOINDEX.SelectedIndex == 1)
                     {
-                        var ser = from s in list where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) select s;
-                        serv = ser.ToList<service>();
+                        var ser = from s in Lsm where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) select s;
+                        serv = ser.ToList<OperateXML.serviceModel>();
                     }
                     else if (comboBox_NFOINDEX.SelectedIndex == 2 || comboBox_NFOINDEX.SelectedIndex == 3)
                     {
-                        var ser = from s in list where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) && s.NUM == dataGridView1.Rows[e.RowIndex].Cells["NUM"].Value.ToString() select s;
-                        serv = ser.ToList<service>();
+                        var ser = from s in Lsm where s.SERVICETYPE == dataGridView1.Rows[e.RowIndex].Cells["SERVICETYPE"].Value.ToString() && s.SERVICEID == dataGridView1.Rows[e.RowIndex].Cells["SERVICEID"].Value.ToString() && s.IP_PORTNAME == dataGridView1.Rows[e.RowIndex].Cells["IP_PORTNAME"].Value.ToString() && s.PORT_BAUDRATE == int.Parse(dataGridView1.Rows[e.RowIndex].Cells["PORT_BAUDRATE"].Value.ToString()) && s.NUM == dataGridView1.Rows[e.RowIndex].Cells["NUM"].Value.ToString() select s;
+                        serv = ser.ToList<OperateXML.serviceModel>();
 
                         textBox_num.Text = serv.First().NUM;
                     }
@@ -388,12 +392,26 @@ namespace YYApp.SetControl
             else
             {
                 string Type = string.Empty;
+                string Port = string.Empty;
                 if (comboBox_DBType.SelectedIndex == 0)
-                { Type = "MSSQL"; }
-                else
+                {
+                    Type = "MSSQL";
+                    Port = "1433";
+                }
+                else if (comboBox_DBType.SelectedIndex == 1)
                 { Type = "MYSQL"; }
-                Program.wrx.WriteDBXML(Type, textBox_Source.Text.Trim(), textBox_DataBase.Text.Trim(), textBox_UserName.Text.Trim(), textBox_PassWord.Text.Trim());
-
+                else
+                { 
+                    Type = "ORACLE"; 
+                    Port = "1521";
+                }
+                Program.wrx.XMLObj.DBtype=Type;
+                Program.wrx.XMLObj.DBport = Port;
+                Program.wrx.XMLObj.DBserver=textBox_Source.Text.Trim();
+                Program.wrx.XMLObj.DBcatalog=textBox_DataBase.Text.Trim();
+                Program.wrx.XMLObj.DBusername= textBox_UserName.Text.Trim();
+                Program.wrx.XMLObj.DBpassword= textBox_PassWord.Text.Trim();
+                Program.wrx.WriteXML();
                 DevComponents.DotNetBar.MessageBoxEx.Show("本地信息配置成功!");
             }
         }
@@ -502,7 +520,7 @@ namespace YYApp.SetControl
         }
         private void button_SetLocal2_Click(object sender, EventArgs e)
         {
-            if (list != null)
+            if (Lsm != null)
             {
                 string Msg = SerValidate();
                 if (Msg != "")
@@ -511,7 +529,7 @@ namespace YYApp.SetControl
                 }
                 else
                 {
-                    service s = new service();
+                    OperateXML.serviceModel s=new OperateXML.serviceModel();
                     s.SERVICEID = textBox_serviceid.Text.Trim();
                     s.IP_PORTNAME = textBox_ip_portname.Text.Trim();
                     s.PORT_BAUDRATE = int.Parse(textBox_port_baudrate.Text.Trim());
@@ -533,8 +551,8 @@ namespace YYApp.SetControl
                         s.SERVICETYPE = "COM";
                         s.NUM = textBox_num.Text.Trim();
                     }
-                    list.Add(s);
-                    Program.wrx.WriteXML(list);
+                    Lsm.Add(s);
+                    Program.wrx.WriteXML();
                     comboBox_NFOINDEX_SelectedIndexChanged(null, null);
 
                     DevComponents.DotNetBar.MessageBoxEx.Show("本地信息配置成功!");
@@ -573,23 +591,38 @@ namespace YYApp.SetControl
         {
             if (comboBox_Protocol.SelectedIndex == 1)
             {
-                Program.wrx.WriteProtocolXML("HydrologicProtocol.dll", "Service.Hydrologic");
-                Program.wrx.WriteInfoEncodingXML("HEX");
+                Program.wrx.XMLObj.dllfile="HydrologicProtocol.dll";
+                Program.wrx.XMLObj.dllclass="Service.Hydrologic";
+                Program.wrx.XMLObj.HEXOrASC="HEX";
+                Program.wrx.WriteXML();
             }
             else if (comboBox_Protocol.SelectedIndex == 2)
             {
-                Program.wrx.WriteProtocolXML("Protocol.dll", "Service.WaterResource");
-                Program.wrx.WriteInfoEncodingXML("HEX");
+                Program.wrx.XMLObj.dllfile="Protocol.dll";
+                Program.wrx.XMLObj.dllclass="Service.WaterResource";
+                Program.wrx.XMLObj.HEXOrASC="HEX";
+                Program.wrx.WriteXML();
             }
             else if(comboBox_Protocol.SelectedIndex == 0)
             {
-                Program.wrx.WriteProtocolXML("GSProtocol.dll", "Service.GS");
-                Program.wrx.WriteInfoEncodingXML("ASC");
+                Program.wrx.XMLObj.dllfile="GSProtocol.dll";
+                Program.wrx.XMLObj.dllclass="Service.GS";
+                Program.wrx.XMLObj.HEXOrASC="ASC";
+                Program.wrx.WriteXML();
             }
             else if (comboBox_Protocol.SelectedIndex == 3)
             {
-                Program.wrx.WriteProtocolXML("HJT212-2005.dll", "Service.HTJ212");
-                Program.wrx.WriteInfoEncodingXML("ASC");
+                Program.wrx.XMLObj.dllfile="HJT212-2005.dll";
+                Program.wrx.XMLObj.dllclass="Service.HTJ212";
+                Program.wrx.XMLObj.HEXOrASC="ASC";
+                Program.wrx.WriteXML();
+            }
+            else if (comboBox_Protocol.SelectedIndex == 4)
+            {
+                Program.wrx.XMLObj.dllfile="ADJC-001.dll";
+                Program.wrx.XMLObj.dllclass="ADJC_001.ADJC001";
+                Program.wrx.XMLObj.HEXOrASC="ASC";
+                Program.wrx.WriteXML();
             }
 
             DevComponents.DotNetBar.MessageBoxEx.Show("本地信息配置成功!");
@@ -674,7 +707,10 @@ namespace YYApp.SetControl
             }
             else
             {
-                Program.wrx.WriteUIXML(textBox_ip.Text.Trim(), textBox_port.Text.Trim());
+
+                Program.wrx.XMLObj.UiTcpModel.IP=textBox_ip.Text.Trim();
+                Program.wrx.XMLObj.UiTcpModel.PORT=int.Parse(textBox_port.Text.Trim());
+                Program.wrx.WriteXML();
                 if (DevComponents.DotNetBar.MessageBoxEx.Show("信息配置成功是否重启软件？", "[提示]", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -769,10 +805,7 @@ namespace YYApp.SetControl
             {
                 if (buttonX_OK.Text == "确 认")
                 {
-                    string UserName = "";
-                    string PassWord = "";
-                    Program.wrx.ReadLoginXML(out UserName, out PassWord);
-                    if (textBox_SYSUserName.Text.Trim() == UserName && textBox_SYSPassWord.Text.Trim() == PassWord)
+                    if (textBox_SYSUserName.Text.Trim() ==Program.wrx.XMLObj. UserName && textBox_SYSPassWord.Text.Trim() ==Program.wrx.XMLObj. PassWord)
                     {
                         textBox_SYSUserName.Text = "";
                         textBox_SYSPassWord.Text = "";
@@ -789,7 +822,10 @@ namespace YYApp.SetControl
                 {
                     string UserName = textBox_SYSUserName.Text.Trim();
                     string PassWord = textBox_SYSPassWord.Text.Trim();
-                    Program.wrx.WriteLoginXML(UserName, PassWord);
+                    Program.wrx.XMLObj.UserName=UserName;
+                    Program.wrx.XMLObj.PassWord=PassWord;
+                     Program.wrx.WriteXML();
+
                     textBox_SYSUserName.Text = "";
                     textBox_SYSPassWord.Text = "";
                     label14.Text = "当前密码：";
@@ -802,18 +838,19 @@ namespace YYApp.SetControl
 
         private void comboBox_Protocol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox_Protocol.SelectedIndex == 0)
-            {
-                label16.Text = "编码：ASC";
-            }
-            else if (comboBox_Protocol.SelectedIndex == 1)
+            
+            if (comboBox_Protocol.SelectedIndex == 1)
             {
                 label16.Text = "编码：HEX";
             }
             else if (comboBox_Protocol.SelectedIndex == 2)
             {
                 label16.Text = "编码：HEX";
-            } 
+            }
+            else
+            {
+                label16.Text = "编码：ASC";
+            }
         }
 
     }

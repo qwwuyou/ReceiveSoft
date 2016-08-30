@@ -129,7 +129,6 @@ namespace ComService
                     byte[] data=new byte[sp.BytesToRead];
                     sp.Read(data, 0,data.Length );
 
-
                     if (data.Length > 0)
                     {
                         //byte[] data = Encoding.ASCII.GetBytes(str);

@@ -115,7 +115,7 @@ namespace YYApp.CommandControl
             bi.Checked = true;
 
             panelEx_Fill.Controls.Clear();
-            if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "gsprotocol.dll")
             {
                 switch (bi.Tag.ToString())
                 {
@@ -150,7 +150,7 @@ namespace YYApp.CommandControl
                 }
             }
 
-            if (Program.wrx.ReadDllXML().ToLower() == "protocol.dll") 
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "protocol.dll") 
             {
                 switch (bi.Tag.ToString())
                 {
@@ -467,7 +467,7 @@ namespace YYApp.CommandControl
                 }
             }
 
-            if (Program.wrx.ReadDllXML().ToLower() == "hydrologicprotocol.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "hydrologicprotocol.dll")
             {
                 switch (bi.Tag.ToString())
                 {
@@ -761,7 +761,7 @@ namespace YYApp.CommandControl
             else
             {
                 //燕禹协议
-                if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+                if (Program.wrx.XMLObj.dllfile.ToLower() == "gsprotocol.dll")
                 {
                     if (cbBNFOINDEX.SelectedIndex == 0 || cbBNFOINDEX.SelectedIndex == 1)
                     {
@@ -787,7 +787,7 @@ namespace YYApp.CommandControl
                     }
                 } 
                 //水资源
-                if (Program.wrx.ReadDllXML().ToLower() == "protocol.dll")
+                if (Program.wrx.XMLObj.dllfile.ToLower() == "protocol.dll")
                 {
                     SendCommand(Commands, stcds, CommandCode);
                     timer1.Enabled = true;
@@ -795,7 +795,7 @@ namespace YYApp.CommandControl
                 }
 
                 //水文
-                if (Program.wrx.ReadDllXML().ToLower() == "hydrologicprotocol.dll")
+                if (Program.wrx.XMLObj.dllfile.ToLower() == "hydrologicprotocol.dll")
                 {                    
                     SendCommand(Commands, stcds, CommandCode);
                     timer1.Enabled = true;

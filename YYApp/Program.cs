@@ -20,6 +20,7 @@ namespace YYApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
+            
             //Application.Run(new Form1());
 
         }
@@ -33,8 +34,9 @@ namespace YYApp
             else { return oldCD; }
         }
 
-
-        public static WriteReadXML wrx = new WriteReadXML();
+        //操作xml的对象
+        public static OperateXML.WriteReadXML wrx = new OperateXML.WriteReadXML();
+        public static string xmlpath = System.Windows.Forms.Application.StartupPath + "/System.xml";
 
         private static bool loginstate = false;
         public static bool LoginState 

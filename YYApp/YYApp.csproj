@@ -11,7 +11,8 @@
     <RootNamespace>YYApp</RootNamespace>
     <AssemblyName>YYApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -38,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DataAccess">
-      <HintPath>..\DataAccess\bin\Debug\DataAccess.dll</HintPath>
+      <HintPath>..\DataAccess\obj\Debug\DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.8.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -575,7 +576,6 @@
     <Compile Include="Station\RTU.cs" />
     <Compile Include="TcpClient.cs" />
     <Compile Include="TcpControl.cs" />
-    <Compile Include="WriteReadXML.cs" />
     <Compile Include="_51Mail.cs" />
     <Compile Include="SetPojectForm.cs">
       <SubType>Form</SubType>
@@ -859,6 +859,7 @@
       <DependentUpon>SetHLJForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -870,6 +871,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OperateXML\OperateXML.csproj">
+      <Project>{1FB4D8A9-A693-4F1B-8338-2897AA3FE857}</Project>
+      <Name>OperateXML</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YYPack\YYPack.csproj">
       <Project>{4E971A0C-0F70-4423-BBFA-4310AE0E3FD1}</Project>
       <Name>YYPack</Name>

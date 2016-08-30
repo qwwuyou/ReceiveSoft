@@ -7,31 +7,72 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Xml;
+using System.IO;
 
 namespace YYApp
 {
     public partial class SetHLJForm : DevComponents.DotNetBar.Metro.MetroForm
     {
-        WriteReadXML wrxml = new WriteReadXML();
+        string Type, Source, DataBase, UserName, PassWord;
         public SetHLJForm()
         {
             InitializeComponent();
         }
 
-
-
+        private void ReadXml(string Path)
+        {
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(Path);
+                XmlNode root = xmlDoc.SelectSingleNode("system").SelectSingleNode("DataBaseConnect");
+                XmlElement nls;
+                nls = (XmlElement)root.SelectSingleNode("Type");
+                Source = nls.InnerText;
+                nls = (XmlElement)root.SelectSingleNode("Source");
+                Source = nls.InnerText;
+                nls = (XmlElement)root.SelectSingleNode("DataBase");
+                DataBase = nls.InnerText;
+                nls = (XmlElement)root.SelectSingleNode("UserName");
+                UserName = nls.InnerText;
+                nls = (XmlElement)root.SelectSingleNode("PassWord");
+                PassWord = nls.InnerText;
+            }
+            catch { }
+        }
+        private void WriteXml(string Path)
+        {
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(Path);
+                XmlNode node = xmlDoc.SelectSingleNode("system").SelectSingleNode("DataBaseConnect");
+                XmlElement nls;
+                nls = (XmlElement)node.SelectSingleNode("Type");
+                nls.InnerText = Type;
+                nls = (XmlElement)node.SelectSingleNode("Source");
+                nls.InnerText = Source;
+                nls = (XmlElement)node.SelectSingleNode("DataBase");
+                nls.InnerText = DataBase;
+                nls = (XmlElement)node.SelectSingleNode("UserName");
+                nls.InnerText = UserName;
+                nls = (XmlElement)node.SelectSingleNode("PassWord");
+                nls.InnerText = PassWord;
+                xmlDoc.Save(Path);
+            }
+            catch { }
+        }
         private void SetHLJForm_Load(object sender, EventArgs e)
         {
-            wrxml.SetPath(System.Windows.Forms.Application.StartupPath + "/Resave_hlj.xml");
-            if (wrxml.GetPath() == System.Windows.Forms.Application.StartupPath + "/System.xml")
-            {
+            string path = System.Windows.Forms.Application.StartupPath + "/Resave_hlj.xml";
+            if (!File.Exists(path))
+            { 
                 DevComponents.DotNetBar.MessageBoxEx.Show("没有找到转存信息的xml文件，请联系系统设计人员!");
             }
             else 
             {
-                string Type, Sourc, DataBase, UserName, PassWord;
-                wrxml.ReadDBXML(out Type,out Sourc ,out DataBase ,out UserName ,out PassWord );
-                textBox_Source.Text =Sourc ;
+                ReadXml(path);
+                textBox_Source.Text =Source ;
                 textBox_DataBase.Text=DataBase ;
                 textBox_UserName.Text=UserName;
                 textBox_PassWord.Text = PassWord;
@@ -48,18 +89,20 @@ namespace YYApp
             }
             else
             {
-                
-                string Type = "MSSQL";
-
-                if (wrxml.GetPath() == System.Windows.Forms.Application.StartupPath + "/System.xml")
+                string path = System.Windows.Forms.Application.StartupPath + "/Resave_hlj.xml";
+                if (!File.Exists(path))
                 {
                     DevComponents.DotNetBar.MessageBoxEx.Show("没有找到转存信息的xml文件，请联系系统设计人员!");
                 }
                 else
                 {
-                    wrxml.WriteDBXML(Type, textBox_Source.Text.Trim(), textBox_DataBase.Text.Trim(), textBox_UserName.Text.Trim(), textBox_PassWord.Text.Trim());
-
-                    Service._51Data dt = new Service._51Data(wrxml.GetPath());
+                    Source = textBox_Source.Text.Trim();
+                    DataBase = textBox_DataBase.Text.Trim();
+                    UserName=textBox_UserName.Text.Trim();
+                    PassWord = textBox_PassWord.Text.Trim();
+                    
+                    WriteXml(path);
+                    Service._51Data dt = new Service._51Data(path);
                     try
                     {
                         dt.conn.Open();

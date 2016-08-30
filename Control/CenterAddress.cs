@@ -12,27 +12,21 @@ namespace Service
         {
             IP = "";
             Port = "";
+
             try
             {
-                System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create("https://raw.githubusercontent.com/qwwuyou/iprepo/master/ip.txt");
-                request.Method = "POST";
-                request.ContentType = "application/json; charset=utf-8";
+                WebRequest webRequest = WebRequest.Create("https://raw.githubusercontent.com/qwwuyou/iprepo/master/ip.txt");
+                HttpWebRequest httpRequest = webRequest as HttpWebRequest;
+                System.IO.Stream responseStream = httpRequest.GetResponse().GetResponseStream();
 
-                byte[] byteData =new byte [1024];
 
-                using (System.IO.Stream postStream = request.GetRequestStream())
+                string strText = string.Empty;
+                using (System.IO.StreamReader responseReader = new System.IO.StreamReader(responseStream, Encoding.GetEncoding("gb2312")))
                 {
-                    postStream.Write(byteData, 0, byteData.Length);
+                    strText = responseReader.ReadToEnd();
                 }
-                string strText = "";
-                // Get response   
-                using (System.Net.HttpWebResponse response = request.GetResponse() as System.Net.HttpWebResponse)
-                {
-                    // Get the response stream   
-                    System.IO.StreamReader reader = new System.IO.StreamReader(response.GetResponseStream());
-                    // Console application output   
-                    strText = strText + reader.ReadToEnd().Replace("\n", "");
-                }
+                responseStream.Close();
+                responseStream.Flush();
 
                 string[] temp = strText.Split(new char[] { ':' });
                 if (temp.Length == 2)

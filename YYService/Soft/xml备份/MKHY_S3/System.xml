@@ -1,0 +1,31 @@
+﻿<system>
+  <Project>
+    <Pro name="" path="" />
+  </Project>
+  <DataBaseConnect>
+    <Type Port="1433">MSSQL</Type>
+    <Source>123.57.234.45</Source>
+    <DataBase>JS_ADJC</DataBase>
+    <UserName>aq</UserName>
+    <PassWord>aquarius</PassWord>
+  </DataBaseConnect>
+  <Dll>
+    <DataProtocol file="MKHY-S3.dll" class="MKHY_S3.MKHYS3" />
+  </Dll>
+  <Service>
+    <tcp serviceid="1" ip_portname="0.0.0.0" port_baudrate="16018" />
+  </Service>
+  <UI>
+    <tcp ip="127.0.0.1" port="8888" />
+  </UI>
+  <TC>
+    <tcp ip="192.168.1.62" port="16020" />
+  </TC>
+  <Login>
+    <UserName>admin</UserName>
+    <PassWord>123</PassWord>
+  </Login>
+  <Mail IsToMail="1" />
+  <WriteInfo Encoding="ASC" />
+  <Resave Name="AQ" file="DataResave_AQ.dll" class="DataResave_AQ.Resave_AQ" />
+</system>

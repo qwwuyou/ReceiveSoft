@@ -1,0 +1,502 @@
+2016/8/23 17:46:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:46:23System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:46:33System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:46:34System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:46:44System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:46:44System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:46:55System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:46:55System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:06System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:06System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:47:16System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:47:17System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:28System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:28System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:47:38System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:47:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:47:50System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:48:00System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:48:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:12System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:48:22System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:48:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:34System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:34System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:48:44System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:48:45System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:56System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:48:56System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:49:06System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:49:06System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:49:17System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:49:17System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:49:28System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:49:28System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:49:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:49:39System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:49:49System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:49:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:01System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:50:11System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:50:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:23System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:50:33System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:50:34System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:45System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:50:45System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:50:55System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:50:56System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:51:07System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:51:07System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:51:17System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:51:18System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:51:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:51:39System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:51:49System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:51:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:01System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:52:11System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:52:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:22System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:22System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:52:33System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:52:33System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:44System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:52:44System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:52:54System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:52:55System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:06System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:06System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:53:16System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:53:17System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:28System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:28System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:53:38System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:53:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:53:50System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:54:00System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:54:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:12System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:54:22System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:54:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:33System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:33System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:54:44System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:54:44System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:55System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:54:55System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:55:05System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:55:06System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:55:17System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:55:17System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:55:27System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:55:28System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:55:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:55:39System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:55:49System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:55:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:01System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:56:11System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:56:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:23System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:56:33System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:56:34System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:34System.Net.Sockets.SocketException (0x80004005): 套接字操作尝试一个无法连接的主机。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:56:45System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:56:45System.Net.Sockets.SocketException (0x80004005): 套接字操作尝试一个无法连接的主机。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:56:53System.Net.Sockets.SocketException (0x80004005): 套接字操作尝试一个无法连接的主机。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:57:03System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:57:03System.Net.Sockets.SocketException (0x80004005): 套接字操作尝试一个无法连接的主机。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:57:12System.Net.Sockets.SocketException (0x80004005): 套接字操作尝试一个无法连接的主机。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:57:28System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:57:39System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:57:39System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:57:49System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:57:50System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:01System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:01System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:58:11System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:58:12System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:23System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:23System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:58:33System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:58:34System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:45System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 17:58:45System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 17:58:55System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 17:58:55System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 18:04:14System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 18:04:14System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 18:04:21System.Net.Sockets.SocketException (0x80004005): 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。 192.168.1.62:16020
+   在 System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   在 ToUI.TcpClient.OnConnect(IAsyncResult ar) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 73
+2016/8/23 18:04:25System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 18:04:36System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 18:04:36System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51
+2016/8/23 18:06:20System.Net.Sockets.SocketException (0x80004005): 由于套接字没有连接并且(当使用一个 sendto 调用发送数据报套接字时)没有提供地址，发送或接收数据的请求没有被接受。
+   在 System.Net.Sockets.Socket.Disconnect(Boolean reuseSocket)
+   在 ToUI.TcpClient.SendData() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 201
+2016/8/23 18:06:20System.Net.Sockets.SocketException (0x80004005): 提供了一个无效的参数。
+   在 System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(EndPoint remoteEP, AsyncCallback callback, Object state)
+   在 System.Net.Sockets.Socket.BeginConnect(IPAddress address, Int32 port, AsyncCallback requestCallback, Object state)
+   在 ToUI.TcpClient.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ToUI\Client\TcpClient.cs:行号 51

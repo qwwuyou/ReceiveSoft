@@ -667,6 +667,19 @@ namespace Service
             return dt.Select<YY_DATA_IMG>("YY_DATA_IMG", new string[] { "*" }, " where STCD='" + STCD + "' and TM ='" + TM + "'");
         }
         #endregion
+
+        #region 操作状态表
+        /// <summary>
+        /// 得到状态列表
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public IList<YY_STATE> GetStateList(string Where) 
+        {
+            return dt.Select<YY_STATE>("YY_STATE", new string[] { "*" }, Where);
+        }
+
+
         /// <summary>
         /// 添加终端状态和报警状态
         /// </summary>
@@ -686,6 +699,18 @@ namespace Service
             model.STATEDATA = AlarmsStr;
             return dt.Insert<YY_DATA_STATE>("YY_DATA_STATE", model);
         }
+
+        /// <summary>
+        /// 添加终端状态和报警状态
+        /// </summary>
+        /// <param name="model">状态实体</param>
+        /// <returns></returns>
+        public bool AddRTUState(YY_DATA_STATE model)
+        {
+            return dt.Insert<YY_DATA_STATE>("YY_DATA_STATE", model);
+        }
+        #endregion
+
 
         /// <summary>
         /// 添加召测命令记录
@@ -1017,6 +1042,137 @@ namespace Service
 
             return DT;
 
+        }
+        #endregion
+
+
+        #region 中心表相关方法
+        /// <summary>
+        /// 得到所有中心站的
+        /// </summary>
+        /// <returns></returns>
+        public IList<CENTER_SERVER> GetServers()
+        {
+            return dt.Select<CENTER_SERVER>("center_server", new string[] { "*" }, " order by DTime desc");
+        }
+
+        /// <summary>
+        /// 根据条件获得各中心站服务的启动状态
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public IList<CENTER_STARTSTATE> GetStartState(string Where) 
+        {
+            return dt.Select<CENTER_STARTSTATE>("CENTER_STARTSTATE", new string[] { "*" }, Where);
+        }
+
+        /// <summary>
+        /// 更新服务列表状态
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public bool UpdCENTER_SERVER(CENTER_SERVER model, string Where)
+        {
+            return dt.Update<CENTER_SERVER>("CENTER_SERVER", model, Where);
+        }
+
+        /// <summary>
+        /// 添加新服务到服务列表
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <returns></returns>
+        public bool AddCENTER_SERVER(CENTER_SERVER model)
+        {
+            return dt.Insert<CENTER_SERVER>("CENTER_SERVER", model);
+        }
+
+        /// <summary>
+        /// 得到启动状态表中各服务最新的数据
+        /// </summary>
+        /// <returns></returns>
+        public IList<CENTER_STARTSTATE> GetStartStateServers()
+        {
+            string name=" Center_StartState";
+            string[] fields =new string[]{"*"};
+            string Where="where exists ("+
+                         "select 1 from "+
+                         "(select ProjectName,PublicIP , max(DTime) as DTime from Center_StartState  group by ProjectName,PublicIP) x "+
+                         "where x.ProjectName = Center_StartState.ProjectName  and x.PublicIP =Center_StartState.PublicIP and x.DTime = Center_StartState.DTime"+
+                         ")";
+
+            return dt.Select<CENTER_STARTSTATE>(name, fields, Where);
+        }
+
+        /// <summary>
+        /// 添加服务启动信息
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <returns></returns>
+        public bool AddCENTER_STARTSTATE(CENTER_STARTSTATE model) 
+        {
+            return dt.Insert<CENTER_STARTSTATE>("CENTER_STARTSTATE", model);
+        }
+
+        /// <summary>
+        /// 更新服务启动信息
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public bool UdpCENTER_STARTSTATE(CENTER_STARTSTATE model,string Where)
+        {
+            return dt.Update<CENTER_STARTSTATE>("CENTER_STARTSTATE", model, Where);
+        }
+
+        /// <summary>
+        /// 添加RTU数量变化信息
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <returns></returns>
+        public bool AddCENTER_RTUCHANGE(CENTER_RTUCHANGE model) 
+        {
+            return dt.Insert<CENTER_RTUCHANGE>("CENTER_RTUCHANGE", model);
+        }
+
+        /// <summary>
+        /// 得到所有RTU数量变化信息
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public IList<CENTER_RTUCHANGE> GetCenterRTUChange(string Where)
+        {
+            return dt.Select<CENTER_RTUCHANGE>("CENTER_RTUCHANGE", new string[]{"*"}, Where);
+        }
+
+        /// <summary>
+        /// 删除RTU数量变化信息
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public bool DelCENTER_RTUCHANGE(string Where) 
+        {
+            return dt.Delete("delete from CENTER_RTUCHANGE " + Where);
+        }
+
+        /// <summary>
+        /// 删除服务启动信息
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public bool DelCENTER_STARTSTATE(string Where)
+        {
+            return dt.Delete("delete from CENTER_STARTSTATE " + Where);
+        }
+
+        /// <summary>
+        /// 删除服务
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+        public bool DelCENTER_SERVER(string Where)
+        {
+            return dt.Delete("delete from CENTER_SERVER " + Where);
         }
         #endregion
     }

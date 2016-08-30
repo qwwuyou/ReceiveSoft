@@ -1,0 +1,1455 @@
+2016年08月26日13时59分21秒 2016/8/26 13:59:21读取服务配置文件成功！
+2016年08月26日13时59分21秒 2016/8/26 13:59:21读取服务与界面交互配置文件成功！
+2016年08月26日13时59分21秒 2016/8/26 13:59:21读取透传配置文件成功！
+2016年08月26日13时59分22秒 数据库连接成功！
+2016年08月26日13时59分22秒 tcp服务(0.0.0.0:16018)启动成功！
+2016年08月26日13时59分22秒 2016/8/26 13:59:22gsm服务(COM4:9600)启动失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 58
+   在 Service.ServiceControl.ChannelStart() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\ServiceControl.cs:行号 317
+2016年08月26日13时59分22秒 2016/8/26 13:59:22界面交互服务(127.0.0.1:8888)启动成功！
+2016年08月26日13时59分22秒 透传服务(192.168.1.62:16020)启动成功！
+2016年08月26日13时59分22秒 启动工作完成！
+2016年08月26日13时59分22秒 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016年08月26日14时00分25秒 2016/8/26 14:00:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时00分25秒 2016/8/26 14:00:25串口状态为关闭，Restart！
+2016年08月26日14时00分58秒 2016/8/26 14:00:58gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时00分58秒 2016/8/26 14:00:58串口状态为关闭，Restart！
+2016年08月26日14时01分31秒 2016/8/26 14:01:31gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时01分31秒 2016/8/26 14:01:31串口状态为关闭，Restart！
+2016年08月26日14时02分04秒 2016/8/26 14:02:04gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时02分04秒 2016/8/26 14:02:04串口状态为关闭，Restart！
+2016年08月26日14时02分37秒 2016/8/26 14:02:37gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时02分37秒 2016/8/26 14:02:37串口状态为关闭，Restart！
+2016年08月26日14时03分10秒 2016/8/26 14:03:10gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时03分10秒 2016/8/26 14:03:10串口状态为关闭，Restart！
+2016年08月26日14时03分43秒 2016/8/26 14:03:43gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时03分43秒 2016/8/26 14:03:43串口状态为关闭，Restart！
+2016年08月26日14时04分16秒 2016/8/26 14:04:16gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时04分16秒 2016/8/26 14:04:16串口状态为关闭，Restart！
+2016年08月26日14时04分49秒 2016/8/26 14:04:49gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时04分49秒 2016/8/26 14:04:49串口状态为关闭，Restart！
+2016年08月26日14时05分22秒 2016/8/26 14:05:22gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时05分22秒 2016/8/26 14:05:22串口状态为关闭，Restart！
+2016年08月26日14时05分55秒 2016/8/26 14:05:55gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时05分55秒 2016/8/26 14:05:55串口状态为关闭，Restart！
+2016年08月26日14时06分28秒 2016/8/26 14:06:28gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时06分28秒 2016/8/26 14:06:28串口状态为关闭，Restart！
+2016年08月26日14时07分01秒 2016/8/26 14:07:01gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时07分01秒 2016/8/26 14:07:01串口状态为关闭，Restart！
+2016年08月26日14时07分34秒 2016/8/26 14:07:34gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时07分34秒 2016/8/26 14:07:34串口状态为关闭，Restart！
+2016年08月26日14时08分07秒 2016/8/26 14:08:07gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时08分07秒 2016/8/26 14:08:07串口状态为关闭，Restart！
+2016年08月26日14时08分40秒 2016/8/26 14:08:40gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时08分40秒 2016/8/26 14:08:40串口状态为关闭，Restart！
+2016年08月26日14时09分13秒 2016/8/26 14:09:13gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时09分13秒 2016/8/26 14:09:13串口状态为关闭，Restart！
+2016年08月26日14时09分25秒 2016/8/26 14:09:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时09分46秒 2016/8/26 14:09:46gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时09分46秒 2016/8/26 14:09:46串口状态为关闭，Restart！
+2016年08月26日14时10分19秒 2016/8/26 14:10:19gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时10分19秒 2016/8/26 14:10:19串口状态为关闭，Restart！
+2016年08月26日14时10分52秒 2016/8/26 14:10:52gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时10分52秒 2016/8/26 14:10:52串口状态为关闭，Restart！
+2016年08月26日14时11分25秒 2016/8/26 14:11:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时11分25秒 2016/8/26 14:11:25串口状态为关闭，Restart！
+2016年08月26日14时11分58秒 2016/8/26 14:11:58gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时11分58秒 2016/8/26 14:11:58串口状态为关闭，Restart！
+2016年08月26日14时12分31秒 2016/8/26 14:12:31gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时12分31秒 2016/8/26 14:12:31串口状态为关闭，Restart！
+2016年08月26日14时13分04秒 2016/8/26 14:13:04gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时13分04秒 2016/8/26 14:13:04串口状态为关闭，Restart！
+2016年08月26日14时13分37秒 2016/8/26 14:13:37gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时13分37秒 2016/8/26 14:13:37串口状态为关闭，Restart！
+2016年08月26日14时14分10秒 2016/8/26 14:14:10gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时14分10秒 2016/8/26 14:14:10串口状态为关闭，Restart！
+2016年08月26日14时14分25秒 2016/8/26 14:14:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时14分43秒 2016/8/26 14:14:43gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时14分43秒 2016/8/26 14:14:43串口状态为关闭，Restart！
+2016年08月26日14时15分16秒 2016/8/26 14:15:16gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时15分16秒 2016/8/26 14:15:16串口状态为关闭，Restart！
+2016年08月26日14时15分49秒 2016/8/26 14:15:49gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时15分49秒 2016/8/26 14:15:49串口状态为关闭，Restart！
+2016年08月26日14时16分22秒 2016/8/26 14:16:22gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时16分22秒 2016/8/26 14:16:22串口状态为关闭，Restart！
+2016年08月26日14时16分55秒 2016/8/26 14:16:55gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时16分55秒 2016/8/26 14:16:55串口状态为关闭，Restart！
+2016年08月26日14时17分28秒 2016/8/26 14:17:28gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时17分28秒 2016/8/26 14:17:28串口状态为关闭，Restart！
+2016年08月26日14时18分01秒 2016/8/26 14:18:01gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时18分01秒 2016/8/26 14:18:01串口状态为关闭，Restart！
+2016年08月26日14时18分34秒 2016/8/26 14:18:34gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时18分34秒 2016/8/26 14:18:34串口状态为关闭，Restart！
+2016年08月26日14时19分07秒 2016/8/26 14:19:07gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时19分07秒 2016/8/26 14:19:07串口状态为关闭，Restart！
+2016年08月26日14时19分25秒 2016/8/26 14:19:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时19分40秒 2016/8/26 14:19:40gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时19分40秒 2016/8/26 14:19:40串口状态为关闭，Restart！
+2016年08月26日14时20分13秒 2016/8/26 14:20:13gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时20分13秒 2016/8/26 14:20:13串口状态为关闭，Restart！
+2016年08月26日14时20分46秒 2016/8/26 14:20:46gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时20分46秒 2016/8/26 14:20:46串口状态为关闭，Restart！
+2016年08月26日14时21分19秒 2016/8/26 14:21:19gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时21分19秒 2016/8/26 14:21:19串口状态为关闭，Restart！
+2016年08月26日14时21分52秒 2016/8/26 14:21:52gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时21分52秒 2016/8/26 14:21:52串口状态为关闭，Restart！
+2016年08月26日14时22分25秒 2016/8/26 14:22:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时22分25秒 2016/8/26 14:22:25串口状态为关闭，Restart！
+2016年08月26日14时22分58秒 2016/8/26 14:22:58gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时22分58秒 2016/8/26 14:22:58串口状态为关闭，Restart！
+2016年08月26日14时23分31秒 2016/8/26 14:23:31gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时23分31秒 2016/8/26 14:23:31串口状态为关闭，Restart！
+2016年08月26日14时24分04秒 2016/8/26 14:24:04gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时24分04秒 2016/8/26 14:24:04串口状态为关闭，Restart！
+2016年08月26日14时24分25秒 2016/8/26 14:24:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时24分37秒 2016/8/26 14:24:37gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时24分37秒 2016/8/26 14:24:37串口状态为关闭，Restart！
+2016年08月26日14时25分10秒 2016/8/26 14:25:10gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时25分10秒 2016/8/26 14:25:10串口状态为关闭，Restart！
+2016年08月26日14时25分43秒 2016/8/26 14:25:43gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时25分43秒 2016/8/26 14:25:43串口状态为关闭，Restart！
+2016年08月26日14时26分16秒 2016/8/26 14:26:16gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时26分16秒 2016/8/26 14:26:16串口状态为关闭，Restart！
+2016年08月26日14时26分49秒 2016/8/26 14:26:49gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时26分49秒 2016/8/26 14:26:49串口状态为关闭，Restart！
+2016年08月26日14时27分22秒 2016/8/26 14:27:22gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时27分22秒 2016/8/26 14:27:22串口状态为关闭，Restart！
+2016年08月26日14时27分55秒 2016/8/26 14:27:55gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时27分55秒 2016/8/26 14:27:55串口状态为关闭，Restart！
+2016年08月26日14时28分28秒 2016/8/26 14:28:28gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时28分28秒 2016/8/26 14:28:28串口状态为关闭，Restart！
+2016年08月26日14时29分01秒 2016/8/26 14:29:01gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时29分01秒 2016/8/26 14:29:01串口状态为关闭，Restart！
+2016年08月26日14时29分25秒 2016/8/26 14:29:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时29分34秒 2016/8/26 14:29:34gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时29分34秒 2016/8/26 14:29:34串口状态为关闭，Restart！
+2016年08月26日14时30分08秒 2016/8/26 14:30:08gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时30分08秒 2016/8/26 14:30:08串口状态为关闭，Restart！
+2016年08月26日14时30分41秒 2016/8/26 14:30:41gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时30分41秒 2016/8/26 14:30:41串口状态为关闭，Restart！
+2016年08月26日14时31分14秒 2016/8/26 14:31:14gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时31分14秒 2016/8/26 14:31:14串口状态为关闭，Restart！
+2016年08月26日14时31分47秒 2016/8/26 14:31:47gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时31分47秒 2016/8/26 14:31:47串口状态为关闭，Restart！
+2016年08月26日14时32分20秒 2016/8/26 14:32:20gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时32分20秒 2016/8/26 14:32:20串口状态为关闭，Restart！
+2016年08月26日14时32分53秒 2016/8/26 14:32:53gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时32分53秒 2016/8/26 14:32:53串口状态为关闭，Restart！
+2016年08月26日14时33分26秒 2016/8/26 14:33:26gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时33分26秒 2016/8/26 14:33:26串口状态为关闭，Restart！
+2016年08月26日14时33分59秒 2016/8/26 14:33:59gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时33分59秒 2016/8/26 14:33:59串口状态为关闭，Restart！
+2016年08月26日14时34分25秒 2016/8/26 14:34:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时34分32秒 2016/8/26 14:34:32gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时34分32秒 2016/8/26 14:34:32串口状态为关闭，Restart！
+2016年08月26日14时35分05秒 2016/8/26 14:35:05gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时35分05秒 2016/8/26 14:35:05串口状态为关闭，Restart！
+2016年08月26日14时35分38秒 2016/8/26 14:35:38gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时35分38秒 2016/8/26 14:35:38串口状态为关闭，Restart！
+2016年08月26日14时36分11秒 2016/8/26 14:36:11gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时36分11秒 2016/8/26 14:36:11串口状态为关闭，Restart！
+2016年08月26日14时36分44秒 2016/8/26 14:36:44gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时36分44秒 2016/8/26 14:36:44串口状态为关闭，Restart！
+2016年08月26日14时37分17秒 2016/8/26 14:37:17gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时37分17秒 2016/8/26 14:37:17串口状态为关闭，Restart！
+2016年08月26日14时37分50秒 2016/8/26 14:37:50gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时37分50秒 2016/8/26 14:37:50串口状态为关闭，Restart！
+2016年08月26日14时38分23秒 2016/8/26 14:38:23gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时38分23秒 2016/8/26 14:38:23串口状态为关闭，Restart！
+2016年08月26日14时38分56秒 2016/8/26 14:38:56gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时38分56秒 2016/8/26 14:38:56串口状态为关闭，Restart！
+2016年08月26日14时39分25秒 2016/8/26 14:39:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时39分29秒 2016/8/26 14:39:29gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时39分29秒 2016/8/26 14:39:29串口状态为关闭，Restart！
+2016年08月26日14时40分02秒 2016/8/26 14:40:02gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时40分02秒 2016/8/26 14:40:02串口状态为关闭，Restart！
+2016年08月26日14时40分35秒 2016/8/26 14:40:35gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时40分35秒 2016/8/26 14:40:35串口状态为关闭，Restart！
+2016年08月26日14时41分08秒 2016/8/26 14:41:08gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时41分08秒 2016/8/26 14:41:08串口状态为关闭，Restart！
+2016年08月26日14时41分41秒 2016/8/26 14:41:41gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时41分41秒 2016/8/26 14:41:41串口状态为关闭，Restart！
+2016年08月26日14时42分14秒 2016/8/26 14:42:14gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时42分14秒 2016/8/26 14:42:14串口状态为关闭，Restart！
+2016年08月26日14时42分47秒 2016/8/26 14:42:47gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时42分47秒 2016/8/26 14:42:47串口状态为关闭，Restart！
+2016年08月26日14时43分20秒 2016/8/26 14:43:20gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时43分20秒 2016/8/26 14:43:20串口状态为关闭，Restart！
+2016年08月26日14时43分53秒 2016/8/26 14:43:53gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时43分53秒 2016/8/26 14:43:53串口状态为关闭，Restart！
+2016年08月26日14时44分25秒 2016/8/26 14:44:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时44分26秒 2016/8/26 14:44:26gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时44分26秒 2016/8/26 14:44:26串口状态为关闭，Restart！
+2016年08月26日14时44分59秒 2016/8/26 14:44:59gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时44分59秒 2016/8/26 14:44:59串口状态为关闭，Restart！
+2016年08月26日14时45分32秒 2016/8/26 14:45:32gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时45分32秒 2016/8/26 14:45:32串口状态为关闭，Restart！
+2016年08月26日14时46分05秒 2016/8/26 14:46:05gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时46分05秒 2016/8/26 14:46:05串口状态为关闭，Restart！
+2016年08月26日14时46分38秒 2016/8/26 14:46:38gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时46分38秒 2016/8/26 14:46:38串口状态为关闭，Restart！
+2016年08月26日14时47分11秒 2016/8/26 14:47:11gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时47分11秒 2016/8/26 14:47:11串口状态为关闭，Restart！
+2016年08月26日14时47分44秒 2016/8/26 14:47:44gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时47分44秒 2016/8/26 14:47:44串口状态为关闭，Restart！
+2016年08月26日14时48分17秒 2016/8/26 14:48:17gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时48分17秒 2016/8/26 14:48:17串口状态为关闭，Restart！
+2016年08月26日14时48分50秒 2016/8/26 14:48:50gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时48分50秒 2016/8/26 14:48:50串口状态为关闭，Restart！
+2016年08月26日14时49分23秒 2016/8/26 14:49:23gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时49分23秒 2016/8/26 14:49:23串口状态为关闭，Restart！
+2016年08月26日14时49分25秒 2016/8/26 14:49:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时49分56秒 2016/8/26 14:49:56gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时49分56秒 2016/8/26 14:49:56串口状态为关闭，Restart！
+2016年08月26日14时50分29秒 2016/8/26 14:50:29gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时50分29秒 2016/8/26 14:50:29串口状态为关闭，Restart！
+2016年08月26日14时51分02秒 2016/8/26 14:51:02gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时51分02秒 2016/8/26 14:51:02串口状态为关闭，Restart！
+2016年08月26日14时51分35秒 2016/8/26 14:51:35gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时51分35秒 2016/8/26 14:51:35串口状态为关闭，Restart！
+2016年08月26日14时52分08秒 2016/8/26 14:52:08gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时52分08秒 2016/8/26 14:52:08串口状态为关闭，Restart！
+2016年08月26日14时52分41秒 2016/8/26 14:52:41gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时52分41秒 2016/8/26 14:52:41串口状态为关闭，Restart！
+2016年08月26日14时53分14秒 2016/8/26 14:53:14gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时53分14秒 2016/8/26 14:53:14串口状态为关闭，Restart！
+2016年08月26日14时53分47秒 2016/8/26 14:53:47gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时53分47秒 2016/8/26 14:53:47串口状态为关闭，Restart！
+2016年08月26日14时54分20秒 2016/8/26 14:54:20gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时54分20秒 2016/8/26 14:54:20串口状态为关闭，Restart！
+2016年08月26日14时54分25秒 2016/8/26 14:54:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时54分53秒 2016/8/26 14:54:53gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时54分53秒 2016/8/26 14:54:53串口状态为关闭，Restart！
+2016年08月26日14时55分26秒 2016/8/26 14:55:26gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时55分26秒 2016/8/26 14:55:26串口状态为关闭，Restart！
+2016年08月26日14时55分59秒 2016/8/26 14:55:59gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时55分59秒 2016/8/26 14:55:59串口状态为关闭，Restart！
+2016年08月26日14时56分32秒 2016/8/26 14:56:32gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时56分32秒 2016/8/26 14:56:32串口状态为关闭，Restart！
+2016年08月26日14时57分05秒 2016/8/26 14:57:05gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时57分05秒 2016/8/26 14:57:05串口状态为关闭，Restart！
+2016年08月26日14时57分38秒 2016/8/26 14:57:38gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时57分38秒 2016/8/26 14:57:38串口状态为关闭，Restart！
+2016年08月26日14时58分11秒 2016/8/26 14:58:11gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时58分11秒 2016/8/26 14:58:11串口状态为关闭，Restart！
+2016年08月26日14时58分44秒 2016/8/26 14:58:44gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时58分44秒 2016/8/26 14:58:44串口状态为关闭，Restart！
+2016年08月26日14时59分17秒 2016/8/26 14:59:17gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时59分17秒 2016/8/26 14:59:17串口状态为关闭，Restart！
+2016年08月26日14时59分50秒 2016/8/26 14:59:50gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日14时59分50秒 2016/8/26 14:59:50串口状态为关闭，Restart！
+2016年08月26日15时00分23秒 2016/8/26 15:00:23gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时00分23秒 2016/8/26 15:00:23串口状态为关闭，Restart！
+2016年08月26日15时00分56秒 2016/8/26 15:00:56gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时00分56秒 2016/8/26 15:00:56串口状态为关闭，Restart！
+2016年08月26日15时01分29秒 2016/8/26 15:01:29gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时01分29秒 2016/8/26 15:01:29串口状态为关闭，Restart！
+2016年08月26日15时02分02秒 2016/8/26 15:02:02gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时02分02秒 2016/8/26 15:02:02串口状态为关闭，Restart！
+2016年08月26日15时02分35秒 2016/8/26 15:02:35gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时02分35秒 2016/8/26 15:02:35串口状态为关闭，Restart！
+2016年08月26日15时03分08秒 2016/8/26 15:03:08gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时03分08秒 2016/8/26 15:03:08串口状态为关闭，Restart！
+2016年08月26日15时03分41秒 2016/8/26 15:03:41gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时03分41秒 2016/8/26 15:03:41串口状态为关闭，Restart！
+2016年08月26日15时04分14秒 2016/8/26 15:04:14gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时04分14秒 2016/8/26 15:04:14串口状态为关闭，Restart！
+2016年08月26日15时04分47秒 2016/8/26 15:04:47gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时04分47秒 2016/8/26 15:04:47串口状态为关闭，Restart！
+2016年08月26日15时05分20秒 2016/8/26 15:05:20gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时05分20秒 2016/8/26 15:05:20串口状态为关闭，Restart！
+2016年08月26日15时05分53秒 2016/8/26 15:05:53gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时05分53秒 2016/8/26 15:05:53串口状态为关闭，Restart！
+2016年08月26日15时06分27秒 2016/8/26 15:06:27gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时06分27秒 2016/8/26 15:06:27串口状态为关闭，Restart！
+2016年08月26日15时07分00秒 2016/8/26 15:07:00gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时07分00秒 2016/8/26 15:07:00串口状态为关闭，Restart！
+2016年08月26日15时07分33秒 2016/8/26 15:07:33gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时07分33秒 2016/8/26 15:07:33串口状态为关闭，Restart！
+2016年08月26日15时08分06秒 2016/8/26 15:08:06gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时08分06秒 2016/8/26 15:08:06串口状态为关闭，Restart！
+2016年08月26日15时08分39秒 2016/8/26 15:08:39gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时08分39秒 2016/8/26 15:08:39串口状态为关闭，Restart！
+2016年08月26日15时09分12秒 2016/8/26 15:09:12gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时09分12秒 2016/8/26 15:09:12串口状态为关闭，Restart！
+2016年08月26日15时09分25秒 2016/8/26 15:09:25gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时09分45秒 2016/8/26 15:09:45gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时09分45秒 2016/8/26 15:09:45串口状态为关闭，Restart！
+2016年08月26日15时10分18秒 2016/8/26 15:10:18gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时10分18秒 2016/8/26 15:10:18串口状态为关闭，Restart！
+2016年08月26日15时10分51秒 2016/8/26 15:10:51gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时10分51秒 2016/8/26 15:10:51串口状态为关闭，Restart！
+2016年08月26日15时11分24秒 2016/8/26 15:11:24gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时11分24秒 2016/8/26 15:11:24串口状态为关闭，Restart！
+2016年08月26日15时11分57秒 2016/8/26 15:11:57gsm服务(COM4:9600)重启失败！
+System.IO.IOException: 端口“COM4”不存在。
+   在 System.IO.Ports.InternalResources.WinIOError(Int32 errorCode, String str)
+   在 System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   在 System.IO.Ports.SerialPort.Open()
+   在 GSMMODEM.MyCom.Open() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\MyCom.cs:行号 156
+   在 GSMMODEM.GsmModem.Open(String& sResult, Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 269
+   在 GSMMODEM.GsmModem.Open(Int32 SleepTime) 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\GSMMODEM\GsmModem.cs:行号 254
+   在 GsmService.GsmServer.Start() 位置 D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\Control\Channel\GSM\GsmServer.cs:行号 74
+2016年08月26日15时11分57秒 2016/8/26 15:11:57串口状态为关闭，Restart！
+2016年08月26日17时29分17秒 2016/8/26 17:29:17读取服务配置文件成功！
+2016年08月26日17时29分17秒 2016/8/26 17:29:17读取服务与界面交互配置文件成功！
+2016年08月26日17时29分17秒 2016/8/26 17:29:17读取透传配置文件成功！
+2016年08月26日17时29分19秒 数据库连接成功！
+2016年08月26日17时29分19秒 tcp服务(0.0.0.0:16018)启动成功！
+2016年08月26日17时29分19秒 2016/8/26 17:29:19界面交互服务(127.0.0.1:8888)启动成功！
+2016年08月26日17时29分19秒 透传服务(192.168.1.62:16020)启动成功！
+2016年08月26日17时29分19秒 启动工作完成！
+2016年08月26日17时29分19秒 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016年08月26日23时20分31秒 2016/8/26 23:20:31读取服务配置文件成功！
+2016年08月26日23时20分31秒 2016/8/26 23:20:31读取服务与界面交互配置文件成功！
+2016年08月26日23时20分31秒 2016/8/26 23:20:31读取透传配置文件成功！
+2016年08月26日23时20分32秒 数据库连接成功！
+2016年08月26日23时20分32秒 tcp服务(0.0.0.0:16018)启动成功！
+2016年08月26日23时20分32秒 2016/8/26 23:20:32界面交互服务(127.0.0.1:8888)启动成功！
+2016年08月26日23时20分32秒 透传服务(192.168.1.62:16020)启动成功！
+2016年08月26日23时20分32秒 启动工作完成！
+2016年08月26日23时20分32秒 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016年08月26日23时22分54秒 2016/8/26 23:22:54读取服务配置文件成功！
+2016年08月26日23时22分54秒 2016/8/26 23:22:54读取服务与界面交互配置文件成功！
+2016年08月26日23时22分54秒 2016/8/26 23:22:54读取透传配置文件成功！
+2016年08月26日23时22分54秒 数据库连接成功！
+2016年08月26日23时22分54秒 tcp服务(0.0.0.0:16018)启动成功！
+2016年08月26日23时22分54秒 2016/8/26 23:22:54界面交互服务(127.0.0.1:8888)启动成功！
+2016年08月26日23时22分54秒 透传服务(192.168.1.62:16020)启动成功！
+2016年08月26日23时22分54秒 启动工作完成！
+2016年08月26日23时22分54秒 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

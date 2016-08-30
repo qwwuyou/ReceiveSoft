@@ -45,7 +45,12 @@ namespace YYApp.SetControl
 
         private void Search()
         {
+
             string Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>= to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') AND TM<= to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS') ";
+            }
             DataTable dt = PublicBD.db.GetRemDataForWhere (Where);
             dataGridView1.DataSource = dt;
             if (dt != null) 
@@ -259,6 +264,10 @@ namespace YYApp.SetControl
                 model.ItemID = dataGridView1.Rows[e.RowIndex].Cells["Column8"].Value.ToString();
 
                 string Where = "where stcd='" + model.STCD + "' and ItemID='" + model.ItemID + "' and   TM='" + model.TM.ToString("yyyy-MM-dd HH:mm:ss.fff") + "'";
+                if (PublicBD.DB == "ORACLE")
+                {
+                    Where = "where stcd='" + model.STCD + "' and ItemID='" + model.ItemID + "' and  TM=to_date('" + model.TM.ToString() + "','yyyy-MM-dd HH24:MI:SS')";
+                }
                 if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "删 除")
                 {
                     bool b = PublicBD.db.DelRemData(Where);

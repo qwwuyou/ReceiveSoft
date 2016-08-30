@@ -33,6 +33,10 @@ namespace YYApp.SetControl
         private void Search()
         {
             string Where = " where YY_DATA_MANUAL.stcd='" + comboBox_STCD.SelectedValue + "'  and YY_DATA_MANUAL.TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and YY_DATA_MANUAL.TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'  order by YY_DATA_MANUAL.TM desc";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where YY_DATA_MANUAL.stcd='" + comboBox_STCD.SelectedValue + "'  and YY_DATA_MANUAL.TM>=to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') and YY_DATA_MANUAL.TM<=to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS')  order by YY_DATA_MANUAL.TM desc";
+            }
             DataTable dt = PublicBD.db.GetManualDataForWhere(Where);
             dataGridView1.DataSource = dt;
             if(dt!=null)

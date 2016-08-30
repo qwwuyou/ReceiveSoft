@@ -379,8 +379,8 @@ namespace YYApp
             // 
             // pageSliderPage1
             // 
-            this.pageSliderPage1.BackColor = System.Drawing.Color.White;
-            this.pageSliderPage1.ForeColor = System.Drawing.Color.Black;
+            this.pageSliderPage1.BackColor = System.Drawing.Color.Black;
+            this.pageSliderPage1.ForeColor = System.Drawing.Color.White;
             this.pageSliderPage1.Location = new System.Drawing.Point(4, 4);
             this.pageSliderPage1.Name = "pageSliderPage1";
             this.pageSliderPage1.Size = new System.Drawing.Size(1026, 466);
@@ -388,8 +388,8 @@ namespace YYApp
             // 
             // pageSliderPage2
             // 
-            this.pageSliderPage2.BackColor = System.Drawing.Color.White;
-            this.pageSliderPage2.ForeColor = System.Drawing.Color.Black;
+            this.pageSliderPage2.BackColor = System.Drawing.Color.Black;
+            this.pageSliderPage2.ForeColor = System.Drawing.Color.White;
             this.pageSliderPage2.Location = new System.Drawing.Point(1030, 4);
             this.pageSliderPage2.Name = "pageSliderPage2";
             this.pageSliderPage2.Size = new System.Drawing.Size(1026, 466);
@@ -397,8 +397,8 @@ namespace YYApp
             // 
             // pageSliderPage3
             // 
-            this.pageSliderPage3.BackColor = System.Drawing.Color.White;
-            this.pageSliderPage3.ForeColor = System.Drawing.Color.Black;
+            this.pageSliderPage3.BackColor = System.Drawing.Color.Black;
+            this.pageSliderPage3.ForeColor = System.Drawing.Color.White;
             this.pageSliderPage3.Location = new System.Drawing.Point(2056, 4);
             this.pageSliderPage3.Name = "pageSliderPage3";
             this.pageSliderPage3.Size = new System.Drawing.Size(1026, 466);
@@ -406,8 +406,8 @@ namespace YYApp
             // 
             // pageSliderPage4
             // 
-            this.pageSliderPage4.BackColor = System.Drawing.Color.White;
-            this.pageSliderPage4.ForeColor = System.Drawing.Color.Black;
+            this.pageSliderPage4.BackColor = System.Drawing.Color.Black;
+            this.pageSliderPage4.ForeColor = System.Drawing.Color.White;
             this.pageSliderPage4.Location = new System.Drawing.Point(3082, 4);
             this.pageSliderPage4.Name = "pageSliderPage4";
             this.pageSliderPage4.Size = new System.Drawing.Size(1026, 466);

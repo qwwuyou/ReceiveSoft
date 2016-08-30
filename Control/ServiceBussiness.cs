@@ -88,13 +88,7 @@ namespace Service
 
         }
 
-        //public static void WriteQUIM()
-        //{
-        //    UIModel UIm = new UIModel();
-        //    UIm.EXPLAIN = rtf;
-        //    UIm.DataType = 1;
-        //    ServiceQueue.QUIM.Enqueue(UIm);
-        //}
+       
 
         #region 从UI接收命令后
         /// <summary>
@@ -132,11 +126,11 @@ namespace Service
                         Data = temps[0];
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(Data);
                         }
@@ -165,11 +159,11 @@ namespace Service
                         Data = temps[0];
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(Data);
                         }
@@ -195,11 +189,11 @@ namespace Service
                         Data = temps[0];
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "HEX")
                         {
                             EncoderData = EnCoder.HexStrToByteArray(Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(Data);
                         }
@@ -405,46 +399,56 @@ namespace Service
                 }
                 else if (data[i] != "" && data[i].Length == 6)
                 {
-                    //收到该命令发送所有命令列表
-                    if (data[i].Substring(0, 6) == "--cmd|")
-                        ServiceBussiness.SendCommandListState();
-                    //重启服务命令
-                    if (data[i].Substring(0, 6) == "--ser|")
+                    switch (data[i].Substring(0, 6))
                     {
-                        System.Threading.Thread thread = new System.Threading.Thread(new System.Threading.ParameterizedThreadStart(ReBootService));
-                        thread.Start(sc);
-                    }
-                    //发送邮件命令
-                    if (data[i].Substring(0, 6) == "--mal|")
-                    {
-                        try
-                        {
-                            SendMail();
-                        }
-                        catch (Exception e)
-                        {
-                            TimeSpan ts1 = new TimeSpan(ServiceControl.StartTime.Ticks);
-                            TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
-                            TimeSpan ts = ts1.Subtract(ts2).Duration();
-                            string dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒";
+                        case "--cmd|"://收到该命令发送所有命令列表
+                            {
+                                ServiceBussiness.SendCommandListState();
+                                break;
+                            }
+                        case "--ser|"://重启服务命令
+                            {
+                                System.Threading.Thread thread = new System.Threading.Thread(new System.Threading.ParameterizedThreadStart(ReBootService));
+                                thread.Start(sc);
+                                break;
+                            }
+                        case "--mal|"://发送邮件命令
+                            {
+                                try
+                                {
+                                    SendMail();
+                                }
+                                catch (Exception e)
+                                {
+                                    TimeSpan ts1 = new TimeSpan(ServiceControl.StartTime.Ticks);
+                                    TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
+                                    TimeSpan ts = ts1.Subtract(ts2).Duration();
+                                    string dateDiff = ts.Days.ToString() + "天" + ts.Hours.ToString() + "小时" + ts.Minutes.ToString() + "分钟" + ts.Seconds.ToString() + "秒";
 
-                            ServiceControl.log.Error(DateTime.Now + "系统运行时长：" + dateDiff + " 接收到发送邮件命令，邮件发送失败！" + e.ToString());
-                        }
+                                    ServiceControl.log.Error(DateTime.Now + "系统运行时长：" + dateDiff + " 接收到发送邮件命令，邮件发送失败！" + e.ToString());
+                                }
+                                break;
+                            }
+                        case "--rtu|"://重新读取rtu信息
+                            {
+                                ServiceBussiness.GetRTUList();
+                                WriteQUIM("", "Service", "", "服务已重新从数据库中读取RTU信息！", new byte[] { }, Service.ServiceEnum.EnCoderType.HEX, Service.ServiceEnum.DataType.Text);
+                                break;
+                            }
+                        case "--reg|"://远程注册
+                            {
+                                DeletEFileVerificationRegistration(); 
+                                break;
+                            }
+                        case "--lkd|"://反注册，锁住客户端
+                            {
+                                lkd();
+                                break;
+                            }
+                        default:
+                            break;
                     }
-                    //重新读取rtu信息
-                    if (data[i].Substring(0, 6) == "--rtu|")
-                    {
-                        ServiceBussiness.GetRTUList();
-                        WriteQUIM("", "Service", "", "服务已重新从数据库中读取RTU信息！", new byte[] { }, Service.ServiceEnum.EnCoderType.HEX, Service.ServiceEnum.DataType.Text);
 
-                    }
-                    //远程注册
-                    if (data[i].Substring(0, 6) == "--reg|")
-                    {
-                        //string path = @"***.exe";
-                        //System.Diagnostics.Process.Start(path);
-                        DeletEFileVerificationRegistration();
-                    }
                 }
             }
         }
@@ -510,10 +514,22 @@ namespace Service
         /// </summary>
         private static void ReBootService(object sc)
         {
-            ServiceControl.ReReadXML();
+            //重新初始化读取数据库配置
+            PublicBD.RePublicBD();
+
+            //重读取xml配置文件
+            ServiceControl.wrx.ReadXML();
+            if (ServiceControl.wrx.XMLObj.dllfile == "Center.dll" && ServiceControl.wrx.XMLObj.dllclass == "Service.Center")
+            {
+                ServiceControl.IsCenter = true;
+            }
+
+            //用反射实现协议
+            Reflection_Protoco R_Protoco = new Reflection_Protoco(); 
 
             ServiceBussiness.GetRTUList();  //重读RTU列表
             ServiceControl.LC = ServiceBussiness.GetCommandTempToLC();  //重读命令列表
+
             foreach (var tcp in Service.ServiceControl.tcp)
             {
                 tcp.Stop();
@@ -532,46 +548,9 @@ namespace Service
             }
             SendEveryServcieState();
             System.Threading.Thread.Sleep(3 * 1000);
-            //try
-            //{
-            //    foreach (var tcp in Service.ServiceControl.tcp)
-            //    {
-            //        tcp.Start();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{ Service.ServiceControl.log.Error(DateTime.Now + ex.ToString()); }
-            //try
-            //{
-            //    foreach (var udp in Service.ServiceControl.udp)
-            //    {
-            //        udp.Start();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{ Service.ServiceControl.log.Error(DateTime.Now + ex.ToString()); }
-            //try
-            //{
-            //    foreach (var gsm in Service.ServiceControl.gsm)
-            //    {
-            //        gsm.Start(); //该方法中重读了Mobile号
-            //        Console.WriteLine(DateTime.Now + "远程命令重启服务，" + "Restart！");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{ Service.ServiceControl.log.Error(DateTime.Now + ex.ToString()); }
-            //try
-            //{
-            //    foreach (var com in Service.ServiceControl.com)
-            //    {
-            //        com.Start();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{ Service.ServiceControl.log.Error(DateTime.Now + ex.ToString()); }
+            
             (sc as ServiceControl).ChannelStart();
 
-            //ResaveToHLJDB.ReResaveToHLJDB();
             Reflection_Resave.InitInfo();
             ServiceControl.AccessCenter();
 
@@ -844,24 +823,29 @@ namespace Service
         {
             if (protocol.ToLower() == "shuiwen")
             {
-                new Service.WriteReadXML().WriteProtocolXML("HydrologicProtocol.dll", "Service.Hydrologic");
-                new Service.WriteReadXML().WriteInfoEncodingXML("HEX");
+                ServiceControl.wrx.XMLObj.dllfile="HydrologicProtocol.dll";
+                ServiceControl.wrx.XMLObj.dllclass="Service.Hydrologic";
+                ServiceControl.wrx.XMLObj.HEXOrASC="HEX";
             }
             else if (protocol.ToLower() == "shuiziyuan")
             {
-                new Service.WriteReadXML().WriteProtocolXML("Protocol.dll", "Service.WaterResource");
-                new Service.WriteReadXML().WriteInfoEncodingXML("HEX");
+                ServiceControl.wrx.XMLObj.dllfile = "Protocol.dll";
+                ServiceControl.wrx.XMLObj.dllclass = "Service.WaterResource";
+                ServiceControl.wrx.XMLObj.HEXOrASC = "HEX";
             }
             else if (protocol.ToLower() == "yanyu")
             {
-                new Service.WriteReadXML().WriteProtocolXML("GSProtocol.dll", "Service.GS");
-                new Service.WriteReadXML().WriteInfoEncodingXML("ASC");
+                ServiceControl.wrx.XMLObj.dllfile = "GSProtocol.dll";
+                ServiceControl.wrx.XMLObj.dllclass =  "Service.GS";
+                ServiceControl.wrx.XMLObj.HEXOrASC = "ASC";
             }
             else if (protocol.ToLower() == "zhengda212")
             {
-                new Service.WriteReadXML().WriteProtocolXML("HJT212-2005.dll", "Service.HTJ212");
-                new Service.WriteReadXML().WriteInfoEncodingXML("ASC");
+                ServiceControl.wrx.XMLObj.dllfile = "HJT212-2005.dll";
+                ServiceControl.wrx.XMLObj.dllclass = "Service.HTJ212";
+                ServiceControl.wrx.XMLObj.HEXOrASC = "ASC";
             }
+            ServiceControl.wrx.WriteXML();
         }
 
         /// <summary>
@@ -869,12 +853,8 @@ namespace Service
         /// </summary>
         public static void SendMail()
         {
-            if (ServiceControl.IsToMail)//配置文件配置了允许发送邮件
-            {
-
-                //注册信息
-                string RegistrationInfo=Registration();
-
+            if (ServiceControl.wrx.XMLObj.IsToMail)//配置文件配置了允许发送邮件
+            {   
                 //ipx信息
                 List<string> IPs = GetHostIPAddress();
                 string ips = "本机IP：";
@@ -883,7 +863,7 @@ namespace Service
                     ips += item + "<br>";
                 }
 
-                List<string> projects=(new WriteReadXML()).GetProjects();
+                List<OperateXML.ProjectInfo> projects = ServiceControl.wrx.XMLObj.projects; ;
 
                 TimeSpan ts1 = new TimeSpan(ServiceControl.StartTime.Ticks);
                 TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
@@ -892,7 +872,7 @@ namespace Service
 
                 string To = "YYsoft2013@163.com";
                 string From = To;
-                string Body = "管理员：<br>   hello！<br> 系统运行时长为：" + dateDiff + "<br> 异常信息请查看附件内容!" + "<br>公网IP：" + GetPublicIP() + "<br>" + ips + "<bs>" + RegistrationInfo;
+                string Body = "管理员：<br>   hello！<br> 系统运行时长为：" + dateDiff + "<br> 异常信息请查看附件内容!" + "<br>公网IP：" + ServiceControl.PublicIP  + "<br>" + ips + "<bs>" + ServiceControl.RegistrationInfo;
 
 
                 foreach (var item in projects)
@@ -951,7 +931,8 @@ namespace Service
         {
             try
             {
-                Uri uri = new Uri("http://city.ip138.com/ip2city.asp");
+                Uri uri = new Uri("http://1212.ip138.com/ic.asp");
+            //http://city.ip138.com/ip2city.asp
                 System.Net.HttpWebRequest req = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(uri);
                 req.Method = "get";
                 using (Stream s = req.GetResponse().GetResponseStream())
@@ -962,14 +943,34 @@ namespace Service
                         string str = reader.ReadToEnd();
                         System.Text.RegularExpressions.Match m = System.Text.RegularExpressions.Regex.Match(str, @"\[(?<IP>[0-9\.]*)\]");
                         return m.Value.Trim(ch);
-
                     }
                 }
             }
             catch
             { return "未获取到公网IP"; }
         }
+        //获取外网IP
+        //public static string GetPublicIP()
+        //{
+        //    string tempip = "";
+        //    try
+        //    {
+        //        WebRequest wr = WebRequest.Create("http://1212.ip138.com/ic.asp");
+        //        Stream s = wr.GetResponse().GetResponseStream();
+        //        StreamReader sr = new StreamReader(s, Encoding.Default);
+        //        string all = sr.ReadToEnd(); //读取网站的数据
 
+        //        int start = all.IndexOf("您的IP是：[") + 7;
+        //        int end = all.IndexOf("]", start);
+        //        tempip = all.Substring(start, end - start);
+        //        sr.Close();
+        //        s.Close();
+        //    }
+        //    catch
+        //    {
+        //    }
+        //    return tempip;
+        //}
         //获得本机IP列表
         private static List<string> GetHostIPAddress()
         {
@@ -1000,13 +1001,14 @@ namespace Service
 
 
         #region 注册信息
-        public static string Registration()
+        public static string Registration(out int day)
         {
+            day = 0;
             string Info = "注册信息：无";
             string text = EnDe.DESDecrypt(EnDe.ReadAk(), "1q2w3e4r", "11111111");
             string EnCPU = EnDe.GetCPU();
 
-            if (EnCPU != text)
+            if (text != "")
             {
                 TimeSpan ts1 = new TimeSpan(DateTime.Now.Ticks);
                 TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks); ;
@@ -1040,8 +1042,10 @@ namespace Service
                 {
                     Info = "系统还可试用" + (300 - Day) + "天！";
                     //MessageBox.Show("系统还可试用" + (300 - Day) + "天！");
+                    day = (300 - Day);
                 }
             }
+            else { Info = "系统试用结束!"; }
 
             return Info;
         }
@@ -1079,6 +1083,22 @@ namespace Service
                 EnDe.WriteAk(EnDe.DESEncrypt(DateTime.Now.ToString(), "1q2w3e4r", "11111111"));
             }
         }
+        /// <summary>
+        /// 反注册，客户端禁止打开
+        /// </summary>
+        public static void lkd() 
+        {
+            string file_name = System.Windows.Forms.Application.StartupPath + "/HYXT.ak";
+            try
+            {
+                if (!File.Exists(file_name))
+                {
+                    File.Create(file_name);
+                }
+                EnDe.WriteAk("ddddddddddddddddddddd");
+            }
+            catch { }
+        }
         #endregion
         #endregion
 
@@ -1112,10 +1132,14 @@ namespace Service
             if (str.Substring(0, 6) == "--TCI|") 
             {
                 string[] temp= str.Split(new char[] { '|' });
-                WriteReadXML wrx = new WriteReadXML();
-                wrx.WriteTCXML(temp[1], temp[2].Replace("\r\n",""));
-                ServiceControl.ReReadTCXML();
-                ServiceControl.ReTCstart();
+                if (temp.Length >= 3)
+                {
+                    ServiceControl.wrx.XMLObj.TCTcpModel.IP = temp[1];
+                    ServiceControl.wrx.XMLObj.TCTcpModel.PORT =int.Parse( temp[2].Replace("\r\n", ""));
+                    ServiceControl.wrx.WriteXML();
+                }
+                ServiceControl.wrx.ReadXML();
+                ServiceControl.TCstart();
             }
         } 
         #endregion
@@ -1313,8 +1337,8 @@ namespace Service
         /// <param name="node">节点信息</param>
         public static void SendXMLFile(string node)
         {
-            WriteReadXML wrx = new WriteReadXML();
-            string xml = wrx.GetXMLStr(node);
+            //WriteReadXML wrx = new WriteReadXML();
+            string xml =ServiceControl.wrx .GetXMLStr(node);
             xml = "file|" + node + "|" + xml;
             ServiceBussiness.WriteQUIM("", "", "", xml, new byte[] { }, Service.ServiceEnum.EnCoderType.HEX, Service.ServiceEnum.DataType.State);
         }
@@ -1328,8 +1352,7 @@ namespace Service
             string[] temps = data.Split(new char[] { '|' });
             if (temps.Length > 1)
             {
-                WriteReadXML wrx = new WriteReadXML();
-                wrx.SetXMLStr(temps[0], temps[1]);
+                ServiceControl.wrx.SetXMLStr(temps[0], temps[1]);
             }
         }
 
@@ -1384,6 +1407,7 @@ namespace Service
         public static List<YY_RTU_ITEMCONFIG> ITEMCONFIGList = null;
         public static List<YY_RTU_CONFIGITEM> CONFIGITEMList = null;
         public static List<YY_RTU_ITEM> ITEMList = null;
+        public static List<YY_STATE> STATEList = null;
         /// <summary>
         /// 得到RTU列表
         /// </summary>
@@ -1396,7 +1420,7 @@ namespace Service
             ITEMCONFIGList = Service.PublicBD.db.GetRTU_ItemConfig("").ToList<YY_RTU_ITEMCONFIG>();
             CONFIGITEMList = Service.PublicBD.db.GetRTU_ConfigItemList("").ToList<YY_RTU_CONFIGITEM>();
             ITEMList = Service.PublicBD.db.GetItemList("").ToList<YY_RTU_ITEM>();
-
+            STATEList = Service.PublicBD.db.GetStateList("").ToList<YY_STATE>();
             if (ServiceControl.gsm != null)
             {
                 //重新读取手机号

@@ -21,12 +21,9 @@ namespace YYApp
 
         public static void TcpClient_Init()
         {
-
-            string IP = "", Port = "";
-            Program.wrx.ReadUIXML(out IP, out Port);
-            if (IP != "" && Port != "")
+            if (Program.wrx.XMLObj.UiTcpModel.IP != "" && Program.wrx.XMLObj.UiTcpModel.PORT.ToString() != "")
             {
-                tcpclient = new TcpClient(IP, int.Parse(Port), "");
+                tcpclient = new TcpClient(Program.wrx.XMLObj.UiTcpModel.IP, Program.wrx.XMLObj.UiTcpModel.PORT, "");
                 tcpclient.Start();
                 tcpclient.OnReceivedData += new EventHandler<TcpClient.ReceivedDataEventArgs>(tcpclient_OnReceivedData);
             }

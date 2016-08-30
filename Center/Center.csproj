@@ -41,12 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Center.cs" />
+    <Compile Include="ParseData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Control\Control.csproj">
       <Project>{F50EBC6B-F338-4EEE-B346-6559EA561496}</Project>
       <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{F518E703-68B7-4083-8068-959C556AC887}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

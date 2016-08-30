@@ -10,12 +10,12 @@ namespace Service.Model
 		public YY_STATE()
 		{}
 		#region Model
-		private int _stateid;
+		private string _stateid;
 		private string _rtustate;
 		/// <summary>
 		/// 
 		/// </summary>
-		public int STATEID
+        public string STATEID
 		{
 			set{ _stateid=value;}
 			get{return _stateid;}

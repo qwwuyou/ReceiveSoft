@@ -339,11 +339,11 @@ namespace TcpService
                     {
                         #region 编码
                         byte[] EncoderData = null;
-                        if (ServiceControl.HEXOrASC == "HEX") 
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "HEX") 
                         {
                             EncoderData = EnCoder.HexStrToByteArray(item.Data);
                         }
-                        if (ServiceControl.HEXOrASC == "ASC")
+                        if (ServiceControl.wrx.XMLObj.HEXOrASC == "ASC")
                         {
                             EncoderData = Encoding.ASCII.GetBytes(item.Data);
                         }

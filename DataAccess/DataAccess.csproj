@@ -35,9 +35,9 @@
       <HintPath>..\DllReference\MySql.Data.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\DllReference\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBBussiness.cs" />
+    <Compile Include="Model\CENTER_RTUCHANGE.cs" />
+    <Compile Include="Model\CENTER_SERVER.cs" />
+    <Compile Include="Model\CENTER_STARTSTATE.cs" />
     <Compile Include="Model\YY_DATA_IMG.cs" />
     <Compile Include="Model\YY_RTU_ITEMCONFIG.cs" />
     <Compile Include="OracleData.cs" />

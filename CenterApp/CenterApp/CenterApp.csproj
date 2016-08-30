@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAB8F426-B1FF-428B-A3B5-407AE6143B5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CenterApp</RootNamespace>
+    <AssemblyName>CenterApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20131.23069, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Chart3D.4, Version=4.0.20131.23069, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=10.8.0.0, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\chartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\chartControl.Designer.cs">
+      <DependentUpon>chartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LogInControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LogInControl.Designer.cs">
+      <DependentUpon>LogInControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\registerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\registerControl.Designer.cs">
+      <DependentUpon>registerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\RTUCountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\RTUCountControl.Designer.cs">
+      <DependentUpon>RTUCountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClass.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\NetworkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\NetworkControl.Designer.cs">
+      <DependentUpon>NetworkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Control\SetDBControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetDBControl.Designer.cs">
+      <DependentUpon>SetDBControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetControl.Designer.cs">
+      <DependentUpon>SetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SetWebControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SetWebControl.Designer.cs">
+      <DependentUpon>SetWebControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCP\TcpClient.cs" />
+    <Compile Include="TCP\TcpControl.cs" />
+    <EmbeddedResource Include="Control\chartControl.resx">
+      <DependentUpon>chartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\LogInControl.resx">
+      <DependentUpon>LogInControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\registerControl.resx">
+      <DependentUpon>registerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\RTUCountControl.resx">
+      <DependentUpon>RTUCountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\NetworkControl.resx">
+      <DependentUpon>NetworkControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Control\SetDBControl.resx">
+      <DependentUpon>SetDBControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetControl.resx">
+      <DependentUpon>SetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SetWebControl.resx">
+      <DependentUpon>SetWebControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorScheme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Connect.ico" />
+    <Content Include="ico.ico" />
+    <Content Include="Resources\Chrome.png" />
+    <Content Include="Resources\connect.png" />
+    <Content Include="Resources\Database.png" />
+    <Content Include="Resources\data_no.png" />
+    <Content Include="Resources\data_yes.png" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\Firefox.png" />
+    <Content Include="Resources\ico.ico" />
+    <Content Include="Resources\ie.png" />
+    <Content Include="Resources\internet_web.png" />
+    <None Include="Resources\Key.png" />
+    <Content Include="Resources\MarkAsPaid.png" />
+    <Content Include="Resources\Network_no.png" />
+    <Content Include="Resources\Network_yes.png" />
+    <Content Include="Resources\no.png" />
+    <Content Include="Resources\Person.png" />
+    <Content Include="Resources\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\DataAccess.csproj">
+      <Project>{F518E703-68B7-4083-8068-959C556AC887}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperateXML\OperateXML.csproj">
+      <Project>{1FB4D8A9-A693-4F1B-8338-2897AA3FE857}</Project>
+      <Name>OperateXML</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

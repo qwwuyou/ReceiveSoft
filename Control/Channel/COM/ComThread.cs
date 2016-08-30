@@ -60,6 +60,8 @@ namespace ComService
                 //TimeSpan ts = DateTime.Now.Subtract(com.CState.DATATIME);
                 //新版本卫星协议4.0
                 TimeSpan ts = DateTime.Now.Subtract(com.CStateFor4.DATATIME);
+
+                Console.WriteLine(DateTime.Now + "--------" + com.CStateFor4.DATATIME);
                 if (ts.Minutes > 10)
                 {
                     try

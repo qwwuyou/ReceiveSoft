@@ -15,11 +15,8 @@ namespace Service
 
         public Reflection_Protoco() 
         {
-            WriteReadXML wrx = new WriteReadXML();
-            string File = "",Class="";
-            wrx.ReadDllXML(out File ,out Class);
-            A = System.Reflection.Assembly.LoadFrom(System.Windows.Forms.Application.StartupPath + "/" + File);
-            T = A.GetType(Class);
+            A = System.Reflection.Assembly.LoadFrom(System.Windows.Forms.Application.StartupPath + "/" + ServiceControl.wrx.XMLObj.dllfile);
+            T = A.GetType(ServiceControl.wrx.XMLObj.dllclass);
             O = Activator.CreateInstance(T);
         }
         /// <summary>

@@ -85,22 +85,22 @@ namespace YYApp.SetControl
         }
         private void RadioButtong_Init() 
         {
-            if (Program.wrx.ReadDllXML().ToLower() == "hjt212-2005.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "hjt212-2005.dll")
             {
-                radioButton_2011.Enabled = true;
-                radioButton_2031.Enabled = true;
-                radioButton_2051.Enabled = true;
-                radioButton_2061.Enabled = true;
+                radioButton_2011.Visible = true;
+                radioButton_2031.Visible = true;
+                radioButton_2051.Visible = true;
+                radioButton_2061.Visible = true;
                 radioButton_2011.Checked = true;
 
                 comboBox_Item.Width = 95;
             }
             else 
             {
-                radioButton_2011.Enabled = false;
-                radioButton_2031.Enabled = false;
-                radioButton_2051.Enabled = false;
-                radioButton_2061.Enabled = false;
+                radioButton_2011.Visible = false;
+                radioButton_2031.Visible = false;
+                radioButton_2051.Visible = false;
+                radioButton_2061.Visible = false;
 
                 comboBox_Item.Width = 208;
             }
@@ -257,11 +257,15 @@ namespace YYApp.SetControl
             return false;
         }
 
-        private void Search() 
+        private void Search()
         {
             string Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE") 
+            {
+                Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>= to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') AND TM<= to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS') ";
+            }
 
-            if (Program.wrx.ReadDllXML().ToLower() == "hjt212-2005.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "hjt212-2005.dll")
             {
                 if (radioButton_2011.Checked) 
                 {
@@ -336,7 +340,8 @@ namespace YYApp.SetControl
 
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        val = double.Parse(dt.Rows[i]["datavalue"].ToString());
+                        val = -9999;
+                        double.TryParse(dt.Rows[i]["CorrectionVALUE"].ToString(), out val);
                         date = DateTime.Parse(dt.Rows[i]["TM"].ToString()).ToString("MM月dd日 HH时");
                         series.Points.AddXY(date, val);
                         series.Points[i].ToolTip = "值：#VAL" + "\n时间：" + dt.Rows[i]["TM"].ToString();
@@ -400,10 +405,13 @@ namespace YYApp.SetControl
                                         ItemName += "|平均|";
                                         break;
                                 }
+                                series.Name = ItemName + NewTable.Rows[0]["ItemName"].ToString();
                             }
+                            else
+                            { series.Name = NewTable.Rows[0]["ItemName"].ToString() + NewTable.Rows[0]["datatype"].ToString(); }
                             #endregion
-                            series.Name = ItemName+NewTable.Rows[0]["ItemName"].ToString();
-                            legend = new Legend(series.Name);
+
+                            legend = new Legend(series.Name); 
                             
                             //legend.Position = new ElementPosition(0, 0, 20, 100);
                             legend.Docking = Docking.Bottom;
@@ -441,6 +449,7 @@ namespace YYApp.SetControl
                  model.STCD = comboBox_STCD.SelectedValue.ToString();
                  model.TM = DateTime.Parse(dateTimePicker_Add.Text);
                  model.CorrectionVALUE= decimal.Parse(textBox_Val.Text.Trim());
+                 model.DATAVALUE = decimal.Parse(textBox_Val.Text.Trim());
                  model.DOWNDATE = DateTime.Now;
                  model.NFOINDEX = 5;
                  model.ItemID = comboBox_Item.SelectedValue.ToString();
@@ -468,12 +477,21 @@ namespace YYApp.SetControl
                 model.STCD = dataGridView1.Rows[e.RowIndex].Cells["Column1"].Value.ToString();
                 model.TM = (DateTime)dataGridView1.Rows[e.RowIndex].Cells["Column5"].Value;//此字段为记录原始采集时间（精确到毫秒的主键）
 
-                model.CorrectionVALUE = decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells["Column4"].Value.ToString());
+                decimal CorrectionVALUE;
+                if(decimal.TryParse(dataGridView1.Rows[e.RowIndex].Cells["Column4"].Value.ToString(),out CorrectionVALUE))
+                {
+                    model.CorrectionVALUE=CorrectionVALUE;
+                }else{ model.CorrectionVALUE=null;}
+
                 model.DOWNDATE = DateTime.Now;
                 model.NFOINDEX = 5;
                 model.ItemID = dataGridView1.Rows[e.RowIndex].Cells["Column9"].Value.ToString();
                 //model.DATATYPE = "";
                 string Where = "where stcd='" + model.STCD + "' and ItemID='" + model.ItemID + "' and  TM='" + model.TM.ToString("yyyy-MM-dd HH:mm:ss.fff") + "'";
+                if (PublicBD.DB == "ORACLE") 
+                {
+                    Where = "where stcd='" + model.STCD + "' and ItemID='" + model.ItemID + "' and  TM=to_date('" + model.TM.ToString() + "','yyyy-MM-dd HH24:MI:SS')";
+                }
                 if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "删 除")
                 {
                     bool b = PublicBD.db.DelRealTimeData(Where);

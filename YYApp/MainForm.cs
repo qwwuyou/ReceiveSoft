@@ -40,14 +40,15 @@ namespace YYApp
             ExecCommandList.LC = new List<Command>();
 
 
-            ExecServiceList.Lsm = Program.wrx.ReadXML(); //读取服务信息
+            ExecServiceList.Lsm = Program.wrx.XMLObj.LsM; //读取服务信息
             buttonItem1.Text += "[" + ProName + "]";
 
 
             AddControls();        //根据xml文件动态添加服务显示灯控件
             TcpControl.TcpClient_Init();     //tcp与服务交互初始化
 
-            PublicBD.Path = Program.wrx.GetPath();
+
+            PublicBD.Path = Program.xmlpath;
             PublicBD.ReInit();
             //连接数据库
             if (PublicBD.ConnectState)
@@ -346,7 +347,7 @@ namespace YYApp
             var ser = from s in ExecServiceList.Lsm where (s.SERVICETYPE + s.SERVICEID) == tag select s;
             string SERVICETYPE = ser.First().SERVICETYPE;
             ser = from s in ExecServiceList.Lsm where s.SERVICETYPE == SERVICETYPE select s;
-            service[] sers=ser.ToArray<service>();
+            OperateXML.serviceModel[] sers = ser.ToArray<OperateXML.serviceModel>();
             string Index = "";
             for (int i = 0; i < ser.Count(); i++)
             {
@@ -389,7 +390,7 @@ namespace YYApp
                 {
                     ri=cci.Control as DevComponents.DotNetBar.Controls.ReflectionImage;
                     var ser = from s in ExecServiceList.Lsm where (s.SERVICETYPE + s.SERVICEID) == ri.Tag.ToString() select s;
-
+                    if(ser.Count()>0)
                     //在线绿色，不在线红色。
                     if (ser.First().STATE == false)
                     {
@@ -554,7 +555,7 @@ namespace YYApp
                     temp = ExecServiceList.UpdDBConnectionState(temp);
                     temp = ExecRTUList.Updrdm(temp);
                     temp = ExecCommandList.UpdCommand(temp);
-                    temp = SynXml.synxml(temp);
+                    temp = synxml(temp);
 
 
                     Text=temp.Replace("++", "");
@@ -602,6 +603,38 @@ namespace YYApp
                 }
                 Thread.Sleep(1000);
             }
+        }
+
+        public string synxml(string data)
+        {
+
+            string Rstr = "";
+            string[] datas = data.Split(new string[] { "\n" }, StringSplitOptions.None);
+            for (int k = 0; k < datas.Count(); k++)
+            {
+                data = datas[k];
+                #region
+                if (data.Length > 7)
+                {
+                    string tem = data.Substring(0, 7);
+                    if (tem == "--file|")
+                    {
+                        data = data.Replace("--file|", "");
+                        string[] temps = data.Split(new char[] { '|' });
+                        if (temps.Length > 1)
+                        {
+                            Program.wrx.SetXMLStr(temps[0], temps[1]);
+                        }
+                    }
+                    else
+                    { Rstr += data + "\n"; }
+                }
+                #endregion
+            }
+            return Rstr;
+
+
+
         }
         #endregion
 
@@ -696,14 +729,14 @@ namespace YYApp
             pageSliderPage3.Controls.Clear();
 
             //燕禹协议
-            if (Program.wrx.ReadDllXML().ToLower() == "gsprotocol.dll")
+            if (Program.wrx.XMLObj.dllfile.ToLower() == "gsprotocol.dll")
             {
                 SetControl.SetYyRTUWorkControl swc = new SetControl.SetYyRTUWorkControl();
                 //scc.Location = new Point((pageSliderPage3.Width - scc.Width) / 2, (pageSliderPage3.Height - scc.Height) / 2);
                 swc.Dock = DockStyle.Fill;
                 pageSliderPage3.Controls.Add(swc);
             }//水资源协议
-            else if (Program.wrx.ReadDllXML().ToLower() == "protocol.dll")
+            else if (Program.wrx.XMLObj.dllfile.ToLower() == "protocol.dll")
             {
                 SetControl.SetRTUWorkControl swc = new SetControl.SetRTUWorkControl();
                 //scc.Location = new Point((pageSliderPage3.Width - scc.Width) / 2, (pageSliderPage3.Height - scc.Height) / 2);
@@ -763,11 +796,12 @@ namespace YYApp
             
             if (System.Diagnostics.Process.GetProcessesByName("DataResaveApplication").ToList().Count > 0)
             {
-                //´æÔÚ
+                //转存工具已经启动
                 DevComponents.DotNetBar.MessageBoxEx.Show("转存工具已经启动！", "[提示]", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-            {//²»´æÔÚ
+            {
+                //启动转存工具
                 try
                 {
                     System.Diagnostics.Process.Start(System.Windows.Forms.Application.StartupPath + "/DataResaveApplication.exe");
@@ -983,7 +1017,7 @@ namespace YYApp
 
         private void labelItem1_DoubleClick(object sender, EventArgs e)
         {
-            if (Program.wrx.ReadResaveName() == "HLJ")
+            if (Program.wrx.XMLObj.ResaveName == "HLJ")
             {
                 SetHLJForm hlj = new SetHLJForm();
                 hlj.ShowDialog();

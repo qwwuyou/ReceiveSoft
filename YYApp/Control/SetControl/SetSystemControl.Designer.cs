@@ -490,7 +490,8 @@
             "其它协议",
             "水文协议",
             "水资源协议",
-            "正大212"});
+            "正大212",
+            "爱德佳创"});
             this.comboBox_Protocol.Location = new System.Drawing.Point(78, 19);
             this.comboBox_Protocol.Name = "comboBox_Protocol";
             this.comboBox_Protocol.Size = new System.Drawing.Size(116, 20);

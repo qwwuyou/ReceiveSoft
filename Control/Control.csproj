@@ -35,10 +35,6 @@
     <Reference Include="log4net">
       <HintPath>..\DllReference\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="OpenPop, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\OpenPop.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -126,7 +122,6 @@
     <Compile Include="ToUI\Server\TcpQueue.cs" />
     <Compile Include="ToUI\Server\TcpServer.cs" />
     <Compile Include="ToUI\Server\TcpThread.cs" />
-    <Compile Include="WriteReadXML.cs" />
     <Compile Include="_51Mail.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +132,10 @@
     <ProjectReference Include="..\GSMMODEM\GSMMODEM.csproj">
       <Project>{FB9F3FF1-0B65-4FF7-AFBA-4DC918FCDDE4}</Project>
       <Name>GSMMODEM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OperateXML\OperateXML.csproj">
+      <Project>{1FB4D8A9-A693-4F1B-8338-2897AA3FE857}</Project>
+      <Name>OperateXML</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

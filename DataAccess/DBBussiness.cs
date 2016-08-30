@@ -453,8 +453,16 @@ namespace Service
          /// <returns></returns>
          IList<YY_DATA_IMG> GetImg(string STCD, DateTime TM);
          #endregion
-         
-        
+
+
+         #region 操作状态表
+         /// <summary>
+         /// 得到状态列表
+         /// </summary>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         IList<YY_STATE> GetStateList(string Where);
+
         /// <summary>
         /// 添加终端状态和报警状态
         /// </summary>
@@ -465,6 +473,14 @@ namespace Service
         /// <param name="Alarms">报警数据</param>
         /// <returns></returns>
          bool AddRTUState(string STCD, DateTime TM, DateTime RTM, int NFOINDEX, string AlarmsStr);
+
+         /// <summary>
+        /// 添加终端状态和报警状态
+        /// </summary>
+        /// <param name="model">状态实体</param>
+        /// <returns></returns>
+         bool AddRTUState(YY_DATA_STATE model);
+        #endregion
 
         /// <summary>
         /// 添加召测命令记录
@@ -591,5 +607,92 @@ namespace Service
         /// <returns></returns>
          System.Data.DataTable CreateRTUStateDataTable(System.Data.DataTable datatable);
         #endregion
+
+
+         #region 中心表相关方法
+         /// <summary>
+         /// 得到所有中心站的
+         /// </summary>
+         /// <returns></returns>
+         IList<CENTER_SERVER> GetServers();
+        
+        /// <summary>
+        /// 根据条件获得各中心站服务的启动状态
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+         IList<CENTER_STARTSTATE> GetStartState(string Where);
+
+         /// <summary>
+         /// 更新服务列表状态
+         /// </summary>
+         /// <param name="model">实体</param>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         bool UpdCENTER_SERVER(CENTER_SERVER model, string Where);
+
+         /// <summary>
+         /// 添加新服务到服务列表
+         /// </summary>
+         /// <param name="model">实体</param>
+         /// <returns></returns>
+         bool AddCENTER_SERVER(CENTER_SERVER model);
+
+        /// <summary>
+        /// 得到启动状态表中各服务最新的数据
+        /// </summary>
+        /// <returns></returns>
+         IList<CENTER_STARTSTATE> GetStartStateServers();
+
+        /// <summary>
+        /// 添加服务启动信息
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <returns></returns>
+         bool AddCENTER_STARTSTATE(CENTER_STARTSTATE model);
+
+         /// <summary>
+         /// 更新服务启动信息
+         /// </summary>
+         /// <param name="model">实体</param>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         bool UdpCENTER_STARTSTATE(CENTER_STARTSTATE model, string Where);
+
+        /// <summary>
+        /// 添加RTU数量变化信息
+        /// </summary>
+        /// <param name="model">实体</param>
+        /// <returns></returns>
+         bool AddCENTER_RTUCHANGE(CENTER_RTUCHANGE model);
+
+        /// <summary>
+        /// 得到所有RTU数量变化信息
+        /// </summary>
+        /// <param name="Where">条件</param>
+        /// <returns></returns>
+         IList<CENTER_RTUCHANGE> GetCenterRTUChange(string Where);
+
+         /// <summary>
+         /// 删除RTU数量变化信息
+         /// </summary>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         bool DelCENTER_RTUCHANGE(string Where);
+
+         /// <summary>
+         /// 删除服务启动信息
+         /// </summary>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         bool DelCENTER_STARTSTATE(string Where);
+
+         /// <summary>
+         /// 删除服务
+         /// </summary>
+         /// <param name="Where">条件</param>
+         /// <returns></returns>
+         bool DelCENTER_SERVER(string Where);
+         #endregion
     }
 }

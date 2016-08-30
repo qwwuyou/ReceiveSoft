@@ -110,10 +110,18 @@ namespace YYApp.SetControl
             this.Column4.DataPropertyName = "DataValue";
 
             string Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>=to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') and TM<=to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS')";
+            }
             DataTable dt = PublicBD.db.GetRemDataForWhere(Where);
             dataGridView1.DataSource = dt;
 
             Where = " where datavalue is not NULL and stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where datavalue is not NULL and stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>=to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') and TM<=to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS')";
+            }
             label4.Text = "共" + PublicBD.db.GetRemDataCount(Where) + "条";
         }
         private void SearchRealTime()
@@ -121,10 +129,18 @@ namespace YYApp.SetControl
             this.Column4.DataPropertyName = "CorrectionVALUE";
 
             string Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and  TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>=to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') and  TM<=to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS')";
+            }
             DataTable dt = PublicBD.db.GetRealTimeDataForWhere(Where);
             dataGridView1.DataSource = dt;
 
             Where = " where CorrectionVALUE is not NULL and stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>='" + DateTime.Parse(dateTimePicker_B.Text) + "' and TM<='" + DateTime.Parse(dateTimePicker_E.Text) + "'";
+            if (PublicBD.DB == "ORACLE")
+            {
+                Where = " where CorrectionVALUE is not NULL and stcd='" + comboBox_STCD.SelectedValue + "'  and ItemID='" + comboBox_Item.SelectedValue + "' and TM>=to_date('" + DateTime.Parse(dateTimePicker_B.Text) + "','yyyy-MM-dd HH24:MI:SS') and TM<=to_date('" + DateTime.Parse(dateTimePicker_E.Text) + "','yyyy-MM-dd HH24:MI:SS')";
+            }
             label4 .Text ="共"+ PublicBD.db.GetRealTimeDataCount(Where)+"条";
         }
 

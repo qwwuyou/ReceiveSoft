@@ -1,20 +1,19 @@
 <system>
   <Project>
-    <Pro name="北京" path="E:\接收软件代码\DevControlsDemo_5.2\Service 水资源数据库调整后  -卫星完成\YYApp\bin\Debug/System.xml" />
+    <Pro name="we" path="D:\吴琼\安装文件\Service 水资源数据库调整后  -卫星完成 - 伟思 - 大动\YYService\Soft/System.xml" />
   </Project>
   <DataBaseConnect>
-    <Type>MSSQL</Type>
+    <Type Port="1433">MSSQL</Type>
     <Source>123.57.234.45</Source>
-    <DataBase>JS_shuiwen</DataBase>
+    <DataBase>JS_ADJC</DataBase>
     <UserName>aq</UserName>
     <PassWord>aquarius</PassWord>
   </DataBaseConnect>
   <Dll>
-    <DataProtocol file="HydrologicProtocol.dll" class="Service.Hydrologic" />
+    <DataProtocol file="Center.dll" class="Service.Center" />
   </Dll>
   <Service>
     <tcp serviceid="1" ip_portname="0.0.0.0" port_baudrate="16018" />
-    <gsm serviceid="2" ip_portname="COM4" port_baudrate="9600" num="13555555555" />
   </Service>
   <UI>
     <tcp ip="127.0.0.1" port="8888" />

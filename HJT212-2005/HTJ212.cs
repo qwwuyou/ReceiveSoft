@@ -197,7 +197,7 @@ namespace Service
         #region 包处理
         public void PacketArrived(UdpService.UdpServer US)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void PacketArrived(TcpService.TcpServer TS)

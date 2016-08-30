@@ -11,16 +11,38 @@ namespace Service
         static DateTime dt;
         static void Main(string[] args)
         {
-            byte[] ddd = EnCoder.HexStrToByteArray("99");
-            //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();//实例化一个计时器
-            //watch.Start();//开始计时  
-            //watch.Stop();
-            //Console.WriteLine(watch.ElapsedMilliseconds.ToString());
 
-            //ReadMail rm = new ReadMail();
-            //string ip = "";
-            //string port = "";
-            //rm.ReadMailInfo(out ip,out port );
+            //byte[] bytes = EnCoder.HexStrToByteArray("41 ed 47 ae".Replace(" ", ""));
+            //Array.Reverse(bytes);
+            //float f= BitConverter.ToSingle(bytes, 0);
+
+            long k = long.Parse("1f 3b ba 2b".Replace(" ", ""), System.Globalization.NumberStyles.AllowHexSpecifier);
+            DateTime dttt = DateTime.Parse("2000-1-1").AddSeconds(k);
+            //string ip = Service.ServiceBussiness.GetPublicIP();
+            //string data = "40 04 00 36 01 FD 10 06 0E 0D 0A 01 8C 00 00 27 42 FF FF FF  FF 01 01 3C 46 46 01 01 00 00 23 5A 00 00 27 10 64 00 01 86 A0 03 01 00 64 3C 01 00 64 3C 01 00 64 3C 03 01 02 03 11".Replace (" ","");
+            //MKHY_S3.ParseData pd = new MKHY_S3.ParseData();
+            //MKHY_S3.DataModel dm=  pd.UnPack(data)
+            //string  DataState = data.Substring(44, 2);
+            //string DataState1 = data.Substring(42, 2);
+            //double  DataState2 = 0;
+            //DataState2 = Convert.ToInt32(data.Substring(56, 8), 16);
+            //string sss = "PARM 0023 00001 12345678901234567890 20160527120000 0202 P1=127.0.0.1:5555,Q5=60";
+            //sss = "STAT 0000 00000 12345678901234567890 20160527120000 0101";
+            //sss = sss.Replace(" ", "");
+            //ADJC_001.ParseData pd = new ADJC_001.ParseData();
+            //ADJC_001.DataModel dm = pd.UnPack(sss);
+
+            //string ss = "40 04 00 36 01 FD 10 06 0E 0D 0A 01 8C 00 00 27 42 FF FF FF  FF 01 01 3C 46 46 01 01 00 00 23 5A 00 00 27 10 64 00 01 86 A0 03 01 00 64 3C 01 00 64 3C 01 00 64 3C 03 01 02 03 11".Replace(" ", "");
+
+
+            // System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();//实例化一个计时器
+            // sw.Start();
+            // //耗时巨大的代码
+
+
+            //sw.Stop();
+            //TimeSpan ts2 = sw.Elapsed;
+            //Console.WriteLine("Stopwatch总共花费{0}ms.", ts2.TotalMilliseconds);
             
             dt = DateTime.Now;
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);

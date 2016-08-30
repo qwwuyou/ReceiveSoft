@@ -138,7 +138,7 @@ namespace DataResave_AQ
                     {
                         if (model.DATATYPE == 2011)
                         {
-                            var TS = from Ts in TimeSeriesList where Ts.QWService == QW_ts && Ts.DataType == "" select Ts;
+                            var TS = from Ts in TimeSeriesList where Ts.QWService == QW_ts && (Ts.DataType == ""||Ts.DataType == "2011") select Ts;
                             if (TS.Count() > 0)
                             {
                                 append = client.AppendTimeSeriesAsync(authToken, Guid.Parse(TS.First().AQ), b); //NGAQ上数

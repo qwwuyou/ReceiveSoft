@@ -82,7 +82,7 @@ namespace GsmService
                                     GSMMODEM.DecodedMessage dm = item;
                                     gsm.gm.DeleteMsgByIndex(dm.SmsIndex);  //根据索引删除
                                     byte[] bt = null;
-                                    if (Service.ServiceControl.HEXOrASC == "HEX")
+                                    if (Service.ServiceControl.wrx.XMLObj.HEXOrASC == "HEX")
                                     {
                                         bt = Service.EnCoder.HexStrToByteArray(dm.SmsContent);
                                     }
@@ -119,7 +119,7 @@ namespace GsmService
                                     GSMMODEM.DecodedMessage dm = item;
                                     gsm.gm.DeleteMsgByIndex(dm.SmsIndex);//根据索引删除
                                     byte[] bt = null;
-                                    if (Service.ServiceControl.HEXOrASC == "HEX")
+                                    if (Service.ServiceControl.wrx.XMLObj.HEXOrASC == "HEX")
                                     {
                                         bt = Service.EnCoder.HexStrToByteArray(dm.SmsContent);
                                     }

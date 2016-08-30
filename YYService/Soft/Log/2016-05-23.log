@@ -1,0 +1,10 @@
+
+
+[2016/5/23 13:50:26]
+违反了 PRIMARY KEY 约束 'PK_ST_RIVER_R'。不能在对象 'dbo.ST_YCRIVER_R' 中插入重复键。
+语句已终止。
+
+
+[2016/5/23 13:50:26]
+违反了 PRIMARY KEY 约束 'PK_YY_DATA_AUTO_1'。不能在对象 'dbo.YY_DATA_AUTO' 中插入重复键。
+语句已终止。
